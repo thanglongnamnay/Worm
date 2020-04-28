@@ -79,21 +79,21 @@ public:
 
         return false;
     }
-    virtual void onOpen(network::WebSocket* ws) {
-        if (pendingMessages.size() > 0) {
+    void onOpen(network::WebSocket* ws) override {
+        if (!pendingMessages.empty()) {
             for (const auto& message : pendingMessages)
                 send(message);
 
             pendingMessages.clear();
         }
     }
-    virtual void onMessage(network::WebSocket* ws, const network::WebSocket::Data& data) {
+    void onMessage(network::WebSocket* ws, const network::WebSocket::Data& data) override {
         const string msg = string(data.bytes, data.len);
         CCLOG(msg.c_str());
     }
-    virtual void onClose(network::WebSocket* ws) {
+    void onClose(network::WebSocket* ws) override {
     }
-    virtual void onError(network::WebSocket* ws, const network::WebSocket::ErrorCode& error) {
+    void onError(network::WebSocket* ws, const network::WebSocket::ErrorCode& error) override {
     }
 
 };
@@ -110,8 +110,8 @@ bool HelloWorld::init()
     auto scene = CSLoader::createNode("MainScene.csb");
     addChild(scene);
 
-    const auto websocket = new Socket("ws://localhost:8080");
-    websocket->send("hello from client");
+    const auto websocket = new Socket("ws://127.0.0.1:8080");
+    websocket->send("hello from client linux");
 
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
