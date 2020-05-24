@@ -4,18 +4,7 @@
 
 #include "MapLogic.h"
 
-void MapLogic::CreateMap() {
-    auto fNoiseSeed = std::vector<float>(mapSize.x);
-    for (int i = 0; i < mapSize.x; i++)
-        fNoiseSeed[i] = (float)rand() / RAND_MAX;
-    fNoiseSeed[0] = 0.5f;
-    auto fSurface = PerlinNoise1D(fNoiseSeed, 8, 2.0f);
-    for (int x = 0; x < mapSize.x; x++) {
-        for (int y = 0; y < mapSize.y; y++) {
-            map[y][x] = y >= fSurface[x] * mapSize.y ? 1 : 0;
-        }
-    }
-}
+#include <utility>
 
 std::vector<float> MapLogic::PerlinNoise1D(std::vector<float> fSeed, int nOctaves, float fBias) {
     auto nCount = fSeed.size();
@@ -40,4 +29,10 @@ std::vector<float> MapLogic::PerlinNoise1D(std::vector<float> fSeed, int nOctave
         fOutput[x] = fNoise / fScaleAcc;
     }
     return fOutput;
+}
+
+MapLogic::MapLogic(type::Vector<int> mapSize) : mapSize(mapSize) {
+    map = createMap(mapSize);
+    mapView = MapView::create(map);
+//    mapView = std::make_shared<MapView>(map);
 }

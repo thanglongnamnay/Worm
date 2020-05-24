@@ -35,15 +35,14 @@ using namespace cocos2d::experimental;
 
 USING_NS_CC;
 
-const static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
-const static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-const static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
+const static auto smallResolutionSize = cocos2d::Size(480, 320);
+const static auto mediumResolutionSize = cocos2d::Size(1024, 768);
+const static auto largeResolutionSize = cocos2d::Size(2048, 1536);
 
-const static cocos2d::Size designResolutionSize = mediumResolutionSize;
+const static auto designResolutionSize = cocos2d::Size(960, 480);
 
 AppDelegate::AppDelegate()
-{
-}
+= default;
 
 AppDelegate::~AppDelegate() 
 {
