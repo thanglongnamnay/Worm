@@ -12,7 +12,7 @@ using namespace std;
 class Helper {
 public:
     static string getSocketAddr(char host[], int port) {
-        return string(host) + ":" + to_string(port);
+      return string(host)+":"+to_string(port);
     }
 };
 

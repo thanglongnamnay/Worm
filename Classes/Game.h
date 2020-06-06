@@ -18,5 +18,4 @@ public:
     explicit Game(GameConfig gameConfig);
 };
 
-
 #endif //WORM_GAME_H

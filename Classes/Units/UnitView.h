@@ -9,9 +9,14 @@
 
 USING_NS_CC;
 
-class UnitView : Sprite {
+class UnitView : public Sprite {
 
+public:
+    static UnitView* create() {
+      auto pRet = new UnitView();
+      pRet && pRet->init() && pRet->autorelease();
+      return pRet;
+    }
 };
-
 
 #endif //WORM_UNITVIEW_H

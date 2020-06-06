@@ -27,20 +27,33 @@
 
 #include <iostream>
 #include "cocos2d.h"
+#include "Observable.h"
+
 using namespace std;
 
-class HelloWorld : public cocos2d::Scene
-{
+class HelloWorld : public cocos2d::Scene, public IObserver {
 public:
-    static cocos2d::Scene* createScene();
+    explicit HelloWorld(Observable& subject);
 
-    virtual bool init();
-    
+    void onMessage(const Packet& packet) override;
+
+    bool init() override;
+
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
-    
+
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    static HelloWorld* create(Observable& subject) {
+      auto pRet = new(std::nothrow) HelloWorld(subject);
+      if (pRet && pRet->init()) {
+        pRet->autorelease();
+        return pRet;
+      }
+      else {
+        delete pRet;
+        return nullptr;
+      }
+    }
 };
 
 #endif // __HELLOWORLD_SCENE_H__

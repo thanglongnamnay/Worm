@@ -33,9 +33,7 @@
 
 USING_NS_CC;
 
-
-class PhysicsShapeCache
-{
+class PhysicsShapeCache {
 public:
 
     /**
@@ -43,7 +41,7 @@ public:
      *
      * @return PhysicsShapeCache*
      */
-    static PhysicsShapeCache *getInstance();
+    static PhysicsShapeCache* getInstance();
 
     /**
      * Adds all physics shapes from a plist file.
@@ -54,7 +52,7 @@ public:
      * @retval true if ok
      * @retval false on error
      */
-    bool addShapesWithFile(const std::string &plist);
+    bool addShapesWithFile(const std::string& plist);
 
     /**
      * Adds all physics shapes from a plist file.
@@ -65,14 +63,14 @@ public:
      * @retval true if ok
      * @retval false on error
      */
-    bool addShapesWithFile(const std::string &plist, float scaleFactor);
+    bool addShapesWithFile(const std::string& plist, float scaleFactor);
 
     /**
      * Removes all shapes loaded from the given file
      *
      * @param plist name of the body definitions file
      */
-    void removeShapesWithFile(const std::string &plist);
+    void removeShapesWithFile(const std::string& plist);
 
     /**
      * Removes all shapes
@@ -87,7 +85,7 @@ public:
      * @return new PhysicsBody
      * @retval nullptr if body is not found
      */
-    PhysicsBody *createBodyWithName(const std::string &name);
+    PhysicsBody* createBodyWithName(const std::string& name);
 
     /**
      * Creates a new PhysicsBody and attaches it to the given sprite
@@ -98,26 +96,21 @@ public:
      * @retval true if body was attached to the sprite
      * @retval false if body was not found
      */
-    bool setBodyOnSprite(const std::string &name, Sprite *sprite);
+    bool setBodyOnSprite(const std::string& name, Sprite* sprite);
 
 private:
-    typedef enum
-    {
+    typedef enum {
         FIXTURE_POLYGON,
         FIXTURE_CIRCLE
     } FixtureType;
 
-
-    class Polygon
-    {
+    class Polygon {
     public:
         Point* vertices;
         int numVertices;
     };
 
-
-    class FixtureData
-    {
+    class FixtureData {
     public:
         FixtureType fixtureType;
 
@@ -135,16 +128,13 @@ private:
         Point center;
         float radius;
 
-
-        std::vector<Polygon *> polygons;
+        std::vector<Polygon*> polygons;
     };
 
-
-    class BodyDef
-    {
+    class BodyDef {
     public:
         Point anchorPoint;
-        std::vector<FixtureData *> fixtures;
+        std::vector<FixtureData*> fixtures;
 
         bool isDynamic;
         bool affectedByGravity;
@@ -158,14 +148,13 @@ private:
 
     PhysicsShapeCache();
     ~PhysicsShapeCache();
-    void safeDeleteBodyDef(BodyDef *bodyDef);
-    BodyDef *getBodyDef(const std::string &name);
-    void setBodyProperties(PhysicsBody *body, BodyDef *bd);
-    void setShapeProperties(PhysicsShape *shape, FixtureData *fd);
+    void safeDeleteBodyDef(BodyDef* bodyDef);
+    BodyDef* getBodyDef(const std::string& name);
+    void setBodyProperties(PhysicsBody* body, BodyDef* bd);
+    void setShapeProperties(PhysicsShape* shape, FixtureData* fd);
 
-    std::map<std::string, BodyDef *> bodyDefs;
-    std::map<std::string, std::vector<BodyDef *>> bodiesInFile;
+    std::map<std::string, BodyDef*> bodyDefs;
+    std::map<std::string, std::vector<BodyDef*>> bodiesInFile;
 };
-
 
 #endif // __PhysicsShapeCache_h

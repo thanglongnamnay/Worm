@@ -4,53 +4,65 @@
 
 #include "GameNetwork.h"
 
-bool GameNetwork::send(const string &message) {
-    try {
-        CCLOG("Sending...");
-        if (socket != nullptr) {
-            if (socket->getReadyState() == network::WebSocket::State::OPEN)
-                socket->send(message);
-            else if (socket->getReadyState() == network::WebSocket::State::CONNECTING)
-                pendingMessages.push_back(message);
-        }
+bool GameNetwork::send(const int cmd, const vector<int>& message) {
+  return send(Packet(cmd, message));
+}
 
-        return true;
-    } catch (const std::exception&) {
-        throw;
+bool GameNetwork::send(const Packet& packet) {
+  try {
+    CCLOG("Sending...");
+    if (socket!=nullptr) {
+      if (socket->getReadyState()==network::WebSocket::State::OPEN) {
+        const vector<int>& socketData = packet.toSocketData();
+        const ssize_t size = socketData.size();
+        socket->send((unsigned char*)socketData.data(), size*4);
+      }
+      else if (socket->getReadyState()==network::WebSocket::State::CONNECTING) {
+        pendingMessages.push_back(packet);
+      }
     }
 
-    return false;
+    return true;
+  }
+  catch (const std::exception&) {
+    CCLOG("Send fail. Resending...");
+    send(packet);
+  }
+
+  return false;
 }
 
-void GameNetwork::onOpen(network::WebSocket *ws) {
-    if (!pendingMessages.empty()) {
-        for (const auto& message : pendingMessages)
-            send(message);
-
-        pendingMessages.clear();
+void GameNetwork::onOpen(network::WebSocket* ws) {
+  if (!pendingMessages.empty()) {
+    for (const auto& message : pendingMessages) {
+      send(message);
     }
+
+    pendingMessages.clear();
+  }
 }
 
-void GameNetwork::onMessage(network::WebSocket *ws, const network::WebSocket::Data &data) {
-    const string msg = string(data.bytes, data.len);
-    CCLOG(msg.c_str());
+void GameNetwork::onMessage(network::WebSocket* ws, const network::WebSocket::Data& data) {
+  const string msg = string(data.bytes, data.len);
+  CCLOG(msg.c_str());
+
+  const Packet packet(data);
+  notify(packet);
 }
 
-void GameNetwork::onClose(network::WebSocket *ws) {
-    CCLOG("Socket closed.");
+void GameNetwork::onClose(network::WebSocket* ws) {
+  CCLOG("Socket closed.");
 }
 
-void GameNetwork::onError(network::WebSocket *ws, const network::WebSocket::ErrorCode &error) {
-    CCLOG("Socket error %d", error);
+void GameNetwork::onError(network::WebSocket* ws, const network::WebSocket::ErrorCode& error) {
+  CCLOG("Socket error %d", error);
 }
 
-GameNetwork::GameNetwork(const char *url)
-        : socket(new WebSocket())
-        , url(url)
-        , pendingMessages() {
-    socket->init(*this, url);
+GameNetwork::GameNetwork(const char* url)
+    :socket(new WebSocket()), url(url), pendingMessages() {
+  socket->init(*this, url);
 }
 
 GameNetwork::~GameNetwork() {
-    socket->close();
+  socket->close();
 }
