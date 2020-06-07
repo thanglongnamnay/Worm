@@ -21,7 +21,7 @@ public:
         for (int y = 0; y<map.size(); ++y) {
             std::string line;
             for (int x = 0; x<map[0].size(); ++x) {
-                drawSolidRect(Vec2(x, y), Vec2(x+1, y+1), Color4F(map[y][x] ? 0 : 1, 0, 0, .5));
+                drawSolidRect(Vec2(x, y), Vec2(x+1, y+1), Color4F(map[y][x] ? 1 : 0, 0, 0, .5));
             }
         }
     }

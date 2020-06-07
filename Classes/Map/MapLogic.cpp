@@ -33,11 +33,36 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
 		:mapSize(mapSize) {
 	map = createMap(mapSize);
 	mapView = MapView::create(map);
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Worm/texture.plist", "Worm/texture.png");\
-//	for (auto i = 0; i < 10; ++i) {
-		addUnit(std::make_unique<Worm>(300, 400));
-//	}
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Worm/texture.plist", "Worm/texture.png");
+    worm = std::make_shared<Worm>(300, 400);
+    addUnit(worm);
 	mapView->schedule([=](float dt) {
 	  this->update(dt);
 	}, 0.0f, "update");
+
+
+	const auto listener = cocos2d::EventListenerKeyboard::create();
+    listener->onKeyPressed = [&](EventKeyboard::KeyCode keyCode, Event* event) {
+        CCLOG("Key pressed");
+        if (worm->isStable) {
+            switch (keyCode) {
+                case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+                case EventKeyboard::KeyCode::KEY_A:
+                    worm->vy = 20;
+                    worm->vx = -10;
+                    break;
+                case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+                case EventKeyboard::KeyCode::KEY_D:
+                    worm->vy = 20;
+                    worm->vx = 10;
+                    break;
+            }
+        }
+    };
+    listener->onKeyReleased = [&](EventKeyboard::KeyCode keyCode, Event* event) {
+        worm->ay = 0;
+        worm->ax = 0;
+    };
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, worm->view);
+
 }
