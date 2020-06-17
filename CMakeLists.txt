@@ -120,7 +120,7 @@ endif()
 set(all_code_files
     ${GAME_HEADER}
     ${GAME_SOURCE}
-        Classes/GameNetwork.cpp Classes/GameNetwork.h Classes/Game.cpp Classes/Game.h Classes/Configs/GameConfig.h Classes/Helper.h Classes/Units/UnitView.cpp Classes/Units/UnitView.h Classes/Units/UnitLogic.cpp Classes/Units/UnitLogic.h Classes/Map/MapView.cpp Classes/Map/MapView.h Classes/Types/Vector.h Classes/Map/MapLogic.cpp Classes/Map/MapLogic.h Classes/PhysicsShapeCache.h Classes/PhysicsShapeCache.cpp Classes/Types/HP.h Classes/Types/MP.h Classes/Observable.h Classes/Packet.h Observable.cpp)
+        Classes/GameNetwork.cpp Classes/GameNetwork.h Classes/Game.cpp Classes/Game.h Classes/Configs/GameConfig.h Classes/Helper.h Classes/Units/UnitView.cpp Classes/Units/UnitView.h Classes/Units/UnitPhysic.cpp Classes/Units/UnitPhysic.h Classes/Map/MapView.cpp Classes/Map/MapView.h Classes/Types/Vector.h Classes/Map/MapLogic.cpp Classes/Map/MapLogic.h Classes/PhysicsShapeCache.h Classes/PhysicsShapeCache.cpp Classes/Types/HP.h Classes/Types/MP.h Classes/Observable.h Classes/Packet.h Observable.cpp)
 if(NOT ANDROID)
     add_executable(${APP_NAME} ${all_code_files})
 else()

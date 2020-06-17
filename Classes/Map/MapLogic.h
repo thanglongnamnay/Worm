@@ -7,7 +7,7 @@
 
 #include <Types/Vector.h>
 #include <vector>
-#include <Units/UnitLogic.h>
+#include <Units/UnitPhysic.h>
 #include "MapView.h"
 
 class MapLogic {
