@@ -8,6 +8,7 @@
 #include <cocos2d.h>
 
 #include <utility>
+#include <Types/Angle.h>
 
 USING_NS_CC;
 
@@ -85,9 +86,9 @@ public:
 
         return true;
     }
-    void indicate(double angle) {
+    void indicate(Angle angle) {
         indicator->clear();
-        indicator->drawLine(Vec2::ZERO, (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, angle * 3.14 / 180 ), Color4F(1, 1, 1, 1));
+        indicator->drawLine(Vec2::ZERO, (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, static_cast<double>(angle) * 3.14 / 180 ), Color4F(1, 1, 1, 1));
     }
     static WormView* create() {
         auto p = new (std::nothrow) WormView();

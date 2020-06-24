@@ -9,6 +9,7 @@
 #include <vector>
 #include <GameEvent.h>
 #include <Units/UnitPhysic.h>
+#include <Packet.h>
 #include "MapView.h"
 
 constexpr const double epsilon = 0.001;
@@ -16,6 +17,7 @@ constexpr const double epsilon = 0.001;
 class MapLogic : game::EventListener {
 private:
     void handleEvent(int eventName, const Object &data) override;
+    void handleNetworkCmd(CMD cmd);
 
     type::Vector<int> mapSize;
     std::vector<std::vector<unsigned char>> map;

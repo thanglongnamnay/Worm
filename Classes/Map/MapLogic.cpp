@@ -5,6 +5,7 @@
 #include "MapLogic.h"
 
 #include <utility>
+#include <GameNetwork.h>
 
 std::vector<double> MapLogic::PerlinNoise1D(std::vector<double> fSeed, int nOctaves, double fBias) {
 	auto nCount = fSeed.size();
@@ -56,6 +57,16 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
                     worm->vy = 20;
                     worm->vx = 10;
                     break;
+                case EventKeyboard::KeyCode::KEY_UP_ARROW:
+                case EventKeyboard::KeyCode::KEY_W:
+                    worm->angle += 1;
+                    worm->refreshIndicate();
+                    break;
+                case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+                case EventKeyboard::KeyCode::KEY_S:
+                    worm->angle -= 1;
+                    worm->refreshIndicate();
+                    break;
                 case EventKeyboard::KeyCode::KEY_SPACE:
                     addUnit(worm->make_bullet());
                     break;
@@ -69,7 +80,6 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
         worm->ax = 0;
     };
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, worm->view);
-
 }
 
 void MapLogic::handleEvent(int eventName, const Object &data) {
@@ -77,6 +87,19 @@ void MapLogic::handleEvent(int eventName, const Object &data) {
         auto unit = std::any_cast<UnitPhysic*>(data.at("unit"));
         auto respond = std::any_cast<int>(data.at("respond"));
         explode(unit->px, unit->py, respond);
+        return;
+    }
+    if (eventName == GameNetwork::EVENT_RECEIVE_PACKET) {
+        auto cmd = std::any_cast<CmdCode>(data.at("cmd"));
+        auto params = std::any_cast<std::vector<int>>(data.at("params"));
+        handleNetworkCmd(static_cast<CMD>(static_cast<int>(cmd))); //ugly as fuck i know
+        return;
+    }
+}
+
+void MapLogic::handleNetworkCmd(CMD cmd) {
+    switch (cmd) {
+        // TODO: implement this shit
     }
 }
 

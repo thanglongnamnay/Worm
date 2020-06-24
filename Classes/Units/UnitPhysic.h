@@ -6,6 +6,7 @@
 #define WORM_UNITPHYSIC_H
 
 #include <GameEvent.h>
+#include <Types/Angle.h>
 #include "UnitView.h"
 
 const int EVENT_EXPLODE = game::EventManager::nextId();
@@ -86,8 +87,8 @@ public:
         }
 
         // Calculate magnitudes of response and velocity vectors
-        double magVelocity = sqrtf(vx * vx + vy * vy);
-        double magResponse = sqrtf(responseX * responseX + responseY * responseY);
+        double magVelocity = sqrt(vx * vx + vy * vy);
+        double magResponse = sqrt(responseX * responseX + responseY * responseY);
 
         // Collision occurred
         if (collision) {
@@ -119,7 +120,6 @@ public:
                                 {"respond", response},
                         };
                         game::EventManager::emit(EVENT_EXPLODE, data);
-                        CCLOG("Emited %d", std::any_cast<UnitPhysic*>(data.at("unit"))->isDead);
                     }
                 }
             }
@@ -130,10 +130,7 @@ public:
             py = potentialY;
         }
 
-        // Turn off movement when tiny
-//			CCLOG("POTENTIAL: %f, %f", potentialX, potentialY);
-//			CCLOG("POS: %f, %f", px, py);
-        if (magVelocity < 0.1) { isStable = true; }
+        if (magVelocity < epsilon) { isStable = true; }
         draw();
     }
 
@@ -146,12 +143,13 @@ public:
 
 class Missile : public UnitPhysic {
 public:
-    explicit Missile(float x = 0, float y = 0, float _vx = 0, float _vy = 0)
+    explicit Missile(double x, double y, const Angle& angle, double strength = 100)
             : UnitPhysic(x, y) {
         radius = 2;
         friction = 0.5;
-        vx = _vx;
-        vy = _vy;
+
+        vx = strength * cos(static_cast<double>(angle));
+        vy = strength * sin(static_cast<double>(angle));
         bounceBeforeDeath = 1;
         view = MissileView::create();
     }
@@ -180,9 +178,9 @@ public:
 };
 
 class Worm : public UnitPhysic {
-    double angle;
 public:
-    explicit Worm(float x = 0, float y = 0)
+    Angle angle;
+    explicit Worm(double x = 0, double y = 0)
             : UnitPhysic(x, y), angle(0) {
         radius = 5;
         friction = 0.2;
@@ -195,12 +193,11 @@ public:
     }
 
     std::shared_ptr<Missile> make_bullet() {
-        return std::make_shared<Missile>(px, py, 20, 20);
+        return std::make_shared<Missile>(px, py, angle);
     }
 
-    void draw() override {
-        UnitPhysic::draw();
-        ((WormView *) view)->indicate(45);
+    void refreshIndicate() {
+        ((WormView *) view)->indicate(angle);
     }
 };
 
