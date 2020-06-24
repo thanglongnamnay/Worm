@@ -14,13 +14,53 @@ USING_NS_CC;
 class UnitView : public Node {
 };
 
-class WormView : public UnitView {
-    DrawNode *indicator;
-    Sprite *view;
+class DebrisView : public UnitView {
+    DrawNode *view{};
 public:
-    bool init(const std::string& name) {
+    bool init() override {
+        Node::init();
+        view = DrawNode::create();
+        view->drawDot(Vec2::ZERO, 4, Color4F::RED);
+        addChild(view);
+        return true;
+    }
+    static DebrisView* create() {
+        auto p = new (std::nothrow) DebrisView();
+        if (p && p->init()) {
+            p->autorelease();
+            return p;
+        }
+        return nullptr;
+    }
+};
+
+class MissileView : public UnitView {
+    DrawNode *view{};
+public:
+    bool init() override {
+        Node::init();
+        view = DrawNode::create();
+        view->drawDot(Vec2::ZERO, 5, Color4F::BLUE);
+        addChild(view);
+        return true;
+    }
+    static MissileView* create() {
+        auto p = new (std::nothrow) MissileView();
+        if (p && p->init()) {
+            p->autorelease();
+            return p;
+        }
+        return nullptr;
+    }
+};
+
+class WormView : public UnitView {
+    DrawNode *indicator{};
+    Sprite *view{};
+public:
+    bool init() override {
         if (!Node::init()) return false;
-        view = Sprite::createWithSpriteFrameName(name);
+        view = Sprite::createWithSpriteFrameName("tile000.png");
         addChild(view);
         indicator = DrawNode::create();
         addChild(indicator);
@@ -47,11 +87,11 @@ public:
     }
     void indicate(double angle) {
         indicator->clear();
-        indicator->drawLine(Vec2::ZERO, (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, angle), Color4F(1, 1, 1, 1));
+        indicator->drawLine(Vec2::ZERO, (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, angle * 3.14 / 180 ), Color4F(1, 1, 1, 1));
     }
-    static UnitView* create(const std::string& name) {
+    static WormView* create() {
         auto p = new (std::nothrow) WormView();
-        if (p && p->init(name)) {
+        if (p && p->init()) {
             p->autorelease();
             return p;
         }

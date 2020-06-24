@@ -30,7 +30,7 @@ std::vector<double> MapLogic::PerlinNoise1D(std::vector<double> fSeed, int nOcta
 }
 
 MapLogic::MapLogic(type::Vector<int> mapSize)
-		:mapSize(mapSize) {
+		: mapSize(mapSize), game::EventListener() {
 	map = createMap(mapSize);
 	mapView = MapView::create(map);
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Worm/texture.plist", "Worm/texture.png");
@@ -56,6 +56,11 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
                     worm->vy = 20;
                     worm->vx = 10;
                     break;
+                case EventKeyboard::KeyCode::KEY_SPACE:
+                    addUnit(worm->make_bullet());
+                    break;
+                default:
+                    break;
             }
         }
     };
@@ -66,3 +71,12 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, worm->view);
 
 }
+
+void MapLogic::handleEvent(int eventName, const Object &data) {
+    if (eventName == EVENT_EXPLODE) {
+        auto unit = std::any_cast<UnitLogic*>(data.at("unit"));
+        auto respond = std::any_cast<int>(data.at("respond"));
+        explode(unit->px, unit->py, respond);
+    }
+}
+
