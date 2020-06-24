@@ -74,7 +74,7 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
 
 void MapLogic::handleEvent(int eventName, const Object &data) {
     if (eventName == EVENT_EXPLODE) {
-        auto unit = std::any_cast<UnitLogic*>(data.at("unit"));
+        auto unit = std::any_cast<UnitPhysic*>(data.at("unit"));
         auto respond = std::any_cast<int>(data.at("respond"));
         explode(unit->px, unit->py, respond);
     }
