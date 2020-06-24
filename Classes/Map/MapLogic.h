@@ -19,7 +19,7 @@ private:
 
     type::Vector<int> mapSize;
     std::vector<std::vector<unsigned char>> map;
-    std::list<std::shared_ptr<UnitLogic>> unitList;
+    std::list<std::shared_ptr<UnitPhysic>> unitList;
     std::shared_ptr<Worm> worm;
 public:
     MapView *mapView;
@@ -30,10 +30,10 @@ public:
             : mapSize(rhs.mapSize), map(std::move(rhs.map)), mapView(rhs.mapView) {
     }
 
-    void addUnit(const std::shared_ptr<UnitLogic> &unitLogic) {
-        unitLogic->draw();
-        mapView->addChild(unitLogic->view);
-        unitList.push_back(unitLogic);
+    void addUnit(const std::shared_ptr<UnitPhysic> &UnitPhysic) {
+        UnitPhysic->draw();
+        mapView->addChild(UnitPhysic->view);
+        unitList.push_back(UnitPhysic);
     }
 
     void update(double dt) {
@@ -44,7 +44,7 @@ public:
 
         // Remove dead objects from the list, so they are not processed further. As the object
         // is a unique pointer, it will go out of scope too, deleting the object automatically. Nice :-)
-        unitList.remove_if([](const std::shared_ptr<UnitLogic>& o) { return o->isDead; });
+        unitList.remove_if([](const std::shared_ptr<UnitPhysic>& o) { return o->isDead; });
     }
 
 private:
