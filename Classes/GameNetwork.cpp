@@ -49,7 +49,6 @@ void GameNetwork::onMessage(network::WebSocket *ws, const network::WebSocket::Da
 
     const Packet packet(data);
     game::EventManager::emit(GameNetwork::EVENT_RECEIVE_PACKET, static_cast<Object>(packet));
-    notify(packet);
 }
 
 void GameNetwork::onClose(network::WebSocket *ws) {

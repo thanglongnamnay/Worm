@@ -37,6 +37,14 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Worm/texture.plist", "Worm/texture.png");
     worm = std::make_shared<Worm>(300, 400);
     addUnit(worm);
+
+    for (int i = 0; i < 4; ++i) {
+        players.emplace_back(0, "p" + to_string(i));
+    }
+    for (const auto& player : players) {
+        CCLOG("ADD UNIT");
+        addUnit(player.worm);
+    }
 	mapView->schedule([=](float dt) {
 	  this->update(dt);
 	}, 0.0f, "update");
@@ -59,16 +67,16 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
                     break;
                 case EventKeyboard::KeyCode::KEY_UP_ARROW:
                 case EventKeyboard::KeyCode::KEY_W:
-                    worm->angle += 1;
+                    worm->angle += 10;
                     worm->refreshIndicate();
                     break;
                 case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
                 case EventKeyboard::KeyCode::KEY_S:
-                    worm->angle -= 1;
+                    worm->angle -= 10;
                     worm->refreshIndicate();
                     break;
                 case EventKeyboard::KeyCode::KEY_SPACE:
-                    addUnit(worm->make_bullet());
+                    addUnit(worm->makeBullet());
                     break;
                 default:
                     break;

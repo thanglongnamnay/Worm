@@ -10,7 +10,6 @@
 #include <utility>
 #include "network/WebSocket.h"
 #include "cocos2d.h"
-#include "Observable.h"
 #include "Packet.h"
 
 USING_NS_CC;
@@ -19,7 +18,7 @@ using namespace cocos2d::network;
 
 typedef std::function<void(std::vector<int>)> NetworkCallback;
 
-class GameNetwork : public WebSocket::Delegate, public Observable {
+class GameNetwork : public WebSocket::Delegate {
 private:
     unique_ptr<WebSocket> socket;
     string url;

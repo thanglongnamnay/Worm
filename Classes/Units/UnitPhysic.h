@@ -148,8 +148,8 @@ public:
         radius = 2;
         friction = 0.5;
 
-        vx = strength * cos(static_cast<double>(angle));
-        vy = strength * sin(static_cast<double>(angle));
+        vx = strength * cos(static_cast<double>(angle) * 3.14 / 180);
+        vy = strength * sin(static_cast<double>(angle) * 3.14 / 180);
         bounceBeforeDeath = 1;
         view = MissileView::create();
     }
@@ -192,7 +192,7 @@ public:
         return 0;
     }
 
-    std::shared_ptr<Missile> make_bullet() {
+    std::shared_ptr<Missile> makeBullet() {
         return std::make_shared<Missile>(px, py, angle);
     }
 

@@ -31,11 +31,9 @@
 
 using namespace std;
 
-class HelloWorld : public cocos2d::Scene, public IObserver {
+class HelloWorld : public cocos2d::Scene {
 public:
-    explicit HelloWorld(Observable& subject);
-
-    void onMessage(const Packet& packet) override;
+    explicit HelloWorld() {};
 
     bool init() override;
 
@@ -43,8 +41,8 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
 
     // implement the "static create()" method manually
-    static HelloWorld* create(Observable& subject) {
-      auto pRet = new(std::nothrow) HelloWorld(subject);
+    static HelloWorld* create() {
+      auto pRet = new(std::nothrow) HelloWorld();
       if (pRet && pRet->init()) {
         pRet->autorelease();
         return pRet;

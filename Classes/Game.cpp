@@ -15,7 +15,7 @@ Game::Game(GameConfig gameConfig)
         :gameConfig(gameConfig),
          gameNetwork(Helper::getSocketAddr(gameConfig.serverAddr,
                  gameConfig.serverPort).c_str()) {
-    auto scene = HelloWorld::create(gameNetwork);
+    auto scene = HelloWorld::create();
     cocos2d::Director::getInstance()->runWithScene(scene);
 
     auto layer = LayerColor::create({40, 40, 40, 255});

@@ -10,7 +10,9 @@
 #include <GameEvent.h>
 #include <Units/UnitPhysic.h>
 #include <Packet.h>
+#include <GameNetwork.h>
 #include "MapView.h"
+#include "Player.h"
 
 constexpr const double epsilon = 0.001;
 
@@ -22,6 +24,7 @@ private:
     type::Vector<int> mapSize;
     std::vector<std::vector<unsigned char>> map;
     std::list<std::shared_ptr<UnitPhysic>> unitList;
+    std::vector<Player> players;
     std::shared_ptr<Worm> worm;
 public:
     MapView *mapView;
@@ -47,6 +50,10 @@ public:
         // Remove dead objects from the list, so they are not processed further. As the object
         // is a unique pointer, it will go out of scope too, deleting the object automatically. Nice :-)
         unitList.remove_if([](const std::shared_ptr<UnitPhysic>& o) { return o->isDead; });
+    }
+
+    void nextTurn(int id) {
+
     }
 
 private:

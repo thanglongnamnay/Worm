@@ -57,10 +57,3 @@ void HelloWorld::menuCloseCallback(Ref* pSender) {
 
 
 }
-
-void HelloWorld::onMessage(const Packet& packet) {
-
-}
-
-HelloWorld::HelloWorld(Observable& subject)
-    :IObserver(subject) { }

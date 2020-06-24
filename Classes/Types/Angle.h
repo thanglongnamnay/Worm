@@ -7,53 +7,28 @@
 
 class Angle {
     double internal;
+    void check(double angle) {
+        if (angle > 180) internal = 180;
+        else if (angle < 0) internal = 0;
+        else internal = angle;
+    }
 public:
     Angle(double angle) {
-        if (angle > 180) internal = 180;
-        if (angle < -180) internal = -180;
-        internal = angle;
+        check(angle);
     }
 
     explicit operator double() const {
         return internal;
     }
 
-    Angle& operator+=(const Angle &rhs) {
-        internal += rhs.internal;
+    Angle& operator+=(double t) {
+        check(internal + t);
         return *this;
     }
 
-    Angle& operator-=(const Angle &rhs) {
-        internal -= rhs.internal;
+    Angle& operator-=(double t) {
+        check(internal - t);
         return *this;
-    }
-
-    Angle operator+(const Angle &rhs) const {
-        return Angle(internal + rhs.internal);
-    }
-
-    bool operator==(const Angle &rhs) const {
-        return internal == rhs.internal;
-    }
-
-    bool operator<(const Angle &rhs) const {
-        return internal < rhs.internal;
-    }
-
-    bool operator>(const Angle &rhs) const {
-        return rhs < *this;
-    }
-
-    bool operator<=(const Angle &rhs) const {
-        return !(rhs < *this);
-    }
-
-    bool operator>=(const Angle &rhs) const {
-        return !(*this < rhs);
-    }
-
-    bool operator!=(const Angle &rhs) const {
-        return !(rhs == *this);
     }
 };
 

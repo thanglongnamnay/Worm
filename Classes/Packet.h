@@ -9,7 +9,7 @@
 #include "network/WebSocket.h"
 #include "cocos2d.h"
 #include "GameEvent.h"
-#include "GameNetwork.h"
+#include <type_safe/strong_typedef.hpp>
 
 namespace ts = type_safe;
 
