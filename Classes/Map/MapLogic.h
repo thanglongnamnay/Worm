@@ -7,8 +7,8 @@
 
 #include <Types/Vector.h>
 #include <vector>
-#include <Units/UnitLogic.h>
 #include <GameEvent.h>
+#include <Units/UnitPhysic.h>
 #include "MapView.h"
 
 constexpr const double epsilon = 0.001;
