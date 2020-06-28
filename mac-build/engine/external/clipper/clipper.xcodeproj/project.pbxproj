@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EC90594E1FA547C6AC353B8F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E3BCE088F9A44A52A982B29D /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B45700581C594718A6CC0ACB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5603D34F55A34E2C86EDC74F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				5780D650930D4B068483759B /* CMake Rules */,
+			);
+			dependencies = (
+				64EB8CF6C176430C8081421E /* PBXTargetDependency */,
+				26029BEEFABB4E839A399622 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7BDA47BFB2114B1691C20E70 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A327374E8836400EBE96D14F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */; };
+		EF7201FB5736454EA47A39D0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */ = {isa = PBXBuildFile; fileRef = C7CE8D7DAE8B45B5BA9BDE97 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		1B817DA018A048579F1CFFF4 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		22FB1614389D464390B06BCB /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		DB97C1FCA3874BCA88566F8E /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		E6A7685DBAF14E258BB7B442 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3626BEAD99A14BDC9E4D9DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E71F73162A45848C3E3674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+		5EF3D43B64D440E19BE3DB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E71F73162A45848C3E3674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D149A086FFA4BBDAF6ED52D;
+			remoteInfo = ext_clipper;
+		};
+		EA68F57338414A1FA961A500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E71F73162A45848C3E3674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BD8149E3F4D4F2190BCDDEE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		66C379F1FAE94096BF2C2670 /* ext_clipper */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_clipper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A327374E8836400EBE96D14F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C7CE8D7DAE8B45B5BA9BDE97 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clipper.cpp; path = clipper.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2A306DC58F5D436B876D88A0 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7CE8D7DAE8B45B5BA9BDE97 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		60C9C39539DF4849812D83DD = {
+			isa = PBXGroup;
+			children = (
+				6B1B2155AA7F4F95BF985F16 /* External */,
+				E30580FC64824412A3948E74 /* ALL_BUILD */,
+				B6ADCD038EAC48658C61AC71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B1B2155AA7F4F95BF985F16 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8327A784B5D0466E9804CF9D /* ext_clipper */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		8327A784B5D0466E9804CF9D /* ext_clipper */ = {
+			isa = PBXGroup;
+			children = (
+				2A306DC58F5D436B876D88A0 /* Source Files */,
+				A327374E8836400EBE96D14F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */,
+			);
+			name = ext_clipper;
+			sourceTree = "<group>";
+		};
+		B6ADCD038EAC48658C61AC71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66C379F1FAE94096BF2C2670 /* ext_clipper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E30580FC64824412A3948E74 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C5E2A5B324792BBA3D25B /* CMake Rules */,
+				3BD8149E3F4D4F2190BCDDEE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		EE5C5E2A5B324792BBA3D25B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D149A086FFA4BBDAF6ED52D /* ext_clipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A6AC694C6D4990B0A3083E /* Build configuration list for PBXNativeTarget "ext_clipper" */;
+			buildPhases = (
+				C5157CB984B04E94929758CF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA41AE0EA06343ADAF60CD13 /* PBXTargetDependency */,
+			);
+			name = ext_clipper;
+			productName = ext_clipper;
+			productReference = 66C379F1FAE94096BF2C2670 /* ext_clipper */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26E71F73162A45848C3E3674 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1150;
+			};
+			buildConfigurationList = 0814A9AE248E4CF7933C5EDF /* Build configuration list for PBXProject "clipper" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				22FB1614389D464390B06BCB /* Debug */,
+				1B817DA018A048579F1CFFF4 /* Release */,
+				E6A7685DBAF14E258BB7B442 /* MinSizeRel */,
+				DB97C1FCA3874BCA88566F8E /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 60C9C39539DF4849812D83DD;
+			projectDirPath = ../../../../cocos2d/external/clipper;
+			projectRoot = "";
+			targets = (
+				B45700581C594718A6CC0ACB /* ALL_BUILD */,
+				5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */,
+				6D149A086FFA4BBDAF6ED52D /* ext_clipper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FBEF88D43BE4FEAB7511BD2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5780D650930D4B068483759B /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		B1E11A630CFA4102AD64361E = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E3BCE088F9A44A52A982B29D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5157CB984B04E94929758CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7201FB5736454EA47A39D0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26029BEEFABB4E839A399622 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 3626BEAD99A14BDC9E4D9DE4 /* PBXContainerItemProxy */;
+		};
+		64EB8CF6C176430C8081421E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D149A086FFA4BBDAF6ED52D /* ext_clipper */;
+			targetProxy = 5EF3D43B64D440E19BE3DB58 /* PBXContainerItemProxy */;
+		};
+		DA41AE0EA06343ADAF60CD13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = EA68F57338414A1FA961A500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		081DA1E7F8EE440789ECAD9C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/build";
+			};
+			name = RelWithDebInfo;
+		};
+		0E4C98C9848646C9A00E1270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		412804FC7C4145A682EE1419 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/build";
+			};
+			name = MinSizeRel;
+		};
+		417F5C81D0094C98AA2F1083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/build";
+			};
+			name = Debug;
+		};
+		453C53CA510245849911CEE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5AF0E0FB689348118C64A1B6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6813DD8735F545E6964FE3AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6B2294E234CD4A0A9B92EA78 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6F6E3B959C364930B23EB086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7F885936855B483B8D63A1F0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		89FF57C28AD6442098F43EEA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		90061EC06834433ABA82819F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		95FEE512E811462D8A3738E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A47D33CC68F34E99B82F8016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C1FB78128F274A9D8D94DD91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper/build";
+			};
+			name = Release;
+		};
+		C332D8A3C69A46ADA3D95B19 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0814A9AE248E4CF7933C5EDF /* Build configuration list for PBXProject "clipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417F5C81D0094C98AA2F1083 /* Debug */,
+				C1FB78128F274A9D8D94DD91 /* Release */,
+				412804FC7C4145A682EE1419 /* MinSizeRel */,
+				081DA1E7F8EE440789ECAD9C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5603D34F55A34E2C86EDC74F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47D33CC68F34E99B82F8016 /* Debug */,
+				0E4C98C9848646C9A00E1270 /* Release */,
+				6B2294E234CD4A0A9B92EA78 /* MinSizeRel */,
+				C332D8A3C69A46ADA3D95B19 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E3A6AC694C6D4990B0A3083E /* Build configuration list for PBXNativeTarget "ext_clipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453C53CA510245849911CEE3 /* Debug */,
+				6F6E3B959C364930B23EB086 /* Release */,
+				7F885936855B483B8D63A1F0 /* MinSizeRel */,
+				90061EC06834433ABA82819F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EC90594E1FA547C6AC353B8F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95FEE512E811462D8A3738E4 /* Debug */,
+				6813DD8735F545E6964FE3AC /* Release */,
+				89FF57C28AD6442098F43EEA /* MinSizeRel */,
+				5AF0E0FB689348118C64A1B6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26E71F73162A45848C3E3674 /* Project object */;
+}

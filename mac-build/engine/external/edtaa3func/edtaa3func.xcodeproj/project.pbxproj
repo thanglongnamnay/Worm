@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E4EEBB6A9E064B1F87572346 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				683A8983D8F94F5E8C8E80BF /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B45700581C594718A6CC0ACB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9D6B9048259E454DAC91A607 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				BF3976F0014E4FBB932363B7 /* CMake Rules */,
+			);
+			dependencies = (
+				C0EC0F8A7C474777BD6859F7 /* PBXTargetDependency */,
+				3B2ED64DB8F5443397CF7487 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		C2B199956C5C41ACB7A3DA1E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXBuildFile; fileRef = 943060436B864441BA460DFD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */; };
+		DC651CBE1AB84B7E9191C98F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 800F33337C8F48F798044C2A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		29DBBDE793774359AFE152E2 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		3D80566893F94B4987C7735E /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		535D6B70CBEA4A74BA227E3B /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		E03FC92AFE6B42B8BBA63172 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		262BE3BA488A49478B4785AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1362400098B448EA9D5B5CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+		9DBF868B9AEF473B8A85281B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1362400098B448EA9D5B5CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 483CE6E8015B48228E5B4B8A;
+			remoteInfo = ext_edtaa3func;
+		};
+		C0ED40D8633D41FBBF255993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1362400098B448EA9D5B5CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05EC8675A02D4AE5A0ADE3D6 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		800F33337C8F48F798044C2A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		943060436B864441BA460DFD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = edtaa3func.cpp; path = edtaa3func.cpp; sourceTree = SOURCE_ROOT; };
+		BAE30A36DF8A43D1BF72B546 /* ext_edtaa3func */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_edtaa3func.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		16905D2AEFCF4201A3FDA504 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C5124ACF023A4F4AAD95E406 /* CMake Rules */,
+				05EC8675A02D4AE5A0ADE3D6 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		2335764CF4D64DB19FFB8898 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				D256FAF1B51A482C8302CAAF /* ext_edtaa3func */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		A256F35770B3439B98DE4B63 = {
+			isa = PBXGroup;
+			children = (
+				2335764CF4D64DB19FFB8898 /* External */,
+				16905D2AEFCF4201A3FDA504 /* ALL_BUILD */,
+				E4B79FB411F54D0FA48BBDDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5124ACF023A4F4AAD95E406 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		C9756681B8C8456D9F862F93 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				943060436B864441BA460DFD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D256FAF1B51A482C8302CAAF /* ext_edtaa3func */ = {
+			isa = PBXGroup;
+			children = (
+				C9756681B8C8456D9F862F93 /* Source Files */,
+				800F33337C8F48F798044C2A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */,
+			);
+			name = ext_edtaa3func;
+			sourceTree = "<group>";
+		};
+		E4B79FB411F54D0FA48BBDDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE30A36DF8A43D1BF72B546 /* ext_edtaa3func */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		483CE6E8015B48228E5B4B8A /* ext_edtaa3func */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E64C458301A495B9825BDCA /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */;
+			buildPhases = (
+				D76EAD1208B944A696FB8DD4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8BBE705B1A7467986BE227F /* PBXTargetDependency */,
+			);
+			name = ext_edtaa3func;
+			productName = ext_edtaa3func;
+			productReference = BAE30A36DF8A43D1BF72B546 /* ext_edtaa3func */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1362400098B448EA9D5B5CF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1150;
+			};
+			buildConfigurationList = FAEAEF17E77D4E69B6566EA8 /* Build configuration list for PBXProject "edtaa3func" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				29DBBDE793774359AFE152E2 /* Debug */,
+				E03FC92AFE6B42B8BBA63172 /* Release */,
+				3D80566893F94B4987C7735E /* MinSizeRel */,
+				535D6B70CBEA4A74BA227E3B /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = A256F35770B3439B98DE4B63;
+			projectDirPath = ../../../../cocos2d/external/edtaa3func;
+			projectRoot = "";
+			targets = (
+				B45700581C594718A6CC0ACB /* ALL_BUILD */,
+				5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */,
+				483CE6E8015B48228E5B4B8A /* ext_edtaa3func */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		683A8983D8F94F5E8C8E80BF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		8BE91B388BC64410A6E86E87 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BF3976F0014E4FBB932363B7 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		F6DF9D68849345ABA55AA6F5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D76EAD1208B944A696FB8DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B199956C5C41ACB7A3DA1E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B2ED64DB8F5443397CF7487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = C0ED40D8633D41FBBF255993 /* PBXContainerItemProxy */;
+		};
+		C0EC0F8A7C474777BD6859F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 483CE6E8015B48228E5B4B8A /* ext_edtaa3func */;
+			targetProxy = 9DBF868B9AEF473B8A85281B /* PBXContainerItemProxy */;
+		};
+		E8BBE705B1A7467986BE227F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 262BE3BA488A49478B4785AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25C6532F3B9C4BFC8AFE9998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/build";
+			};
+			name = Debug;
+		};
+		2EB93D72E2434318A267515E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		4C403A7535C041AB8A941DEF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4F6C0A8023414D61876F10F0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5097E10CC1674B67863AA549 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		71E9EAA0A3684C4090213919 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/build";
+			};
+			name = RelWithDebInfo;
+		};
+		9FD28175196747129D37E732 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BB0505D353F24A46A3C6CA1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BE313E4D20FA454F95F2BBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C75C6ED69444426484DEC2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/build";
+			};
+			name = Release;
+		};
+		CF7015A0089C41D2B0C96208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DD94E1ABC7944C8484DAB059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DFEF2474C816476A8C33431E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		ECAFB2B2547D466386E7B2D6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F850C9BCF4674261BD6AC7D1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FD0332A509B743BC95DABA7F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func/build";
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E64C458301A495B9825BDCA /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE313E4D20FA454F95F2BBF3 /* Debug */,
+				CF7015A0089C41D2B0C96208 /* Release */,
+				5097E10CC1674B67863AA549 /* MinSizeRel */,
+				9FD28175196747129D37E732 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9D6B9048259E454DAC91A607 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFEF2474C816476A8C33431E /* Debug */,
+				DD94E1ABC7944C8484DAB059 /* Release */,
+				4F6C0A8023414D61876F10F0 /* MinSizeRel */,
+				4C403A7535C041AB8A941DEF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E4EEBB6A9E064B1F87572346 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB0505D353F24A46A3C6CA1E /* Debug */,
+				2EB93D72E2434318A267515E /* Release */,
+				ECAFB2B2547D466386E7B2D6 /* MinSizeRel */,
+				F850C9BCF4674261BD6AC7D1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FAEAEF17E77D4E69B6566EA8 /* Build configuration list for PBXProject "edtaa3func" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25C6532F3B9C4BFC8AFE9998 /* Debug */,
+				C75C6ED69444426484DEC2AD /* Release */,
+				FD0332A509B743BC95DABA7F /* MinSizeRel */,
+				71E9EAA0A3684C4090213919 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1362400098B448EA9D5B5CF1 /* Project object */;
+}

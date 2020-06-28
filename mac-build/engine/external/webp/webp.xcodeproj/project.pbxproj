@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 80AA9B7D33C2403590332325 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				020AB5CB7736424BB115539F /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B45700581C594718A6CC0ACB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 67AE336DBB1E41DB9AFEBFCF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A68B32D59A774866BE017936 /* CMake Rules */,
+			);
+			dependencies = (
+				9B9ABF4959C044708E5348D1 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildStyle section */
+		1B4B3539E8094EFBA7EBF8C1 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		3824BC500502409F91B6D418 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		C8BD3A85D52844A3B753CBD8 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		C98BAC86E99548F7ABC9E051 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		93DC41B1908F4581A8AF4FE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47FDA6C04ED54F98A3328D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89B5FEFB0F11460BB552ED2D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		29A60F3946634C5CA1DA5756 = {
+			isa = PBXGroup;
+			children = (
+				3FC67D2340034628A2DF3495 /* ALL_BUILD */,
+				DACFD7C81D0A4BE2B9FE00CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC67D2340034628A2DF3495 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C40E52BF3F6C45D8AB11A869 /* CMake Rules */,
+				89B5FEFB0F11460BB552ED2D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C40E52BF3F6C45D8AB11A869 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		DACFD7C81D0A4BE2B9FE00CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		47FDA6C04ED54F98A3328D5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1150;
+			};
+			buildConfigurationList = 7FB46C0406434E7B949365A3 /* Build configuration list for PBXProject "webp" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				C98BAC86E99548F7ABC9E051 /* Debug */,
+				1B4B3539E8094EFBA7EBF8C1 /* Release */,
+				3824BC500502409F91B6D418 /* MinSizeRel */,
+				C8BD3A85D52844A3B753CBD8 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 29A60F3946634C5CA1DA5756;
+			projectDirPath = ../../../../cocos2d/external/webp;
+			projectRoot = "";
+			targets = (
+				B45700581C594718A6CC0ACB /* ALL_BUILD */,
+				5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		020AB5CB7736424BB115539F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		30899C263F7446498093DD56 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6738841AD0784B8191C2ABB0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A68B32D59A774866BE017936 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B9ABF4959C044708E5348D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 93DC41B1908F4581A8AF4FE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		031DC6A5C3CB4C5E98969213 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		08A40B0DF87A4020ABFA75E9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1387B7E3AC864EBBBC01ACB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		1AD0A25667EF4D9580ACB4A6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/build";
+			};
+			name = RelWithDebInfo;
+		};
+		2548E687AB2646378C2B6B39 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3C2C9D9C680E4D9589FFAE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		41273113486E4A908F557E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/build";
+			};
+			name = Debug;
+		};
+		5E7FDACEF3E44299910873D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6C9BA811C23D4B79820BBA78 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7BCD8E12F034421D996D5D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DECC7193B2B849E8952B7722 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/build";
+			};
+			name = MinSizeRel;
+		};
+		F261B61EC9764DDF98D406B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/webp/build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67AE336DBB1E41DB9AFEBFCF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7FDACEF3E44299910873D1 /* Debug */,
+				1387B7E3AC864EBBBC01ACB6 /* Release */,
+				6C9BA811C23D4B79820BBA78 /* MinSizeRel */,
+				031DC6A5C3CB4C5E98969213 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FB46C0406434E7B949365A3 /* Build configuration list for PBXProject "webp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41273113486E4A908F557E47 /* Debug */,
+				F261B61EC9764DDF98D406B5 /* Release */,
+				DECC7193B2B849E8952B7722 /* MinSizeRel */,
+				1AD0A25667EF4D9580ACB4A6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		80AA9B7D33C2403590332325 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2C9D9C680E4D9589FFAE41 /* Debug */,
+				7BCD8E12F034421D996D5D8E /* Release */,
+				2548E687AB2646378C2B6B39 /* MinSizeRel */,
+				08A40B0DF87A4020ABFA75E9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47FDA6C04ED54F98A3328D5A /* Project object */;
+}

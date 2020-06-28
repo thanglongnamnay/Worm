@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8FE78F18553F4465BFB8E1FA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				D194BC0138C24726A9D5E5B8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B45700581C594718A6CC0ACB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8040227F4BFF498B92643B18 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				8DBE8DE5DEC4415597B47F2A /* CMake Rules */,
+			);
+			dependencies = (
+				3671BA28C09249328C6724F7 /* PBXTargetDependency */,
+				3600CCF0D9C84119A0172CB5 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B051766D1527419FB6116867 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */ = {isa = PBXBuildFile; fileRef = 45A686144B1D4E2CA154FDE6 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */; };
+		C4E601E01CDF4E0780ACD806 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C05A5C702112464AB1FF79A7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		6EECF4AC9AB84B3B8F4B88C9 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		94D88778F9A64F09A9B1FAD1 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		AAD8112DB12C4C4589B67CB4 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		F766543692644F7F9B2F995D /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		73D42A9D9CBC4241A153CB88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25214198DDFE4579BFCDF558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+		99FD4265ACC24139B430A993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25214198DDFE4579BFCDF558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F45DAA7AAFF452FA38EB966;
+			remoteInfo = ext_md5;
+		};
+		E4A1D4A3747349CBB6355AC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25214198DDFE4579BFCDF558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		039B1914CDA54C689A0AA7B2 /* ext_md5 */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_md5.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A686144B1D4E2CA154FDE6 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = md5.c; sourceTree = SOURCE_ROOT; };
+		C05A5C702112464AB1FF79A7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E22BBBEC00B149ACB304D710 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0E765EC2D8CE481BAC5E7ABD /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				DF12B01DFAB4432C8CAED4F0 /* CMake Rules */,
+				E22BBBEC00B149ACB304D710 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4182670802C841E9BA4F2810 /* ext_md5 */ = {
+			isa = PBXGroup;
+			children = (
+				9D5170F620974F4CBB825542 /* Source Files */,
+				C05A5C702112464AB1FF79A7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */,
+			);
+			name = ext_md5;
+			sourceTree = "<group>";
+		};
+		9D5170F620974F4CBB825542 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				45A686144B1D4E2CA154FDE6 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A6A8739C689A4C14BDB66826 = {
+			isa = PBXGroup;
+			children = (
+				AD1945E1A82547389998E60C /* External */,
+				0E765EC2D8CE481BAC5E7ABD /* ALL_BUILD */,
+				DDCD7DEEE49C46B58D8ED058 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD1945E1A82547389998E60C /* External */ = {
+			isa = PBXGroup;
+			children = (
+				4182670802C841E9BA4F2810 /* ext_md5 */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		DDCD7DEEE49C46B58D8ED058 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				039B1914CDA54C689A0AA7B2 /* ext_md5 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF12B01DFAB4432C8CAED4F0 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F45DAA7AAFF452FA38EB966 /* ext_md5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D1355B20C24C5E8F1D012F /* Build configuration list for PBXNativeTarget "ext_md5" */;
+			buildPhases = (
+				63F768F6D3FB40AD950629C5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				452E00DBF4BD4840972379A2 /* PBXTargetDependency */,
+			);
+			name = ext_md5;
+			productName = ext_md5;
+			productReference = 039B1914CDA54C689A0AA7B2 /* ext_md5 */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25214198DDFE4579BFCDF558 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1150;
+			};
+			buildConfigurationList = 89D0BC62E4234C62924DA668 /* Build configuration list for PBXProject "md5" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				F766543692644F7F9B2F995D /* Debug */,
+				94D88778F9A64F09A9B1FAD1 /* Release */,
+				6EECF4AC9AB84B3B8F4B88C9 /* MinSizeRel */,
+				AAD8112DB12C4C4589B67CB4 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = A6A8739C689A4C14BDB66826;
+			projectDirPath = ../../../../cocos2d/external/md5;
+			projectRoot = "";
+			targets = (
+				B45700581C594718A6CC0ACB /* ALL_BUILD */,
+				5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */,
+				3F45DAA7AAFF452FA38EB966 /* ext_md5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71DA48C0F1974E168FAE2EBF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8DBE8DE5DEC4415597B47F2A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5 -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		C91464A4346D49CA86421B32 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D194BC0138C24726A9D5E5B8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5 -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63F768F6D3FB40AD950629C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B051766D1527419FB6116867 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3600CCF0D9C84119A0172CB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = E4A1D4A3747349CBB6355AC3 /* PBXContainerItemProxy */;
+		};
+		3671BA28C09249328C6724F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F45DAA7AAFF452FA38EB966 /* ext_md5 */;
+			targetProxy = 99FD4265ACC24139B430A993 /* PBXContainerItemProxy */;
+		};
+		452E00DBF4BD4840972379A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 73D42A9D9CBC4241A153CB88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		056AEE6EFCFF4604AE1FFCAA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2F545E48C3FE40D2BFDD1269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/build";
+			};
+			name = Release;
+		};
+		36C36569D63345A7A5D42720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		697FCE956C754DB789960130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6C916F07938B477F8E434B1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		72BD0FFDEBF04DA6A19AE52B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		741730D9630246D39AAB953E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7BE80A42801945E199B2D6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8BED00C1D8DE4701B8D4CDED /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/build";
+			};
+			name = RelWithDebInfo;
+		};
+		B302415CD0C9451AA33022B7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B6143867DEE4463FB4DD6F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/build";
+			};
+			name = Debug;
+		};
+		BE75CB429DAE43A5B79908C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C00F677614C84E40B4B627CC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5/build";
+			};
+			name = MinSizeRel;
+		};
+		CD3A3A1CB66C4494961DBC5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		D565071520B2474796444D7A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F14AB4B14E3D4261B30B1F5A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D1355B20C24C5E8F1D012F /* Build configuration list for PBXNativeTarget "ext_md5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3A3A1CB66C4494961DBC5B /* Debug */,
+				BE75CB429DAE43A5B79908C0 /* Release */,
+				F14AB4B14E3D4261B30B1F5A /* MinSizeRel */,
+				D565071520B2474796444D7A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8040227F4BFF498B92643B18 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				697FCE956C754DB789960130 /* Debug */,
+				6C916F07938B477F8E434B1B /* Release */,
+				741730D9630246D39AAB953E /* MinSizeRel */,
+				B302415CD0C9451AA33022B7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		89D0BC62E4234C62924DA668 /* Build configuration list for PBXProject "md5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6143867DEE4463FB4DD6F7B /* Debug */,
+				2F545E48C3FE40D2BFDD1269 /* Release */,
+				C00F677614C84E40B4B627CC /* MinSizeRel */,
+				8BED00C1D8DE4701B8D4CDED /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8FE78F18553F4465BFB8E1FA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BE80A42801945E199B2D6F3 /* Debug */,
+				36C36569D63345A7A5D42720 /* Release */,
+				056AEE6EFCFF4604AE1FFCAA /* MinSizeRel */,
+				72BD0FFDEBF04DA6A19AE52B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25214198DDFE4579BFCDF558 /* Project object */;
+}

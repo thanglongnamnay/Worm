@@ -101,8 +101,6 @@ private:
         // Launch debris proportional to blast size
         for (int i = 0; i < (int) radius; i++)
             addUnit(std::make_shared<Debris>(worldX, worldY));
-
-        mapView->refreshMap();
     }
 
     static std::vector<std::vector<unsigned char>> createMap(type::Vector<int> mapSize) {

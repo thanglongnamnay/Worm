@@ -1,0 +1,2645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C70426436E4B4546AA239158 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				DC01B106C0CD4E05AB87A7CF /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B45700581C594718A6CC0ACB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5018E0491E79457DB51D8D37 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				B02CAA72B9EE452582B047EF /* CMake Rules */,
+			);
+			dependencies = (
+				A666A8014C8449ECB146BB3D /* PBXTargetDependency */,
+				7EB92F7F5EB34C7082920EE7 /* PBXTargetDependency */,
+				109DD638F08545B8B8085354 /* PBXTargetDependency */,
+				80939001742744A8B89D87A6 /* PBXTargetDependency */,
+				4946DFF282524AD5B93149E2 /* PBXTargetDependency */,
+				C6CE435BC0CB4D6CB4554F3E /* PBXTargetDependency */,
+				7175429B2BF148F2A5893DAC /* PBXTargetDependency */,
+				F0016F89FCB24E2E851A7BFF /* PBXTargetDependency */,
+				25DB6AA52DB74FAB9CF3CC83 /* PBXTargetDependency */,
+				5A21D4440AC04C8586D28525 /* PBXTargetDependency */,
+				5AA6962BA8584862A69E1B62 /* PBXTargetDependency */,
+				1F04F386408A4FDC8C946E12 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0004E257FEC44B729794D0A4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXBuildFile; fileRef = B29E6BA41C934DBF8DFA0BED /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */; };
+		0347EEA8AC0C411EB786B719 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6E66374FAFC340659AD327E7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */; };
+		083EFBDB094843F290DDA5FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 85C9CBD1D3D34B23B3769D77 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/CMakeLists.txt */; };
+		095EB17063A34069AC7A56CB /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXBuildFile; fileRef = D2903254B75A4368B0FB4F7F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */; };
+		18206E4E74604C22BDB45E42 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTFWrapper.cpp */ = {isa = PBXBuildFile; fileRef = F946B1E4107C4F3EB2B962C2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTFWrapper.cpp */; };
+		1A38DD0BF0CA45DAAE2E24A7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/common/shapes.cc */ = {isa = PBXBuildFile; fileRef = 07DA3CE65D1542AAA0544C4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/common/shapes.cc */; };
+		282A874A99F2454A814253E2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXBuildFile; fileRef = 9A010FFC76BD45FA95D23A8E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourCommon.cpp */; };
+		346C15882C5A4560B0ACE6B4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXBuildFile; fileRef = 7952FDFC5D5F4B1096B345B4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */; };
+		4126943343054719808008FD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */ = {isa = PBXBuildFile; fileRef = D981D97BA42D4183BE2767F0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */; };
+		4A735E6F107D4EAFB9B59821 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep_context.cc */ = {isa = PBXBuildFile; fileRef = D0BE77C040A443E1B302AC87 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep_context.cc */; };
+		4D0272E5A98342AB92B84980 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D4EA6E0BFFF544F8A204754C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/CMakeLists.txt */; };
+		4F9C467A4F4A40BF94390E5C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/empty.cpp */ = {isa = PBXBuildFile; fileRef = 3DC76485275C42CDB75C0561 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/empty.cpp */; };
+		5CAC8F21577D469B8B00E7FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/unzip.cpp */ = {isa = PBXBuildFile; fileRef = 1845159A855042B5BDD4B290 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/unzip.cpp */; };
+		5FE51057E05E4D82A67D674D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXBuildFile; fileRef = 12CA718F1AFD482E97AB71FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */; };
+		60C6191D4B8446F8A183D611 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi_mem.cpp */ = {isa = PBXBuildFile; fileRef = C0DFC696DBCB45C9ADE92BCF /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi_mem.cpp */; };
+		6C10D8191B4D4881A552F091 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXBuildFile; fileRef = A2BBC866482C4E7E8D59FAFA /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */; };
+		7234EDB779504CA9BED2A112 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 023779C70C7A4622A6B02D4D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/CMakeLists.txt */; };
+		735120E3C5A14A019BCBDA6A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXBuildFile; fileRef = 1793AB76BEBA4F77A1636A4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */; };
+		79A3FB7CDAB049E5A5C84494 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXBuildFile; fileRef = 593535A79C8C48BFA27162BC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */; };
+		84A48FFCA06B4806A52F3305 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */ = {isa = PBXBuildFile; fileRef = 45B29A92AC284D6A95918176 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */; };
+		8E5F1065CA574FDC8BB7C129 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/xxhash.c */ = {isa = PBXBuildFile; fileRef = 69D912BB394F47488727DB19 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/xxhash.c */; };
+		8E7948C3ACE04A94B451311F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXBuildFile; fileRef = 7C2930D0B94D45B0AD086F0F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */; };
+		9375CF6DB157434081EBA7C4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXBuildFile; fileRef = 4D16B5A92EE04607B931B5F2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNode.cpp */; };
+		95A1A21957C849B2B5CA2DC2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = 2A03B0B7FBF448F0BC40DD8A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/tinyxml2.cpp */; };
+		9872524A211C46ACABD39D81 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXBuildFile; fileRef = 90F6EF201910474482D54F21 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */; };
+		9E81A4EC27A34D55B8596F80 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 03CC31F8A20A41929D520D61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/CMakeLists.txt */; };
+		A111AFC91A574A179B2337C5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXBuildFile; fileRef = 31B370F991FC4B7AA24D2CC3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/fastlz/fastlz.c */; };
+		A397AD712AD24B97B943A216 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/xxtea.cpp */ = {isa = PBXBuildFile; fileRef = 70194FFA633B4708B844E70E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/xxtea.cpp */; };
+		A44F6E02885A4617A808E572 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CBD121AE02B54B0EBB3ECD61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/CMakeLists.txt */; };
+		A75A2C1FA6D6434496305D5B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9E8769224B7A45FD8374139C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */; };
+		AC6E47B08C644C1682072050 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A589F31CE7564DD4A8B710A3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/CMakeLists.txt */; };
+		B26C31550E0D4F2AB0EA0CBD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXBuildFile; fileRef = F2F3E397C9964AA4877FA541 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMesh.cpp */; };
+		B29DE96DD6294D1AA88E8347 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep.cc */ = {isa = PBXBuildFile; fileRef = 6BF8D3B8A2C24922BD273867 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep.cc */; };
+		BD05B25956A44BC581624CDD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B4D5D35D72604BB19148B536 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */; };
+		C360E0447D9446EBA5A31306 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXBuildFile; fileRef = 00CCBD6E2F9749FEA6E4DAC5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourAlloc.cpp */; };
+		C59BBA193411400FAD37EE1E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = B2A8092DA2F346549703D7A8 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */; };
+		C5F41A84832A44138F355140 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi.cpp */ = {isa = PBXBuildFile; fileRef = 86DA88BEBC5C4352A85D863F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi.cpp */; };
+		CA178440B41D4C4CBA6E44F9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/cdt.cc */ = {isa = PBXBuildFile; fileRef = 1B7698B6517A4903B9BB97B9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/cdt.cc */; };
+		D0137CB7441340CA8BDF933C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F088CC86E818464382131116 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/CMakeLists.txt */; };
+		D20473345B554C62AD193234 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTF.c */ = {isa = PBXBuildFile; fileRef = 3C71A2A190D745F995F260DE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTF.c */; };
+		DBA366C733E848CE9FAEF35B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXBuildFile; fileRef = 48F0115D05B64FF0A4BB7FDE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */; };
+		E39A124E287042EDA467F297 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXBuildFile; fileRef = 9929414086314A03B76251E9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */; };
+		E5650973436C438E91C08DA5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/advancing_front.cc */ = {isa = PBXBuildFile; fileRef = 3885CD74555F4C619EF39894 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/advancing_front.cc */; };
+		E9BC8507ADCD40D7BF0A6B4E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = 3A706281F71041FD924F217F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */; };
+		EFE969C3DF3A4292BF03CAF3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 62EE83FFB3DA4DE9AAF01617 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2893FEAB53F045C3B255B29C /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		2E028E9B1F61447BBC3EFE1A /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		892994FD240841FB9B912C1D /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		9ECB42DF12BB4339A357EB16 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		080A6F80C9374425AFD32098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB8CCF10E6C942ECBEA5605B;
+			remoteInfo = ext_xxhash;
+		};
+		19BE2C265153413A852AF5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D149A086FFA4BBDAF6ED52D;
+			remoteInfo = ext_clipper;
+		};
+		1CFCC2AE3658494A9D491333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF4513B0E8D84140AEDE2FA2;
+			remoteInfo = ext_xxtea;
+		};
+		23B5AC60E5404A05AFE0D4F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+		2F7D62C8DEBD44F4983B39CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 483CE6E8015B48228E5B4B8A;
+			remoteInfo = ext_edtaa3func;
+		};
+		3DAEEE53E8104D82BF173BFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC011F046124BF1918E8857;
+			remoteInfo = external;
+		};
+		441198F0E1B946D0AC36333C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF4513B0E8D84140AEDE2FA2;
+			remoteInfo = ext_xxtea;
+		};
+		478EF8B7CEE34DAE8D21983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38BC5750C8344114A5E030FD;
+			remoteInfo = ext_recast;
+		};
+		4F940A9BD8674F8BB9ED6B61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F45DAA7AAFF452FA38EB966;
+			remoteInfo = ext_md5;
+		};
+		5DEC0EAA246B4CD28AB296AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E16D42D46B4A4B94999257C5;
+			remoteInfo = ext_unzip;
+		};
+		7BA9E6ED9B044930B03435D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF5A17909FC4BA3AE04F225;
+			remoteInfo = ext_convertUTF;
+		};
+		7C665BC1C2664BFC829DC707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F6DBEAB309A4F979627051E;
+			remoteInfo = ext_poly2tri;
+		};
+		837F379AFC494E3FA05061F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB8CCF10E6C942ECBEA5605B;
+			remoteInfo = ext_xxhash;
+		};
+		89EC0E8DA93947C9B96243D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB8D8E870DB45C9AA4FA964;
+			remoteInfo = ext_tinyxml2;
+		};
+		89F2F944A68A499294269F67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F6DBEAB309A4F979627051E;
+			remoteInfo = ext_poly2tri;
+		};
+		9DDDA198073F4FE7A8C7BD68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C3CDA9E07C8497F95FB6C7A;
+			remoteInfo = ZERO_CHECK;
+		};
+		A461330F639248CE8DFAEA55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E16D42D46B4A4B94999257C5;
+			remoteInfo = ext_unzip;
+		};
+		C46018D77238488881DCCD5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB8D8E870DB45C9AA4FA964;
+			remoteInfo = ext_tinyxml2;
+		};
+		C95F4C2A840F4D5FA668E4F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 483CE6E8015B48228E5B4B8A;
+			remoteInfo = ext_edtaa3func;
+		};
+		CDB2C471C0684256B87DF878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F45DAA7AAFF452FA38EB966;
+			remoteInfo = ext_md5;
+		};
+		F07EB412BF104F1388478DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38BC5750C8344114A5E030FD;
+			remoteInfo = ext_recast;
+		};
+		F1532467A2B546B29C79AE6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D149A086FFA4BBDAF6ED52D;
+			remoteInfo = ext_clipper;
+		};
+		F706848BD06248C487FDA591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F1E25229B14483965299FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF5A17909FC4BA3AE04F225;
+			remoteInfo = ext_convertUTF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CCBD6E2F9749FEA6E4DAC5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourAlloc.cpp; path = recast/Detour/DetourAlloc.cpp; sourceTree = SOURCE_ROOT; };
+		023779C70C7A4622A6B02D4D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = recast/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		03CC31F8A20A41929D520D61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = poly2tri/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		07DA3CE65D1542AAA0544C4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/common/shapes.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shapes.cc; path = poly2tri/common/shapes.cc; sourceTree = SOURCE_ROOT; };
+		1067AE581AAC4A7B873F71DB /* external */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libexternal.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CA718F1AFD482E97AB71FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathQueue.cpp; path = recast/DetourCrowd/DetourPathQueue.cpp; sourceTree = SOURCE_ROOT; };
+		1793AB76BEBA4F77A1636A4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshQuery.cpp; path = recast/Detour/DetourNavMeshQuery.cpp; sourceTree = SOURCE_ROOT; };
+		1845159A855042B5BDD4B290 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/unzip.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unzip.cpp; path = unzip/unzip.cpp; sourceTree = SOURCE_ROOT; };
+		1AFB0F5EBDEA435BABB33B59 /* ext_md5 */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_md5.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7698B6517A4903B9BB97B9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/cdt.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cdt.cc; path = poly2tri/sweep/cdt.cc; sourceTree = SOURCE_ROOT; };
+		1DA89901952646B7B8809CC7 /* ext_xxtea */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_xxtea.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		203783F15EC64A8481C03783 /* ext_clipper */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_clipper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		25D5C5A4E452413983A3DC0D /* ext_tinyxml2 */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_tinyxml2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A03B0B7FBF448F0BC40DD8A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = tinyxml2/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		31B370F991FC4B7AA24D2CC3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fastlz.c; path = recast/fastlz/fastlz.c; sourceTree = SOURCE_ROOT; };
+		3885CD74555F4C619EF39894 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/advancing_front.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = advancing_front.cc; path = poly2tri/sweep/advancing_front.cc; sourceTree = SOURCE_ROOT; };
+		3A706281F71041FD924F217F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourDebugDraw.cpp; path = recast/DebugUtils/DetourDebugDraw.cpp; sourceTree = SOURCE_ROOT; };
+		3C71A2A190D745F995F260DE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTF.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ConvertUTF.c; path = ConvertUTF/ConvertUTF.c; sourceTree = SOURCE_ROOT; };
+		3CA351DAAB1F4B9FB8D8D6D0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3D944646CBAF42C18E66461C /* ext_edtaa3func */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_edtaa3func.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC76485275C42CDB75C0561 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/empty.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = empty.cpp; path = empty.cpp; sourceTree = SOURCE_ROOT; };
+		42C6E4837C6D4FF592F4ACD7 /* ext_xxhash */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_xxhash.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B29A92AC284D6A95918176 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clipper.cpp; path = clipper/clipper.cpp; sourceTree = SOURCE_ROOT; };
+		48F0115D05B64FF0A4BB7FDE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = edtaa3func.cpp; path = edtaa3func/edtaa3func.cpp; sourceTree = SOURCE_ROOT; };
+		4D16B5A92EE04607B931B5F2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNode.cpp; path = recast/Detour/DetourNode.cpp; sourceTree = SOURCE_ROOT; };
+		4E77D43C048F4327B4BEB22B /* ext_convertUTF */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_convertUTF.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		593535A79C8C48BFA27162BC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourProximityGrid.cpp; path = recast/DetourCrowd/DetourProximityGrid.cpp; sourceTree = SOURCE_ROOT; };
+		62EE83FFB3DA4DE9AAF01617 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = md5/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		69D912BB394F47488727DB19 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/xxhash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xxhash.c; path = xxhash/xxhash.c; sourceTree = SOURCE_ROOT; };
+		6BF8D3B8A2C24922BD273867 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sweep.cc; path = poly2tri/sweep/sweep.cc; sourceTree = SOURCE_ROOT; };
+		6E66374FAFC340659AD327E7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6EAE7265714F4C2B90AB522A /* ext_recast */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_recast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		70194FFA633B4708B844E70E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/xxtea.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = xxtea.cpp; path = xxtea/xxtea.cpp; sourceTree = SOURCE_ROOT; };
+		7952FDFC5D5F4B1096B345B4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCrowd.cpp; path = recast/DetourCrowd/DetourCrowd.cpp; sourceTree = SOURCE_ROOT; };
+		7C2930D0B94D45B0AD086F0F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCacheBuilder.cpp; path = recast/DetourTileCache/DetourTileCacheBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		85C9CBD1D3D34B23B3769D77 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = xxtea/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		86DA88BEBC5C4352A85D863F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ioapi.cpp; path = unzip/ioapi.cpp; sourceTree = SOURCE_ROOT; };
+		90F6EF201910474482D54F21 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshBuilder.cpp; path = recast/Detour/DetourNavMeshBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		9929414086314A03B76251E9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathCorridor.cpp; path = recast/DetourCrowd/DetourPathCorridor.cpp; sourceTree = SOURCE_ROOT; };
+		9A010FFC76BD45FA95D23A8E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCommon.cpp; path = recast/Detour/DetourCommon.cpp; sourceTree = SOURCE_ROOT; };
+		9E8769224B7A45FD8374139C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = clipper/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A2BBC866482C4E7E8D59FAFA /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCache.cpp; path = recast/DetourTileCache/DetourTileCache.cpp; sourceTree = SOURCE_ROOT; };
+		A589F31CE7564DD4A8B710A3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = xxhash/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B29E6BA41C934DBF8DFA0BED /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourLocalBoundary.cpp; path = recast/DetourCrowd/DetourLocalBoundary.cpp; sourceTree = SOURCE_ROOT; };
+		B2A8092DA2F346549703D7A8 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DebugDraw.cpp; path = recast/DebugUtils/DebugDraw.cpp; sourceTree = SOURCE_ROOT; };
+		B4D5D35D72604BB19148B536 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = edtaa3func/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C0DFC696DBCB45C9ADE92BCF /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi_mem.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ioapi_mem.cpp; path = unzip/ioapi_mem.cpp; sourceTree = SOURCE_ROOT; };
+		C8526594CF914AEB944E94AF /* ext_poly2tri */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_poly2tri.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD121AE02B54B0EBB3ECD61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = unzip/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D0BE77C040A443E1B302AC87 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep_context.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sweep_context.cc; path = poly2tri/sweep/sweep_context.cc; sourceTree = SOURCE_ROOT; };
+		D2903254B75A4368B0FB4F7F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourObstacleAvoidance.cpp; path = recast/DetourCrowd/DetourObstacleAvoidance.cpp; sourceTree = SOURCE_ROOT; };
+		D2C0DB658CD344EAA9A0FD07 /* ext_unzip */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_unzip.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EA6E0BFFF544F8A204754C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = tinyxml2/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D981D97BA42D4183BE2767F0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = md5/md5.c; sourceTree = SOURCE_ROOT; };
+		F088CC86E818464382131116 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = ConvertUTF/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F2F3E397C9964AA4877FA541 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMesh.cpp; path = recast/Detour/DetourNavMesh.cpp; sourceTree = SOURCE_ROOT; };
+		F946B1E4107C4F3EB2B962C2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTFWrapper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ConvertUTFWrapper.cpp; path = ConvertUTF/ConvertUTFWrapper.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B1C27FA4CF5460B976F948E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DC76485275C42CDB75C0561 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/empty.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		0CF17D7D33DF45E5B642D0F0 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				182AFDF75B944FFD8EC8102C /* external */,
+				E416BF8A1C374FF49026ADE4 /* ext_recast */,
+				E39958FD88A648B8B62A54E4 /* ext_tinyxml2 */,
+				F3E409578189475197515D50 /* ext_xxhash */,
+				28E9D9971E7F4AC58DB07EC0 /* ext_xxtea */,
+				D89DA806D8D64F5BBC072153 /* ext_clipper */,
+				27ED56859F424CBC8D46E304 /* ext_edtaa3func */,
+				9151E470564F495F8BFBCAA9 /* ext_convertUTF */,
+				F39184131ECE40448E4E56BF /* ext_poly2tri */,
+				DA440C50BC014D86899EB618 /* ext_md5 */,
+				365E87F23146418F814C7E6A /* ext_unzip */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		0EF5C25D61B04D9996549FB0 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F0115D05B64FF0A4BB7FDE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		182AFDF75B944FFD8EC8102C /* external */ = {
+			isa = PBXGroup;
+			children = (
+				0B1C27FA4CF5460B976F948E /* Source Files */,
+				6E66374FAFC340659AD327E7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		27ED56859F424CBC8D46E304 /* ext_edtaa3func */ = {
+			isa = PBXGroup;
+			children = (
+				0EF5C25D61B04D9996549FB0 /* Source Files */,
+				B4D5D35D72604BB19148B536 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/CMakeLists.txt */,
+			);
+			name = ext_edtaa3func;
+			sourceTree = "<group>";
+		};
+		28E9D9971E7F4AC58DB07EC0 /* ext_xxtea */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE4D88010E4FD6BEA76F3A /* Source Files */,
+				85C9CBD1D3D34B23B3769D77 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/CMakeLists.txt */,
+			);
+			name = ext_xxtea;
+			sourceTree = "<group>";
+		};
+		2DC71536D4ED4F008F991C6B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8092DA2F346549703D7A8 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
+				3A706281F71041FD924F217F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
+				00CCBD6E2F9749FEA6E4DAC5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
+				9A010FFC76BD45FA95D23A8E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourCommon.cpp */,
+				F2F3E397C9964AA4877FA541 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
+				90F6EF201910474482D54F21 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
+				1793AB76BEBA4F77A1636A4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
+				4D16B5A92EE04607B931B5F2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNode.cpp */,
+				7952FDFC5D5F4B1096B345B4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
+				B29E6BA41C934DBF8DFA0BED /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
+				D2903254B75A4368B0FB4F7F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
+				9929414086314A03B76251E9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
+				12CA718F1AFD482E97AB71FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
+				593535A79C8C48BFA27162BC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
+				A2BBC866482C4E7E8D59FAFA /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
+				7C2930D0B94D45B0AD086F0F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
+				31B370F991FC4B7AA24D2CC3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/fastlz/fastlz.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		365E87F23146418F814C7E6A /* ext_unzip */ = {
+			isa = PBXGroup;
+			children = (
+				CDED4BF46C0847D78CC2A82A /* Source Files */,
+				CBD121AE02B54B0EBB3ECD61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/CMakeLists.txt */,
+			);
+			name = ext_unzip;
+			sourceTree = "<group>";
+		};
+		367CE72CE93345CDAD4D4C01 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A03B0B7FBF448F0BC40DD8A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/tinyxml2.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		448F04B093D84C41A6B393AA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		563BA1F894384EA291A4FAD7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D981D97BA42D4183BE2767F0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		582B97FDF3614709979B6E87 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				448F04B093D84C41A6B393AA /* CMake Rules */,
+				3CA351DAAB1F4B9FB8D8D6D0 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		65ED2497B75840B4B2F7981E = {
+			isa = PBXGroup;
+			children = (
+				0CF17D7D33DF45E5B642D0F0 /* External */,
+				582B97FDF3614709979B6E87 /* ALL_BUILD */,
+				6D539256C1AE4B4D9B407982 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D539256C1AE4B4D9B407982 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				203783F15EC64A8481C03783 /* ext_clipper */,
+				4E77D43C048F4327B4BEB22B /* ext_convertUTF */,
+				3D944646CBAF42C18E66461C /* ext_edtaa3func */,
+				1AFB0F5EBDEA435BABB33B59 /* ext_md5 */,
+				C8526594CF914AEB944E94AF /* ext_poly2tri */,
+				6EAE7265714F4C2B90AB522A /* ext_recast */,
+				25D5C5A4E452413983A3DC0D /* ext_tinyxml2 */,
+				D2C0DB658CD344EAA9A0FD07 /* ext_unzip */,
+				42C6E4837C6D4FF592F4ACD7 /* ext_xxhash */,
+				1DA89901952646B7B8809CC7 /* ext_xxtea */,
+				1067AE581AAC4A7B873F71DB /* external */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EBE4D88010E4FD6BEA76F3A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				70194FFA633B4708B844E70E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/xxtea.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9151E470564F495F8BFBCAA9 /* ext_convertUTF */ = {
+			isa = PBXGroup;
+			children = (
+				D6A8384BFF6A47ED8765E72F /* Source Files */,
+				F088CC86E818464382131116 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/CMakeLists.txt */,
+			);
+			name = ext_convertUTF;
+			sourceTree = "<group>";
+		};
+		AD8D0330AFE34742B9E0DCC1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				45B29A92AC284D6A95918176 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B13CEDECC1AC494EB7D02505 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				69D912BB394F47488727DB19 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/xxhash.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		BA018A2B45B74BE9860F2781 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				07DA3CE65D1542AAA0544C4B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/common/shapes.cc */,
+				3885CD74555F4C619EF39894 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/advancing_front.cc */,
+				1B7698B6517A4903B9BB97B9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/cdt.cc */,
+				6BF8D3B8A2C24922BD273867 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep.cc */,
+				D0BE77C040A443E1B302AC87 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep_context.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CDED4BF46C0847D78CC2A82A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				86DA88BEBC5C4352A85D863F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi.cpp */,
+				C0DFC696DBCB45C9ADE92BCF /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi_mem.cpp */,
+				1845159A855042B5BDD4B290 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/unzip.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D6A8384BFF6A47ED8765E72F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C71A2A190D745F995F260DE /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTF.c */,
+				F946B1E4107C4F3EB2B962C2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTFWrapper.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D89DA806D8D64F5BBC072153 /* ext_clipper */ = {
+			isa = PBXGroup;
+			children = (
+				AD8D0330AFE34742B9E0DCC1 /* Source Files */,
+				9E8769224B7A45FD8374139C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/CMakeLists.txt */,
+			);
+			name = ext_clipper;
+			sourceTree = "<group>";
+		};
+		DA440C50BC014D86899EB618 /* ext_md5 */ = {
+			isa = PBXGroup;
+			children = (
+				563BA1F894384EA291A4FAD7 /* Source Files */,
+				62EE83FFB3DA4DE9AAF01617 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/CMakeLists.txt */,
+			);
+			name = ext_md5;
+			sourceTree = "<group>";
+		};
+		E39958FD88A648B8B62A54E4 /* ext_tinyxml2 */ = {
+			isa = PBXGroup;
+			children = (
+				367CE72CE93345CDAD4D4C01 /* Source Files */,
+				D4EA6E0BFFF544F8A204754C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/CMakeLists.txt */,
+			);
+			name = ext_tinyxml2;
+			sourceTree = "<group>";
+		};
+		E416BF8A1C374FF49026ADE4 /* ext_recast */ = {
+			isa = PBXGroup;
+			children = (
+				2DC71536D4ED4F008F991C6B /* Source Files */,
+				023779C70C7A4622A6B02D4D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/CMakeLists.txt */,
+			);
+			name = ext_recast;
+			sourceTree = "<group>";
+		};
+		F39184131ECE40448E4E56BF /* ext_poly2tri */ = {
+			isa = PBXGroup;
+			children = (
+				BA018A2B45B74BE9860F2781 /* Source Files */,
+				03CC31F8A20A41929D520D61 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/CMakeLists.txt */,
+			);
+			name = ext_poly2tri;
+			sourceTree = "<group>";
+		};
+		F3E409578189475197515D50 /* ext_xxhash */ = {
+			isa = PBXGroup;
+			children = (
+				B13CEDECC1AC494EB7D02505 /* Source Files */,
+				A589F31CE7564DD4A8B710A3 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/CMakeLists.txt */,
+			);
+			name = ext_xxhash;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AB8D8E870DB45C9AA4FA964 /* ext_tinyxml2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8419B802CFBE47878B3DDE20 /* Build configuration list for PBXNativeTarget "ext_tinyxml2" */;
+			buildPhases = (
+				E40B24980AD545CE88813B45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_tinyxml2;
+			productName = ext_tinyxml2;
+			productReference = 25D5C5A4E452413983A3DC0D /* ext_tinyxml2 */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0BF5A17909FC4BA3AE04F225 /* ext_convertUTF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C0EBD1D10C44F6A01DA9B1 /* Build configuration list for PBXNativeTarget "ext_convertUTF" */;
+			buildPhases = (
+				AA296A848D784DA19B9A65FF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_convertUTF;
+			productName = ext_convertUTF;
+			productReference = 4E77D43C048F4327B4BEB22B /* ext_convertUTF */;
+			productType = "com.apple.product-type.library.static";
+		};
+		38BC5750C8344114A5E030FD /* ext_recast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32886932BCCC4F08B24A3029 /* Build configuration list for PBXNativeTarget "ext_recast" */;
+			buildPhases = (
+				10CFE4AF260B4AE9BDB55050 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_recast;
+			productName = ext_recast;
+			productReference = 6EAE7265714F4C2B90AB522A /* ext_recast */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3F45DAA7AAFF452FA38EB966 /* ext_md5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8989DF8108F4A6D8BFC653A /* Build configuration list for PBXNativeTarget "ext_md5" */;
+			buildPhases = (
+				9604A6C783C14A3BA345CBC4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_md5;
+			productName = ext_md5;
+			productReference = 1AFB0F5EBDEA435BABB33B59 /* ext_md5 */;
+			productType = "com.apple.product-type.library.static";
+		};
+		483CE6E8015B48228E5B4B8A /* ext_edtaa3func */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24B6744CF454AA493F51183 /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */;
+			buildPhases = (
+				3F96BFECA2B441B3AC5F5D21 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_edtaa3func;
+			productName = ext_edtaa3func;
+			productReference = 3D944646CBAF42C18E66461C /* ext_edtaa3func */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F6DBEAB309A4F979627051E /* ext_poly2tri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B32DC2144E41CDA133B57A /* Build configuration list for PBXNativeTarget "ext_poly2tri" */;
+			buildPhases = (
+				F64DBF90D39A4CE890AC71A1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_poly2tri;
+			productName = ext_poly2tri;
+			productReference = C8526594CF914AEB944E94AF /* ext_poly2tri */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6D149A086FFA4BBDAF6ED52D /* ext_clipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E44BF043939457F89572164 /* Build configuration list for PBXNativeTarget "ext_clipper" */;
+			buildPhases = (
+				B9DAD335313C42DBB481F97F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_clipper;
+			productName = ext_clipper;
+			productReference = 203783F15EC64A8481C03783 /* ext_clipper */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CF4513B0E8D84140AEDE2FA2 /* ext_xxtea */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3D70BF1B4947628E9EA379 /* Build configuration list for PBXNativeTarget "ext_xxtea" */;
+			buildPhases = (
+				E355BB5D743546B691118388 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_xxtea;
+			productName = ext_xxtea;
+			productReference = 1DA89901952646B7B8809CC7 /* ext_xxtea */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DAC011F046124BF1918E8857 /* external */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B742A6268808414FA3CAB5F6 /* Build configuration list for PBXNativeTarget "external" */;
+			buildPhases = (
+				773D37CBEE3C438C8755CED0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48AEB1FFEE284C3C9842C6CA /* PBXTargetDependency */,
+				EA6E6F4E3B3F4BCEA78A1C3B /* PBXTargetDependency */,
+				6366EF60F24B41348258D0E6 /* PBXTargetDependency */,
+				1C68FAF40D1C4B1E9375074E /* PBXTargetDependency */,
+				75B364779ED54A0BA94585EA /* PBXTargetDependency */,
+				513DA244FA7E479193209D5E /* PBXTargetDependency */,
+				04632BD004084447AB0117BD /* PBXTargetDependency */,
+				E99B5A8377DF4EDBB37614C1 /* PBXTargetDependency */,
+				AEEA8E5DC1504E85BA0728CC /* PBXTargetDependency */,
+				C1C8B898371E48339B97B84B /* PBXTargetDependency */,
+				29FADD9688464680A7C894A6 /* PBXTargetDependency */,
+			);
+			name = external;
+			productName = external;
+			productReference = 1067AE581AAC4A7B873F71DB /* external */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DB8CCF10E6C942ECBEA5605B /* ext_xxhash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97E735A0D32F4D74BC014CED /* Build configuration list for PBXNativeTarget "ext_xxhash" */;
+			buildPhases = (
+				1FDD7BA053794BD8B0337169 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_xxhash;
+			productName = ext_xxhash;
+			productReference = 42C6E4837C6D4FF592F4ACD7 /* ext_xxhash */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E16D42D46B4A4B94999257C5 /* ext_unzip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2C5299B2DE34536B78E415B /* Build configuration list for PBXNativeTarget "ext_unzip" */;
+			buildPhases = (
+				0CC7095719954E4E98604E24 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ext_unzip;
+			productName = ext_unzip;
+			productReference = D2C0DB658CD344EAA9A0FD07 /* ext_unzip */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41F1E25229B14483965299FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1150;
+			};
+			buildConfigurationList = 4425DFDA9D6544A4A8420BFA /* Build configuration list for PBXProject "external" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2893FEAB53F045C3B255B29C /* Debug */,
+				892994FD240841FB9B912C1D /* Release */,
+				9ECB42DF12BB4339A357EB16 /* MinSizeRel */,
+				2E028E9B1F61447BBC3EFE1A /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 65ED2497B75840B4B2F7981E;
+			projectDirPath = ../../../cocos2d/external;
+			projectRoot = "";
+			targets = (
+				B45700581C594718A6CC0ACB /* ALL_BUILD */,
+				5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */,
+				6D149A086FFA4BBDAF6ED52D /* ext_clipper */,
+				0BF5A17909FC4BA3AE04F225 /* ext_convertUTF */,
+				483CE6E8015B48228E5B4B8A /* ext_edtaa3func */,
+				3F45DAA7AAFF452FA38EB966 /* ext_md5 */,
+				4F6DBEAB309A4F979627051E /* ext_poly2tri */,
+				38BC5750C8344114A5E030FD /* ext_recast */,
+				0AB8D8E870DB45C9AA4FA964 /* ext_tinyxml2 */,
+				E16D42D46B4A4B94999257C5 /* ext_unzip */,
+				DB8CCF10E6C942ECBEA5605B /* ext_xxhash */,
+				CF4513B0E8D84140AEDE2FA2 /* ext_xxtea */,
+				DAC011F046124BF1918E8857 /* external */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D26042C998149E1BC9DD018 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B02CAA72B9EE452582B047EF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		C5A8EAAB0FE547CCA6E9C942 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DC01B106C0CD4E05AB87A7CF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external -f /Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CC7095719954E4E98604E24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F41A84832A44138F355140 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi.cpp */,
+				60C6191D4B8446F8A183D611 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/ioapi_mem.cpp */,
+				5CAC8F21577D469B8B00E7FC /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/unzip.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CFE4AF260B4AE9BDB55050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59BBA193411400FAD37EE1E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
+				E9BC8507ADCD40D7BF0A6B4E /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
+				C360E0447D9446EBA5A31306 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
+				282A874A99F2454A814253E2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourCommon.cpp */,
+				B26C31550E0D4F2AB0EA0CBD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
+				9872524A211C46ACABD39D81 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
+				735120E3C5A14A019BCBDA6A /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
+				9375CF6DB157434081EBA7C4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/Detour/DetourNode.cpp */,
+				346C15882C5A4560B0ACE6B4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
+				0004E257FEC44B729794D0A4 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
+				095EB17063A34069AC7A56CB /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
+				E39A124E287042EDA467F297 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
+				5FE51057E05E4D82A67D674D /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
+				79A3FB7CDAB049E5A5C84494 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
+				6C10D8191B4D4881A552F091 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
+				8E7948C3ACE04A94B451311F /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
+				A111AFC91A574A179B2337C5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/fastlz/fastlz.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDD7BA053794BD8B0337169 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5F1065CA574FDC8BB7C129 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/xxhash.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F96BFECA2B441B3AC5F5D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA366C733E848CE9FAEF35B /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		773D37CBEE3C438C8755CED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9C467A4F4A40BF94390E5C /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/empty.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9604A6C783C14A3BA345CBC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4126943343054719808008FD /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/md5.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA296A848D784DA19B9A65FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20473345B554C62AD193234 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTF.c */,
+				18206E4E74604C22BDB45E42 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/ConvertUTFWrapper.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DAD335313C42DBB481F97F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A48FFCA06B4806A52F3305 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/clipper.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E355BB5D743546B691118388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A397AD712AD24B97B943A216 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/xxtea.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E40B24980AD545CE88813B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A1A21957C849B2B5CA2DC2 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/tinyxml2.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F64DBF90D39A4CE890AC71A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A38DD0BF0CA45DAAE2E24A7 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/common/shapes.cc */,
+				E5650973436C438E91C08DA5 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/advancing_front.cc */,
+				CA178440B41D4C4CBA6E44F9 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/cdt.cc */,
+				B29DE96DD6294D1AA88E8347 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep.cc */,
+				4A735E6F107D4EAFB9B59821 /* /Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/sweep/sweep_context.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04632BD004084447AB0117BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BF5A17909FC4BA3AE04F225 /* ext_convertUTF */;
+			targetProxy = F706848BD06248C487FDA591 /* PBXContainerItemProxy */;
+		};
+		109DD638F08545B8B8085354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB8D8E870DB45C9AA4FA964 /* ext_tinyxml2 */;
+			targetProxy = 89EC0E8DA93947C9B96243D0 /* PBXContainerItemProxy */;
+		};
+		1C68FAF40D1C4B1E9375074E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF4513B0E8D84140AEDE2FA2 /* ext_xxtea */;
+			targetProxy = 441198F0E1B946D0AC36333C /* PBXContainerItemProxy */;
+		};
+		1F04F386408A4FDC8C946E12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 23B5AC60E5404A05AFE0D4F5 /* PBXContainerItemProxy */;
+		};
+		25DB6AA52DB74FAB9CF3CC83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F6DBEAB309A4F979627051E /* ext_poly2tri */;
+			targetProxy = 7C665BC1C2664BFC829DC707 /* PBXContainerItemProxy */;
+		};
+		29FADD9688464680A7C894A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C3CDA9E07C8497F95FB6C7A /* ZERO_CHECK */;
+			targetProxy = 9DDDA198073F4FE7A8C7BD68 /* PBXContainerItemProxy */;
+		};
+		48AEB1FFEE284C3C9842C6CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38BC5750C8344114A5E030FD /* ext_recast */;
+			targetProxy = F07EB412BF104F1388478DCB /* PBXContainerItemProxy */;
+		};
+		4946DFF282524AD5B93149E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF4513B0E8D84140AEDE2FA2 /* ext_xxtea */;
+			targetProxy = 1CFCC2AE3658494A9D491333 /* PBXContainerItemProxy */;
+		};
+		513DA244FA7E479193209D5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 483CE6E8015B48228E5B4B8A /* ext_edtaa3func */;
+			targetProxy = 2F7D62C8DEBD44F4983B39CC /* PBXContainerItemProxy */;
+		};
+		5A21D4440AC04C8586D28525 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F45DAA7AAFF452FA38EB966 /* ext_md5 */;
+			targetProxy = 4F940A9BD8674F8BB9ED6B61 /* PBXContainerItemProxy */;
+		};
+		5AA6962BA8584862A69E1B62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E16D42D46B4A4B94999257C5 /* ext_unzip */;
+			targetProxy = 5DEC0EAA246B4CD28AB296AC /* PBXContainerItemProxy */;
+		};
+		6366EF60F24B41348258D0E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB8CCF10E6C942ECBEA5605B /* ext_xxhash */;
+			targetProxy = 080A6F80C9374425AFD32098 /* PBXContainerItemProxy */;
+		};
+		7175429B2BF148F2A5893DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 483CE6E8015B48228E5B4B8A /* ext_edtaa3func */;
+			targetProxy = C95F4C2A840F4D5FA668E4F8 /* PBXContainerItemProxy */;
+		};
+		75B364779ED54A0BA94585EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D149A086FFA4BBDAF6ED52D /* ext_clipper */;
+			targetProxy = F1532467A2B546B29C79AE6D /* PBXContainerItemProxy */;
+		};
+		7EB92F7F5EB34C7082920EE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38BC5750C8344114A5E030FD /* ext_recast */;
+			targetProxy = 478EF8B7CEE34DAE8D21983A /* PBXContainerItemProxy */;
+		};
+		80939001742744A8B89D87A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB8CCF10E6C942ECBEA5605B /* ext_xxhash */;
+			targetProxy = 837F379AFC494E3FA05061F1 /* PBXContainerItemProxy */;
+		};
+		A666A8014C8449ECB146BB3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC011F046124BF1918E8857 /* external */;
+			targetProxy = 3DAEEE53E8104D82BF173BFD /* PBXContainerItemProxy */;
+		};
+		AEEA8E5DC1504E85BA0728CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F45DAA7AAFF452FA38EB966 /* ext_md5 */;
+			targetProxy = CDB2C471C0684256B87DF878 /* PBXContainerItemProxy */;
+		};
+		C1C8B898371E48339B97B84B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E16D42D46B4A4B94999257C5 /* ext_unzip */;
+			targetProxy = A461330F639248CE8DFAEA55 /* PBXContainerItemProxy */;
+		};
+		C6CE435BC0CB4D6CB4554F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D149A086FFA4BBDAF6ED52D /* ext_clipper */;
+			targetProxy = 19BE2C265153413A852AF5AC /* PBXContainerItemProxy */;
+		};
+		E99B5A8377DF4EDBB37614C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F6DBEAB309A4F979627051E /* ext_poly2tri */;
+			targetProxy = 89F2F944A68A499294269F67 /* PBXContainerItemProxy */;
+		};
+		EA6E6F4E3B3F4BCEA78A1C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB8D8E870DB45C9AA4FA964 /* ext_tinyxml2 */;
+			targetProxy = C46018D77238488881DCCD5D /* PBXContainerItemProxy */;
+		};
+		F0016F89FCB24E2E851A7BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BF5A17909FC4BA3AE04F225 /* ext_convertUTF */;
+			targetProxy = 7BA9E6ED9B044930B03435D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01952486BEEA491CB8E4CD46 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxhash;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxhash";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		030F621310AF4E4AA18DB4C1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_tinyxml2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/tinyxml2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0DB9AE29281A455C8C7F06B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		168BA87AE4B2437F9FD8C0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_convertUTF;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/ConvertUTF";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		1955BB7BB63848839EE7AF71 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1B3731F19A694EB48B5D17E7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",LWS_WITH_LIBUV);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = external;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/Box2D/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/chipmunk/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/freetype2/include/mac/freetype2,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include/bullet,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/jpeg/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/openssl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/uv/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/websockets/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/curl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/png/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glfw3/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include,"/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glsl-optimizer/include");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1BAE8268F29E416582A67B12 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_convertUTF;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/ConvertUTF";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		281EBA155CA14130BA9D4D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxhash;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxhash";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		29F1C00B668D4708A714957C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2A47F8A451174AB2A0AC0335 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2E73796B2F9B4CC7BF261255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxtea;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxtea";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		34E8D8563FD84E38A634BEAA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		38036D80B67D43F9A7C738C3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_unzip;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/unzip";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		40FB3EC8866F4658A311293D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_poly2tri;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/poly2tri";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4F75F8CAD3634C689311F58E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/build";
+			};
+			name = MinSizeRel;
+		};
+		53ED4C5B6370422F94071671 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		586D01F008BB4A72B8ACF82E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_convertUTF;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/ConvertUTF";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5A1908BA841A48A582184461 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5EF2016F14A349B0BF81F934 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		62E87879B5A44600ACF6B8C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/build";
+			};
+			name = Debug;
+		};
+		66A851B6F4094AFAB94C3553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",LWS_WITH_LIBUV);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = external;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/Box2D/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/chipmunk/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/freetype2/include/mac/freetype2,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include/bullet,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/jpeg/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/openssl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/uv/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/websockets/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/curl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/png/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glfw3/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include,"/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glsl-optimizer/include");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6901D639097F47C2A4ACCB77 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",LWS_WITH_LIBUV);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = external;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/Box2D/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/chipmunk/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/freetype2/include/mac/freetype2,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include/bullet,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/jpeg/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/openssl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/uv/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/websockets/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/curl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/png/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glfw3/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include,"/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glsl-optimizer/include");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6E29329FB9FA4ABAACF77ECB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxhash;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxhash";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7057469398234103AB1F6B2A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/build";
+			};
+			name = RelWithDebInfo;
+		};
+		739708478E734E8891F0B530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		77B00B01779C46A4B6624692 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		78E2638618974C07AF010173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_tinyxml2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/tinyxml2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7BFF5CB444694BA9A62844DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7F41B7DF3DDD4104A6CA22EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_poly2tri;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/poly2tri";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7F57E6D12E8247718DBF3D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		85C817CC3D2D490FA2C4D2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",LWS_WITH_LIBUV);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = external;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/Box2D/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/chipmunk/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/freetype2/include/mac/freetype2,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/bullet/include/bullet,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/jpeg/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/openssl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/uv/include,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/webp/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/websockets/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/curl/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/png/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glfw3/include/mac,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include,"/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/glsl-optimizer/include");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		902C720568604046AD9D275B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_poly2tri;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/poly2tri";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		92060F44F9984C75AF126E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_unzip;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/unzip";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9DEB356AA6C44AF0B16BE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/build";
+			};
+			name = Release;
+		};
+		AA138ACCD9AA4E0CBB6BE9A2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AA8183C4ECC1493F9F02BD2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		AE4F43D5CC3C4C339408A0C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B01CBF0B5B7B463E8DD2CE7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/ConvertUTF/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_convertUTF;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/ConvertUTF";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B4FFF321302A4BB18EBA79D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B707FE1FF9D64330A8D5A318 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C527C13FCB31443EB5110AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		D198584CA400453C9EF0DF42 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D752E6FDD0E247D08691B1A3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_tinyxml2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/tinyxml2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DB721AF1D9774DD2BFDF6599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxtea;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxtea";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		DEA937FBA1BD4167B72F4198 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxtea;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxtea";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DEAA6B5E27144F5483649BD2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E696F9E8B67A4A44888633EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E8438AFCDE694B0CBE496321 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxtea/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxtea;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxtea";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EB87DB8F7CED4BAC911BFAB9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		ED48C972453B44BFB6E1D75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EE7948383ED248D99E3109B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/xxhash/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_xxhash;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/xxhash";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F1A75F62167C4437AD45C230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_unzip;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/unzip";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F2D67355445F45B6AED5CAC1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/unzip/.,/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/zlib/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_unzip;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/unzip";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F4B6AC64F745483F95BCBE44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/tinyxml2/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_tinyxml2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/tinyxml2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F63456CBB6824FC2BE01903A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/clipper/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_clipper;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/clipper";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		FAD1103A34BF4EE9B7B8A660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/macbookpro/Downloads/Game2/Project/test/Worm/cocos2d/external/poly2tri/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++1z'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_poly2tri;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/macbookpro/Downloads/Game2/Project/test/Worm/mac-build/engine/external/poly2tri";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00C0EBD1D10C44F6A01DA9B1 /* Build configuration list for PBXNativeTarget "ext_convertUTF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168BA87AE4B2437F9FD8C0B5 /* Debug */,
+				B01CBF0B5B7B463E8DD2CE7F /* Release */,
+				1BAE8268F29E416582A67B12 /* MinSizeRel */,
+				586D01F008BB4A72B8ACF82E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1E44BF043939457F89572164 /* Build configuration list for PBXNativeTarget "ext_clipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63456CBB6824FC2BE01903A /* Debug */,
+				AA8183C4ECC1493F9F02BD2B /* Release */,
+				5A1908BA841A48A582184461 /* MinSizeRel */,
+				5EF2016F14A349B0BF81F934 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1F3D70BF1B4947628E9EA379 /* Build configuration list for PBXNativeTarget "ext_xxtea" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB721AF1D9774DD2BFDF6599 /* Debug */,
+				2E73796B2F9B4CC7BF261255 /* Release */,
+				DEA937FBA1BD4167B72F4198 /* MinSizeRel */,
+				E8438AFCDE694B0CBE496321 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		32886932BCCC4F08B24A3029 /* Build configuration list for PBXNativeTarget "ext_recast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BFF5CB444694BA9A62844DA /* Debug */,
+				0DB9AE29281A455C8C7F06B6 /* Release */,
+				77B00B01779C46A4B6624692 /* MinSizeRel */,
+				EB87DB8F7CED4BAC911BFAB9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4425DFDA9D6544A4A8420BFA /* Build configuration list for PBXProject "external" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62E87879B5A44600ACF6B8C6 /* Debug */,
+				9DEB356AA6C44AF0B16BE26D /* Release */,
+				4F75F8CAD3634C689311F58E /* MinSizeRel */,
+				7057469398234103AB1F6B2A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5018E0491E79457DB51D8D37 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED48C972453B44BFB6E1D75E /* Debug */,
+				E696F9E8B67A4A44888633EB /* Release */,
+				34E8D8563FD84E38A634BEAA /* MinSizeRel */,
+				AA138ACCD9AA4E0CBB6BE9A2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8419B802CFBE47878B3DDE20 /* Build configuration list for PBXNativeTarget "ext_tinyxml2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E2638618974C07AF010173 /* Debug */,
+				F4B6AC64F745483F95BCBE44 /* Release */,
+				030F621310AF4E4AA18DB4C1 /* MinSizeRel */,
+				D752E6FDD0E247D08691B1A3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		97E735A0D32F4D74BC014CED /* Build configuration list for PBXNativeTarget "ext_xxhash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE7948383ED248D99E3109B9 /* Debug */,
+				281EBA155CA14130BA9D4D75 /* Release */,
+				01952486BEEA491CB8E4CD46 /* MinSizeRel */,
+				6E29329FB9FA4ABAACF77ECB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B24B6744CF454AA493F51183 /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FFF321302A4BB18EBA79D2 /* Debug */,
+				29F1C00B668D4708A714957C /* Release */,
+				D198584CA400453C9EF0DF42 /* MinSizeRel */,
+				B707FE1FF9D64330A8D5A318 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B742A6268808414FA3CAB5F6 /* Build configuration list for PBXNativeTarget "external" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C817CC3D2D490FA2C4D2ED /* Debug */,
+				66A851B6F4094AFAB94C3553 /* Release */,
+				1B3731F19A694EB48B5D17E7 /* MinSizeRel */,
+				6901D639097F47C2A4ACCB77 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C70426436E4B4546AA239158 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C527C13FCB31443EB5110AAC /* Debug */,
+				7F57E6D12E8247718DBF3D3B /* Release */,
+				1955BB7BB63848839EE7AF71 /* MinSizeRel */,
+				53ED4C5B6370422F94071671 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C8989DF8108F4A6D8BFC653A /* Build configuration list for PBXNativeTarget "ext_md5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4F43D5CC3C4C339408A0C6 /* Debug */,
+				739708478E734E8891F0B530 /* Release */,
+				DEAA6B5E27144F5483649BD2 /* MinSizeRel */,
+				2A47F8A451174AB2A0AC0335 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E2C5299B2DE34536B78E415B /* Build configuration list for PBXNativeTarget "ext_unzip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92060F44F9984C75AF126E28 /* Debug */,
+				F1A75F62167C4437AD45C230 /* Release */,
+				F2D67355445F45B6AED5CAC1 /* MinSizeRel */,
+				38036D80B67D43F9A7C738C3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E7B32DC2144E41CDA133B57A /* Build configuration list for PBXNativeTarget "ext_poly2tri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F41B7DF3DDD4104A6CA22EA /* Debug */,
+				FAD1103A34BF4EE9B7B8A660 /* Release */,
+				902C720568604046AD9D275B /* MinSizeRel */,
+				40FB3EC8866F4658A311293D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41F1E25229B14483965299FD /* Project object */;
+}

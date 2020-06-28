@@ -37,13 +37,20 @@ public:
 		USING_NS_CC;
 		for (int y = 0; y<map.size(); ++y) {
 			for (int x = 0; x<map[0].size(); ++x) {
-				mainMap->drawSolidRect(Vec2(x, y), Vec2(x+1, y+1), Color4F(map[y][x] ? 1 : 0, 0, 0, .5));
+				refreshMap(x, y);
 			}
 		}
 	}
-	void refreshMap(int px, int py) {
+	void refreshMap(double x, double y) {
+        mainMap->drawSolidRect(Vec2(x, y), Vec2(x+1, y+1), Color4F(map[y][x] ? 1 : 0, 0, 0, 1));
+	}
+	void refreshMap(const Vec2& topLeft, const Vec2& botRight) {
 		USING_NS_CC;
-		mainMap->drawSolidRect(Vec2(px, py), Vec2(px+1, py+1), Color4F(map[py][px] ? 1 : 0, 0, 0, .5));
+        for (int y = topLeft.y; y<botRight.y; ++y) {
+            for (int x = topLeft.x; x<botRight.x; ++x) {
+                mainMap->drawSolidRect(Vec2(x, y), Vec2(x+1, y+1), Color4F(map[y][x] ? 1 : 0, 0, 0, 1));
+            }
+        }
 	}
 
 	static MapView* create(std::vector<std::vector<u_char>>& map) {
