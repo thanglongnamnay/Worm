@@ -57,10 +57,12 @@ public:
     }
 
 private:
-    void drawLine(int sx, int ex, int ny) {
-        for (int i = sx; i < ex; i++)
-            if (ny >= 0 && ny < mapSize.y && i >= 0 && i <  mapSize.x)
+    void drawLine(const int sx, const int ex, const int ny) {
+        if (ny < 0) return;
+        for (int i = sx; i < ex; i++) {
+            if (ny < mapSize.y && i >= 0 && i < mapSize.x)
                 map[ny][i] = 0;
+        }
     }
     void CircleBresenham(int xc, int yc, int r) {
         int x = 0;
@@ -88,8 +90,8 @@ private:
             if (distance < epsilon) distance = epsilon;
 
             if (distance < radius) {
-                p->vx = (dx / distance) * radius;
-                p->vy = (dy / distance) * radius;
+                p->vx = 10 * (dx / distance) * radius;
+                p->vy = 10 * (dy / distance) * radius;
                 p->isStable = false;
             }
         }

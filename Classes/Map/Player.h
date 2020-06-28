@@ -24,7 +24,7 @@ public:
             name(std::move(name)),
             hp(100),
             mp(0),
-            worm(std::make_shared<Worm>(rand() % 800, 400)) {}
+            worm(std::make_shared<Worm>(rand() % 800, 400 + rand() % 400)) {}
 };
 
 
