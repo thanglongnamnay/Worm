@@ -60,8 +60,10 @@ private:
     void drawLine(const int sx, const int ex, const int ny) {
         if (ny < 0) return;
         for (int i = sx; i < ex; i++) {
-            if (ny < mapSize.y && i >= 0 && i < mapSize.x)
+            if (ny < mapSize.y && i >= 0 && i < mapSize.x) {
                 map[ny][i] = 0;
+                mapView->refreshMap(i, ny);
+            }
         }
     }
     void CircleBresenham(int xc, int yc, int r) {
