@@ -9,8 +9,6 @@
 #include <Types/Angle.h>
 #include "UnitView.h"
 
-const int EVENT_EXPLODE = game::EventManager::nextId();
-
 class UnitPhysic {
 private:
     constexpr static const double epsilon = 0.1;
@@ -36,12 +34,13 @@ public:
             : px(x), py(y) {
     }
     virtual ~UnitPhysic() {
-        if (view)
+        if (view && view->getParent()) {
             try {
                 view->removeFromParent();
-            } catch(std::exception& e) {
+            } catch (std::exception &e) {
 
             }
+        }
     }
 
     virtual void update(double dt, const std::vector<std::vector<unsigned char>> &map) {
@@ -113,7 +112,9 @@ public:
                     // = 0 Nothing
                     // > 0 Explosion
                     int response = bounceDeathAction();
+                    CCLOG("Is dead");
                     if (response > 0) {
+                        CCLOG("BOOM");
                         // Boom(px, py, response);
                         Object data{
                                 {"unit",    this},
@@ -186,6 +187,7 @@ public:
         friction = 0.2;
         bounceBeforeDeath = -1;
         view = WormView::create();
+        dynamic_cast<WormView*>(view)->indicate(0);
     }
 
     int bounceDeathAction() override {

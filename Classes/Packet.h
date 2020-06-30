@@ -9,35 +9,30 @@
 #include "network/WebSocket.h"
 #include "cocos2d.h"
 #include "GameEvent.h"
+#include "Helper.h"
 #include <type_safe/strong_typedef.hpp>
 
 namespace ts = type_safe;
 
-struct CmdCode : ts::strong_typedef<CmdCode, int>,
-                 ts::strong_typedef_op::equality_comparison<CmdCode> {
-    using strong_typedef::strong_typedef;
-};
-
 struct Packet {
-    CmdCode cmd;
-    std::vector<int> params;
+    constexpr const static char delim[] = "|";
+    int cmd = 0;
+    std::vector<std::string> params;
 
     explicit Packet(const cocos2d::network::WebSocket::Data &data) {
-        auto pInt = (int *) data.bytes;
-        auto size = pInt + data.len / (sizeof(int) / sizeof(char));
-        std::vector<int> list{pInt, size};
-        cmd = CmdCode(list[0]);
-        params = std::vector<int>{pInt + 1, size - 1};
+        std::string msg = std::string(data.bytes, data.len);
+        params = Helper::split(msg, '|');
+        cmd = std::stoi(params[0]);
+        params.erase(params.begin());
     }
 
-    Packet(const int cmd, std::vector<int> params)
+    Packet(const int cmd, std::vector<std::string> params)
             : cmd(cmd), params(std::move(params)) {}
 
-    [[nodiscard]] std::vector<int> toSocketData() const {
-        std::vector<int> list;
-        list.push_back(static_cast<int>(cmd));
-        list.insert(list.end(), params.begin(), params.end());
-        return list;
+    [[nodiscard]] std::string toSocketData() const {
+        std::string msg{std::to_string(cmd)};
+        for (const auto& param : params) msg += delim + param;
+        return msg;
     }
 
     explicit operator Object() const {

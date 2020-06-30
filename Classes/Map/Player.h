@@ -19,12 +19,17 @@ public:
     HP hp;
     MP mp;
 
-    Player(int id, std::string name) :
+    Player(int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400) :
             id(id),
             name(std::move(name)),
             hp(100),
             mp(0),
-            worm(std::make_shared<Worm>(rand() % 800, 400 + rand() % 400)) {}
+            worm(std::make_shared<Worm>(x, y)) {}
+
+    void init() {
+        hp = HP(100);
+        mp = MP(0);
+    }
 };
 
 

@@ -24,9 +24,9 @@ private:
     string url;
     vector<Packet> pendingMessages;
 public:
-    static int EVENT_RECEIVE_PACKET;
     explicit GameNetwork(const char url[]);
     ~GameNetwork() override;
+    bool send(int cmd, const vector<string>& message);
     bool send(int cmd, const vector<int>& message);
     bool send(const Packet& packet);
     void onOpen(network::WebSocket* ws) override;
@@ -36,6 +36,7 @@ public:
 };
 
 enum CMD {
+    LOGIN,
     JOIN_ROOM = 69,
     MOVE,
     SHOOT,

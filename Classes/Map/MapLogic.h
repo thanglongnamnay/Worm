@@ -19,13 +19,12 @@ constexpr const double epsilon = 0.001;
 class MapLogic : game::EventListener {
 private:
     void handleEvent(int eventName, const Object &data) override;
+
     void handleNetworkCmd(CMD cmd);
 
     type::Vector<int> mapSize;
     std::vector<std::vector<unsigned char>> map;
     std::list<std::shared_ptr<UnitPhysic>> unitList;
-    std::vector<Player> players;
-    std::shared_ptr<Worm> worm;
 public:
     MapView *mapView;
 
@@ -35,10 +34,16 @@ public:
             : mapSize(rhs.mapSize), map(std::move(rhs.map)), mapView(rhs.mapView) {
     }
 
-    void addUnit(const std::shared_ptr<UnitPhysic> &UnitPhysic) {
-        UnitPhysic->draw();
-        mapView->addChild(UnitPhysic->view);
-        unitList.push_back(UnitPhysic);
+    void addUnit(const std::shared_ptr<UnitPhysic> &unitPhysic) {
+        unitPhysic->draw();
+        mapView->addChild(unitPhysic->view);
+        unitList.push_back(unitPhysic);
+    }
+    void removeUnit(const std::shared_ptr<UnitPhysic> &unitPhysic) {
+        unitPhysic->view->removeFromParent();
+        unitList.remove_if([&](const std::shared_ptr<UnitPhysic> &o) {
+            return o == unitPhysic;
+        });
     }
 
     void update(double dt) {
@@ -47,13 +52,7 @@ public:
             p->update(dt, map);
         }
 
-        // Remove dead objects from the list, so they are not processed further. As the object
-        // is a unique pointer, it will go out of scope too, deleting the object automatically. Nice :-)
-        unitList.remove_if([](const std::shared_ptr<UnitPhysic>& o) { return o->isDead; });
-    }
-
-    void nextTurn(int id) {
-
+        unitList.remove_if([](const std::shared_ptr<UnitPhysic> &o) { return o->isDead; });
     }
 
 private:
@@ -66,6 +65,7 @@ private:
             }
         }
     }
+
     void CircleBresenham(int xc, int yc, int r) {
         int x = 0;
         int y = r;
@@ -82,6 +82,7 @@ private:
             else p += 4 * (x++ - y--) + 10;
         }
     };
+
     void explode(double worldX, double worldY, double radius) {
         CircleBresenham(worldX, worldY, radius);
 

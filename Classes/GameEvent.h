@@ -34,7 +34,6 @@ namespace game {
         static std::set<EventListener *> listeners;
 
     public:
-
         static void emit(const int &eventName, const Object& data);
 
         static void add(EventListener *eventListener);
@@ -48,5 +47,10 @@ namespace game {
     };
 
 }
+
+enum event {
+    EVENT_EXPLODE,
+    EVENT_RECEIVE_PACKET,
+};
 
 #endif //WORM_GAMEEVENT_H

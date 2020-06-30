@@ -34,73 +34,20 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
 		: mapSize(mapSize), game::EventListener() {
 	map = createMap(mapSize);
 	mapView = MapView::create(map);
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Worm/texture.plist", "Worm/texture.png");
-    worm = std::make_shared<Worm>(300, 400);
-    addUnit(worm);
-
-    for (int i = 0; i < 4; ++i) {
-        players.emplace_back(0, "p" + to_string(i));
-    }
-    for (const auto& player : players) {
-        CCLOG("ADD UNIT");
-        addUnit(player.worm);
-    }
-	mapView->schedule([=](float dt) {
-	  this->update(dt);
-	}, 0.0f, "update");
-
-
-	const auto listener = cocos2d::EventListenerKeyboard::create();
-    listener->onKeyPressed = [&](EventKeyboard::KeyCode keyCode, Event* event) {
-        CCLOG("Key pressed");
-        if (worm->isStable) {
-            switch (keyCode) {
-                case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
-                case EventKeyboard::KeyCode::KEY_A:
-                    worm->vy = 20;
-                    worm->vx = -10;
-                    break;
-                case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
-                case EventKeyboard::KeyCode::KEY_D:
-                    worm->vy = 20;
-                    worm->vx = 10;
-                    break;
-                case EventKeyboard::KeyCode::KEY_UP_ARROW:
-                case EventKeyboard::KeyCode::KEY_W:
-                    worm->angle += 10;
-                    worm->refreshIndicate();
-                    break;
-                case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
-                case EventKeyboard::KeyCode::KEY_S:
-                    worm->angle -= 10;
-                    worm->refreshIndicate();
-                    break;
-                case EventKeyboard::KeyCode::KEY_SPACE:
-                    addUnit(worm->makeBullet());
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
-    listener->onKeyReleased = [&](EventKeyboard::KeyCode keyCode, Event* event) {
-        worm->ay = 0;
-        worm->ax = 0;
-    };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, worm->view);
 }
 
 void MapLogic::handleEvent(int eventName, const Object &data) {
-    if (eventName == EVENT_EXPLODE) {
+    if (eventName == event::EVENT_EXPLODE) {
+        CCLOG("Exploded");
         auto unit = std::any_cast<UnitPhysic*>(data.at("unit"));
         auto respond = std::any_cast<int>(data.at("respond"));
         explode(unit->px, unit->py, respond);
         return;
     }
-    if (eventName == GameNetwork::EVENT_RECEIVE_PACKET) {
-        auto cmd = std::any_cast<CmdCode>(data.at("cmd"));
+    if (eventName == event::EVENT_RECEIVE_PACKET) {
+        auto cmd = std::any_cast<string>(data.at("cmd"));
         auto params = std::any_cast<std::vector<int>>(data.at("params"));
-        handleNetworkCmd(static_cast<CMD>(static_cast<int>(cmd))); //ugly as fuck i know
+        handleNetworkCmd(static_cast<CMD>(stoi(cmd))); //ugly as fuck i know
         return;
     }
 }

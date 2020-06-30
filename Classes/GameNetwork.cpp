@@ -4,10 +4,14 @@
 
 #include "GameNetwork.h"
 
-int GameNetwork::EVENT_RECEIVE_PACKET = game::EventManager::nextId();
-
-bool GameNetwork::send(const int cmd, const vector<int> &message) {
+bool GameNetwork::send(const int cmd, const vector<string> &message) {
     return send(Packet(cmd, message));
+}
+
+bool GameNetwork::send(int cmd, const vector<int> &message) {
+    vector<string> msg{};
+    for (auto& m : message) msg.push_back(to_string(m));
+    return send(Packet(cmd, msg));
 }
 
 bool GameNetwork::send(const Packet &packet) {
@@ -15,9 +19,8 @@ bool GameNetwork::send(const Packet &packet) {
         CCLOG("Sending...");
         if (socket != nullptr) {
             if (socket->getReadyState() == network::WebSocket::State::OPEN) {
-                const vector<int> &socketData = packet.toSocketData();
-                const ssize_t size = socketData.size();
-                socket->send((unsigned char *) socketData.data(), size * 4);
+                const string &socketData = packet.toSocketData();
+                socket->send(socketData);
             } else if (socket->getReadyState() == network::WebSocket::State::CONNECTING) {
                 pendingMessages.push_back(packet);
             }
@@ -48,7 +51,7 @@ void GameNetwork::onMessage(network::WebSocket *ws, const network::WebSocket::Da
 //    CCLOG(msg.c_str());
 
     const Packet packet(data);
-    game::EventManager::emit(GameNetwork::EVENT_RECEIVE_PACKET, static_cast<Object>(packet));
+    game::EventManager::emit(event::EVENT_RECEIVE_PACKET, static_cast<Object>(packet));
 }
 
 void GameNetwork::onClose(network::WebSocket *ws) {
