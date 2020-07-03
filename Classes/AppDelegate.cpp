@@ -107,7 +107,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
   register_all_packages();
 
   game = make_unique<Game>(GameConfig());
-  game.get();
+  Game::instance = game.get();
 
   return true;
 }

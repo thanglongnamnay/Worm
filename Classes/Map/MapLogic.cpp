@@ -7,9 +7,9 @@
 #include <utility>
 #include <GameNetwork.h>
 
-std::vector<double> MapLogic::PerlinNoise1D(std::vector<double> fSeed, int nOctaves, double fBias) {
+vector<double> MapLogic::PerlinNoise1D(vector<double> fSeed, int nOctaves, double fBias) {
 	auto nCount = fSeed.size();
-	std::vector<double> fOutput(nCount);
+	vector<double> fOutput(nCount);
 	for (auto x = 0; x<nCount; x++) {
 		auto fNoise = 0.0f;
 		auto fScaleAcc = 0.0f;
@@ -32,6 +32,8 @@ std::vector<double> MapLogic::PerlinNoise1D(std::vector<double> fSeed, int nOcta
 
 MapLogic::MapLogic(type::Vector<int> mapSize)
 		: mapSize(mapSize), game::EventListener() {
+	seed = time(0);
+	srand(seed);
 	map = createMap(mapSize);
 	mapView = MapView::create(map);
 }
@@ -39,22 +41,16 @@ MapLogic::MapLogic(type::Vector<int> mapSize)
 void MapLogic::handleEvent(int eventName, const Object &data) {
     if (eventName == event::EVENT_EXPLODE) {
         CCLOG("Exploded");
-        auto unit = std::any_cast<UnitPhysic*>(data.at("unit"));
-        auto respond = std::any_cast<int>(data.at("respond"));
+        auto unit = any_cast<UnitPhysic*>(data.at("unit"));
+        auto respond = any_cast<int>(data.at("respond"));
         explode(unit->px, unit->py, respond);
         return;
     }
     if (eventName == event::EVENT_RECEIVE_PACKET) {
-        auto cmd = std::any_cast<string>(data.at("cmd"));
-        auto params = std::any_cast<std::vector<int>>(data.at("params"));
-        handleNetworkCmd(static_cast<CMD>(stoi(cmd))); //ugly as fuck i know
+        auto cmd = any_cast<int>(data.at("cmd"));
+        auto params = any_cast<Params>(data.at("params"));
+        handleNetworkCmd(static_cast<CMD>(cmd), params);
         return;
-    }
-}
-
-void MapLogic::handleNetworkCmd(CMD cmd) {
-    switch (cmd) {
-        // TODO: implement this shit
     }
 }
 

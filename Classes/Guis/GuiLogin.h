@@ -15,30 +15,30 @@ USING_NS_CC;
 
 class GuiLogin : public Node {
 public:
-    Node* hud = nullptr;
-    ui::TextField* tfName = nullptr;
-    ui::Button* btnLogin = nullptr;
+	Node* hud = nullptr;
+	ui::TextField* tfName = nullptr;
+	ui::Button* btnLogin = nullptr;
 
-    bool init() override {
-        Node::init();
-        hud = CSLoader::createNode("res/Login.csb");
-        addChild(hud);
-        tfName = dynamic_cast<ui::TextField *>(hud->getChildByName("tfName"));
-        btnLogin = dynamic_cast<ui::Button *>(hud->getChildByName("btnLogin"));
-        return true;
-    }
+	bool init() override {
+		Node::init();
+		hud = CSLoader::createNode("res/Login.csb");
+		addChild(hud);
+		tfName = dynamic_cast<ui::TextField*>(hud->getChildByName("tfName"));
+		btnLogin = dynamic_cast<ui::Button*>(hud->getChildByName("btnLogin"));
+		btnLogin->addClickEventListener([=](Ref* event) {
+		  login();
+		});
+		return true;
+	}
 
-    void login() {
-        auto& name = tfName->getString();
-        Game::instance->login(name);
-    }
+	void login();
 
-    static GuiLogin *create() {
-        auto ptr = new(std::nothrow) GuiLogin();
-        ptr->init();
-        ptr->autorelease();
-        return ptr;
-    }
+	static GuiLogin* create() {
+		auto ptr = new(std::nothrow) GuiLogin();
+		ptr->init();
+		ptr->autorelease();
+		return ptr;
+	}
 };
 
 #endif //WORM_GUILOGIN_H

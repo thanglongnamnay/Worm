@@ -13,18 +13,20 @@
 
 class Player {
 public:
-    const int id;
+	const int id;
     const std::string name;
     const std::shared_ptr<Worm> worm;
     HP hp;
     MP mp;
 
-    Player(int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400) :
+    Player(int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400, int hp = 100, int mp = 0) :
             id(id),
             name(std::move(name)),
-            hp(100),
-            mp(0),
-            worm(std::make_shared<Worm>(x, y)) {}
+            hp(hp),
+            mp(mp),
+            worm(std::make_shared<Worm>(x, y)) {
+
+    }
 
     void init() {
         hp = HP(100);

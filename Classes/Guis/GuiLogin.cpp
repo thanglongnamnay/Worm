@@ -3,3 +3,8 @@
 //
 
 #include "GuiLogin.h"
+
+void GuiLogin::login() {
+	auto& name = tfName->getString();
+	Game::instance->login(name);
+}

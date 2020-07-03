@@ -14,23 +14,42 @@
 
 namespace ts = type_safe;
 
+class Params {
+	vector<string>::iterator p;
+	vector<string> params;
+public:
+	Params(vector<string> params) : params(params), p(params.begin()) {}
+	int getInt() {
+		if (p == params.end()) p = params.begin();
+		return stoi(*p++);
+	}
+	bool getBool() {
+		if (p == params.end()) p = params.begin();
+		return *p++ == "1";
+	}
+	string getString() {
+		if (p == params.end()) p = params.begin();
+		return *p++;
+	}
+};
+
 struct Packet {
     constexpr const static char delim[] = "|";
     int cmd = 0;
-    std::vector<std::string> params;
+    vector<string> params;
 
     explicit Packet(const cocos2d::network::WebSocket::Data &data) {
-        std::string msg = std::string(data.bytes, data.len);
+        string msg = string(data.bytes, data.len);
         params = Helper::split(msg, '|');
-        cmd = std::stoi(params[0]);
+        cmd = stoi(params[0]);
         params.erase(params.begin());
     }
 
-    Packet(const int cmd, std::vector<std::string> params)
-            : cmd(cmd), params(std::move(params)) {}
+    Packet(const int cmd, vector<string> params)
+            : cmd(cmd), params(move(params)) {}
 
-    [[nodiscard]] std::string toSocketData() const {
-        std::string msg{std::to_string(cmd)};
+    [[nodiscard]] string toSocketData() const {
+        string msg{to_string(cmd)};
         for (const auto& param : params) msg += delim + param;
         return msg;
     }
@@ -38,8 +57,9 @@ struct Packet {
     explicit operator Object() const {
         Object obj{
                 {"cmd",    cmd},
-                {"params", params},
+                {"params", Params{params}},
         };
+        return obj;
     }
 };
 

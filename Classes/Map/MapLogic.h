@@ -20,9 +20,8 @@ class MapLogic : game::EventListener {
 private:
     void handleEvent(int eventName, const Object &data) override;
 
-    void handleNetworkCmd(CMD cmd);
-
-    type::Vector<int> mapSize;
+    int seed;
+	type::Vector<int> mapSize;
     std::vector<std::vector<unsigned char>> map;
     std::list<std::shared_ptr<UnitPhysic>> unitList;
 public:
@@ -32,6 +31,20 @@ public:
 
     MapLogic(MapLogic &&rhs) noexcept
             : mapSize(rhs.mapSize), map(std::move(rhs.map)), mapView(rhs.mapView) {
+    }
+
+    void recreateMap(int newSeed) {
+    	if (newSeed == seed) return;
+    	seed = newSeed;
+    	srand(seed);
+		map = createMap(mapSize);
+		const auto& viewParent = mapView->getParent();
+		for (const auto& unit : unitList) unit->view->removeFromParent();
+		mapView->removeFromParent();
+		mapView = MapView::create(map);
+		viewParent->addChild(mapView);
+		for (const auto& unit : unitList) mapView->addChild(unit->view);
+		mapView->refreshMap();
     }
 
     void addUnit(const std::shared_ptr<UnitPhysic> &unitPhysic) {
@@ -106,7 +119,6 @@ private:
 
     static std::vector<std::vector<unsigned char>> createMap(type::Vector<int> mapSize) {
         auto fNoiseSeed = std::vector<double>(static_cast<int>(mapSize.x));
-        srand(time(0));
         for (int i = 0; i < mapSize.x; i++) {
             fNoiseSeed[i] = (double) rand() / RAND_MAX;
         }
@@ -117,13 +129,15 @@ private:
             map[y] = std::vector<unsigned char>(mapSize.x);
             for (auto x = 0; x < mapSize.x; ++x) {
                 map[y][x] = y < fSurface[x] * mapSize.y;
-//                map[y][x] = 0;
             }
         }
         return map;
     }
 
     static std::vector<double> PerlinNoise1D(std::vector<double> fSeed, int nOctaves, double fBias);
+	void handleNetworkCmd(CMD cmd, Params& params) {
+
+	}
 };
 
 #endif //WORM_MAPLOGIC_H

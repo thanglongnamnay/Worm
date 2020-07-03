@@ -26,6 +26,7 @@ private:
 public:
     explicit GameNetwork(const char url[]);
     ~GameNetwork() override;
+    bool send(int cmd);
     bool send(int cmd, const vector<string>& message);
     bool send(int cmd, const vector<int>& message);
     bool send(const Packet& packet);
@@ -36,8 +37,12 @@ public:
 };
 
 enum CMD {
-    LOGIN,
-    JOIN_ROOM = 69,
+	LOGIN = 1,
+	JOIN_ROOM = 2,
+	LEAVE_ROOM = 3,
+	GAME_ACTION = 4,
+	START = 5,
+	YOUR_ID = 6,
     MOVE,
     SHOOT,
 };
