@@ -51,6 +51,8 @@ namespace game {
 enum event {
     EVENT_EXPLODE,
     EVENT_RECEIVE_PACKET,
+    EVENT_HIT,
+    EVENT_DONE_CALCULATE,
 };
 
 #endif //WORM_GAMEEVENT_H

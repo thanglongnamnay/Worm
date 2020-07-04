@@ -9,7 +9,7 @@
 
 namespace ts = type_safe;
 
-struct HP : ts::strong_typedef<HP, unsigned>,
+struct HP : ts::strong_typedef<HP, int>,
 			ts::strong_typedef_op::equality_comparison<HP>,
 			ts::strong_typedef_op::relational_comparison<HP>,
 			ts::strong_typedef_op::integer_arithmetic<HP> {

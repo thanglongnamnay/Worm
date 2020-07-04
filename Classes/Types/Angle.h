@@ -21,6 +21,10 @@ public:
         return internal;
     }
 
+	explicit operator int() const {
+		return internal;
+	}
+
     Angle& operator+=(double t) {
         check(internal + t);
         return *this;

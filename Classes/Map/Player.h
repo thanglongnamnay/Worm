@@ -13,26 +13,21 @@
 
 class Player {
 public:
+	static int myId;
 	const int id;
-    const std::string name;
-    const std::shared_ptr<Worm> worm;
-    HP hp;
-    MP mp;
+	const std::string name;
+	const std::shared_ptr<Worm> worm;
+	HP hp;
+	MP mp;
 
-    Player(int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400, int hp = 100, int mp = 0) :
-            id(id),
-            name(std::move(name)),
-            hp(hp),
-            mp(mp),
-            worm(std::make_shared<Worm>(x, y)) {
+	const HP damage;
 
-    }
-
-    void init() {
-        hp = HP(100);
-        mp = MP(0);
-    }
+	Player(int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400, int hp = 100, int mp = 0,
+			Angle angle = Angle(0));
+	void shoot(Player& other);
+	void onDead();
+	void init();
+	void sync();
 };
-
 
 #endif //WORM_PLAYER_H

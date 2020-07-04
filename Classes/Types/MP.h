@@ -9,7 +9,7 @@
 
 namespace ts = type_safe;
 
-struct MP : ts::strong_typedef<MP, unsigned>,
+struct MP : ts::strong_typedef<MP, int>,
 			ts::strong_typedef_op::equality_comparison<MP>,
 			ts::strong_typedef_op::relational_comparison<MP>,
 			ts::strong_typedef_op::integer_arithmetic<MP> {

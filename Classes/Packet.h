@@ -15,21 +15,21 @@
 namespace ts = type_safe;
 
 class Params {
-	vector<string>::iterator p;
-	vector<string> params;
+	int p;
+	const vector<string>& params;
 public:
-	Params(vector<string> params) : params(params), p(params.begin()) {}
+	Params(const vector<string>& params) : params(params), p(0) {}
 	int getInt() {
-		if (p == params.end()) p = params.begin();
-		return stoi(*p++);
+		return stoi(params[p++]);
+	}
+	double getDouble() {
+		return stod(params[p++]);
 	}
 	bool getBool() {
-		if (p == params.end()) p = params.begin();
-		return *p++ == "1";
+		return params[p++] == "1";
 	}
 	string getString() {
-		if (p == params.end()) p = params.begin();
-		return *p++;
+		return params[p++];
 	}
 };
 

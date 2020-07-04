@@ -4,6 +4,8 @@
 
 #include "GameNetwork.h"
 
+GameNetwork* GameNetwork::instance = nullptr;
+
 bool GameNetwork::send(int cmd) {
 	return send(Packet(cmd, vector<string>{}));;
 }
@@ -21,10 +23,10 @@ bool GameNetwork::send(int cmd, const vector<int> &message) {
 
 bool GameNetwork::send(const Packet &packet) {
     try {
-        CCLOG("Sending...");
         if (socket != nullptr) {
             if (socket->getReadyState() == network::WebSocket::State::OPEN) {
                 const string &socketData = packet.toSocketData();
+				CCLOG("Sending: %s", socketData.c_str());
                 socket->send(socketData);
             } else if (socket->getReadyState() == network::WebSocket::State::CONNECTING) {
                 pendingMessages.push_back(packet);
