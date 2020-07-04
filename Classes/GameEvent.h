@@ -53,6 +53,7 @@ enum event {
     EVENT_RECEIVE_PACKET,
     EVENT_HIT,
     EVENT_DONE_CALCULATE,
+    EVENT_PLAYER_DIE,
 };
 
 #endif //WORM_GAMEEVENT_H

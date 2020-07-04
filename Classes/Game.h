@@ -29,7 +29,7 @@ private:
 	GameState gameState = WAITING;
 	std::list<Player> players;
 	std::list<Player>::iterator currentPlayer;
-	std::list<Player>::iterator myPlayer;
+	Player* myPlayer;
 
 	Scene* currentScene = nullptr;
 	Node* guiLogin = nullptr;

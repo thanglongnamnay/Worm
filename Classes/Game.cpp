@@ -2,6 +2,8 @@
 // Created by long on 20/05/2020.
 //
 
+#include <cocos/2d/CCNode.h>
+#include <Guis/GuiEndGame.h>
 #include "Game.h"
 
 Game* Game::instance = nullptr;
@@ -76,7 +78,7 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 		case CMD::YOUR_ID: {
 			const auto id = params.getInt();
 			CCLOG("YOUR_ID: %d", id);
-			myPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
+			myPlayer = &*find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
 			Player::myId = id;
 			break;
 		}
@@ -88,7 +90,7 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 		}
 		case CMD::SYNC_PLAYER: {
 			CCLOG("SYNC_PLAYER");
-			if (currentPlayer == myPlayer) {
+			if (currentPlayer->id == myPlayer->id) {
 				gameNetwork.send(static_cast<int>(CMD::NEXT_TURN));
 			}
 			break;
@@ -177,7 +179,7 @@ void Game::prepareGame() {
 	const auto listener = cocos2d::EventListenerKeyboard::create();
 	listener->onKeyPressed = [&](EventKeyboard::KeyCode keyCode, Event* event) {
 		CCLOG("Key pressed");
-		if (gameState != PLAYING || currentPlayer != myPlayer) { return; }
+		if (gameState != PLAYING || currentPlayer->id != myPlayer->id) { return; }
 		auto worm = currentPlayer->worm;
 		if (worm->isStable) {
 			switch (keyCode) {
@@ -229,10 +231,15 @@ void Game::startGame(int id) {
 	nextTurn(id);
 }
 void Game::restartGame(int id) {
+	if (id >= 0) {
+		auto winPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
+		currentScene->addChild(GuiEndGame::create(winPlayer->name));
+	} else {
+		currentScene->addChild(GuiEndGame::create());
+	}
 	removeAllPlayer();
-	showLoginScene();
+//	showLoginScene();
 }
 void Game::update(float dt) {
-	players.remove_if([](const Player& p) { return p.hp <= HP(0); });
 	mapLogic.update(dt);
 }

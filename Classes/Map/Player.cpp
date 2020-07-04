@@ -17,6 +17,9 @@ Player::Player(int id, std::string name, int x, int y, int hp, int mp, Angle ang
 }
 void Player::onDead() {
 	worm->isDead = true;
+	game::EventManager::emit(EVENT_PLAYER_DIE, (Object){
+			{"id", id},
+	});
 }
 void Player::init() {
 	hp = HP(100);
@@ -31,12 +34,23 @@ void Player::shoot(Player& other) {
 	}
 }
 void Player::sync() {
-	GameNetwork::instance->send(static_cast<int>(CMD::SYNC_PLAYER), {
-			to_string(id),
-			to_string(worm->px),
-			to_string(worm->py),
-			to_string(static_cast<int>(hp)),
-			to_string(static_cast<int>(mp)),
-			to_string(static_cast<int>(worm->angle)),
-	});
+	if (worm) {
+		GameNetwork::instance->send(static_cast<int>(CMD::SYNC_PLAYER), {
+				to_string(id),
+				to_string(worm->px),
+				to_string(worm->py),
+				to_string(static_cast<int>(hp)),
+				to_string(static_cast<int>(mp)),
+				to_string(static_cast<int>(worm->angle)),
+		});
+	} else {
+		GameNetwork::instance->send(static_cast<int>(CMD::SYNC_PLAYER), {
+				to_string(id),
+				to_string(0),
+				to_string(0),
+				to_string(static_cast<int>(hp)),
+				to_string(static_cast<int>(mp)),
+				to_string(static_cast<int>(0)),
+		});
+	}
 }
