@@ -14,7 +14,8 @@ void Game::showLoginScene() {
 	if (runningScene) {
 		Director::getInstance()->replaceScene(currentScene);
 		mapLogic.mapView->removeFromParent();
-	} else {
+	}
+	else {
 		Director::getInstance()->runWithScene(currentScene);
 	}
 
@@ -43,8 +44,9 @@ void Game::handleEvent(int eventName, const Object& data) {
 		shooterPlayer->shoot(*shotPlayer);
 		return;
 	}
-	if (eventName == event::EVENT_DONE_CALCULATE) {
-		myPlayer->sync();
+	if (eventName == event::EVENT_PLAYER_DIE) {
+		const auto id = any_cast<int>(data.at("id"));
+		someoneDied = true;
 		return;
 	}
 }
@@ -77,34 +79,14 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 		}
 		case CMD::YOUR_ID: {
 			const auto id = params.getInt();
+			isMaster = params.getBool();
 			CCLOG("YOUR_ID: %d", id);
-			myPlayer = &*find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
+			myPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
 			Player::myId = id;
 			break;
 		}
-		case CMD::NEXT_TURN: {
-			const auto id = params.getInt();
-			CCLOG("NEXT_TURN: %d", id);
-			nextTurn(id);
-			break;
-		}
-		case CMD::SYNC_PLAYER: {
-			CCLOG("SYNC_PLAYER");
-			if (currentPlayer->id == myPlayer->id) {
-				gameNetwork.send(static_cast<int>(CMD::NEXT_TURN));
-			}
-			break;
-		}
 		case CMD::GAME_ACTION: {
-			const auto id = params.getInt();
-			CCLOG("GAME_ACTION: %d", id);
 			handleGameAction(params);
-			break;
-		}
-		case CMD::END_GAME: {
-			const auto id = params.getInt();
-			CCLOG("END_GAME: %d", id);
-			restartGame(id);
 			break;
 		}
 		default:
@@ -114,12 +96,17 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 	}
 }
 void Game::handleGameAction(Params params) {
+	const auto id = params.getInt();
+	CCLOG("GAME_ACTION: %d", id);
 	const auto action = (GAME_ACTION)params.getInt();
 	auto worm = currentPlayer->worm;
 	switch (action) {
-		case GAME_ACTION::SHOOT:
-			mapLogic.addUnit(worm->makeBullet());
+		case GAME_ACTION::SHOOT: {
+			const auto power = params.getInt();
+			mapLogic.addUnit(worm->makeBullet(power));
+			needNextTurn = true;
 			break;
+		}
 		case GAME_ACTION::CHANGE_ANGLE: {
 			const auto angle = params.getInt();
 			worm->angle = angle;
@@ -130,6 +117,10 @@ void Game::handleGameAction(Params params) {
 			const auto direction = params.getInt();
 			worm->vy = 20;
 			worm->vx = 10 * direction;
+			break;
+		}
+		case GAME_ACTION::NEXT_TURN: {
+			nextTurn(id);
 			break;
 		}
 	}
@@ -147,7 +138,7 @@ void Game::login(const string& name) {
 	gameNetwork.send(static_cast<int>(CMD::LOGIN), {name});
 }
 void Game::addPlayer(int id, const std::string& name, double x, double y, int hp, int mp, Angle angle) {
-	players.emplace_back(id, name, x, y, hp, mp, angle);
+	players.emplace_back(mapLogic, id, name, x, y, hp, mp, angle);
 	mapLogic.addUnit(players.back().worm);
 }
 void Game::removePlayer(Player* p) {
@@ -165,6 +156,7 @@ void Game::nextTurn(int id) {
 void Game::nextTurn() {
 	++currentPlayer;
 	if (currentPlayer == players.end()) { currentPlayer = players.begin(); }
+	gameState = PLAYING;
 }
 void Game::prepareGame() {
 	gameState = WAITING;
@@ -206,8 +198,11 @@ void Game::prepareGame() {
 							 static_cast<int>(worm->angle) - 10});
 					break;
 				case EventKeyboard::KeyCode::KEY_SPACE:
-					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
-							{currentPlayer->id, static_cast<int>(GAME_ACTION::SHOOT)});
+					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION), {
+							currentPlayer->id,
+							static_cast<int>(GAME_ACTION::SHOOT),
+							mapLogic.mapView->getPower(),
+					});
 					gameState = CALCULATING;
 					break;
 				default:
@@ -231,15 +226,30 @@ void Game::startGame(int id) {
 	nextTurn(id);
 }
 void Game::restartGame(int id) {
+	gameState = WAITING;
 	if (id >= 0) {
 		auto winPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
 		currentScene->addChild(GuiEndGame::create(winPlayer->name));
-	} else {
+	}
+	else {
 		currentScene->addChild(GuiEndGame::create());
 	}
 	removeAllPlayer();
 //	showLoginScene();
 }
 void Game::update(float dt) {
-	mapLogic.update(dt);
+	if (gameState == WAITING) return;
+	if (players.size() < 2) {
+		restartGame(!players.empty() ? players.front().id : -1);
+	} else {
+		mapLogic.update(dt);
+	}
+	if (someoneDied) {
+		someoneDied = false;
+		players.remove_if([=](const Player& p) { return p.hp <= HP(0); });
+	}
+	if (needNextTurn) {
+		needNextTurn = false;
+		nextTurn();
+	}
 }

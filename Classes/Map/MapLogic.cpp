@@ -3,8 +3,6 @@
 //
 
 #include "MapLogic.h"
-
-#include <utility>
 #include <GameNetwork.h>
 
 vector<double> MapLogic::PerlinNoise1D(vector<double> fSeed, int nOctaves, double fBias) {
@@ -44,7 +42,6 @@ void MapLogic::handleEvent(int eventName, const Object& data) {
 		auto unit = any_cast<UnitPhysic*>(data.at("unit"));
 		auto respond = any_cast<int>(data.at("respond"));
 		explode(unit, respond);
-		game::EventManager::emit(EVENT_DONE_CALCULATE, (Object){});
 		return;
 	}
 	if (eventName == event::EVENT_RECEIVE_PACKET) {
@@ -74,7 +71,6 @@ void MapLogic::addUnit(const shared_ptr<UnitPhysic>& unitPhysic) {
 	unitList.push_back(unitPhysic);
 }
 void MapLogic::removeUnit(const shared_ptr<UnitPhysic>& unitPhysic) {
-	unitPhysic->getView()->removeFromParent();
 	unitList.remove_if([&](const std::shared_ptr<UnitPhysic>& o) {
 		return o == unitPhysic;
 	});

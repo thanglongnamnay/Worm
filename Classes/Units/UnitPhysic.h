@@ -200,8 +200,8 @@ public:
 		return 0;
 	}
 
-	std::shared_ptr<Missile> makeBullet() {
-		auto missile = std::make_shared<Missile>(px, py, angle);
+	std::shared_ptr<Missile> makeBullet(int power) {
+		auto missile = std::make_shared<Missile>(px, py, angle, power);
 		missile->playerId = playerId;
 		return missile;
 	}

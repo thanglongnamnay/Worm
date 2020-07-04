@@ -12,7 +12,6 @@
 #include <GameNetwork.h>
 #include <Types/Vector.h>
 #include "MapView.h"
-#include "Player.h"
 
 constexpr const double epsilon = 0.001;
 

@@ -34,7 +34,7 @@ namespace game {
         static std::set<EventListener *> listeners;
 
     public:
-        static void emit(const int &eventName, const Object& data);
+        static void emit(const int &eventName, const Object& data = {});
 
         static void add(EventListener *eventListener);
 

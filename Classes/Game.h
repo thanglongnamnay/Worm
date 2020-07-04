@@ -11,6 +11,7 @@
 #include "Map/MapLogic.h"
 #include "HelloWorldScene.h"
 #include "Helper.h"
+#include <Map/Player.h>
 
 #include "Types/HP.h"
 #include "Types/MP.h"
@@ -27,9 +28,12 @@ private:
 	GameNetwork gameNetwork;
 	MapLogic mapLogic{{1024, 512}};
 	GameState gameState = WAITING;
-	std::list<Player> players;
-	std::list<Player>::iterator currentPlayer;
-	Player* myPlayer;
+	list<Player> players;
+	list<Player>::iterator currentPlayer;
+	list<Player>::iterator myPlayer;
+	bool isMaster{};
+	bool someoneDied{};
+	bool needNextTurn{};
 
 	Scene* currentScene = nullptr;
 	Node* guiLogin = nullptr;
@@ -40,9 +44,9 @@ public:
 	static Game* instance;
 	explicit Game(GameConfig gameConfig);
 	void update(float dt);
-	void login(const std::string& name);
+	void login(const string& name);
 	void
-	addPlayer(int id, const std::string& name, double x = rand() % 800, double y = 400 + rand() % 400, int hp = 100,
+	addPlayer(int id, const string& name, double x = rand() % 800, double y = 400 + rand() % 400, int hp = 100,
 			int mp = 0, Angle angle = Angle(0));
 	void removePlayer(Player* p);
 	void removeAllPlayer();

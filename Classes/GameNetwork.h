@@ -44,17 +44,17 @@ enum class CMD {
 	GAME_ACTION = 4,
 	START = 5,
 	YOUR_ID = 6,
-	NEXT_TURN = 7,
 	SYNC_PLAYER = 8,
-	END_GAME = 9,
     MOVE,
     SHOOT,
 };
 
 enum class GAME_ACTION {
 	SHOOT = 1,
-	CHANGE_ANGLE,
-	MOVE,
+	CHANGE_ANGLE = 2,
+	MOVE = 3,
+	NEXT_TURN = 4,
+	END_GAME = 5,
 };
 
 #endif //WORM_GAMENETWORK_H

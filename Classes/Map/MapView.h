@@ -7,12 +7,14 @@
 
 #include <cocos2d.h>
 #include <cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h>
+#include <cocos/ui/UISlider.h>
 
 USING_NS_CC;
 
 class MapView : public Node {
 	DrawNode* mainMap{};
 	Node* hud{};
+	ui::Slider* powerBar;
 	const std::vector<std::vector<u_char>>& map;
 public:
 	explicit MapView(std::vector<std::vector<u_char>>& map)
@@ -25,7 +27,14 @@ public:
 		addChild(mainMap);
 		hud = CSLoader::createNode("res/GameHUD.csb");
 		addChild(hud);
+		powerBar = hud->getChildByName("ndPropertyies")->getChildByName<ui::Slider*>("slPower");
 		return true;
+	}
+
+	int getPower() const {
+		if (!powerBar) return 100;
+		CCLOG("powerBar: %d", powerBar->getPercent());
+		return powerBar->getPercent();
 	}
 
 	~MapView() override {

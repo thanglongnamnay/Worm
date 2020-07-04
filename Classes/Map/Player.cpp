@@ -5,13 +5,14 @@
 #include <GameNetwork.h>
 #include "Player.h"
 int Player::myId = -1;
-Player::Player(int id, std::string name, int x, int y, int hp, int mp, Angle angle)
+Player::Player(MapLogic& mapLogic, int id, std::string name, int x, int y, int hp, int mp, Angle angle)
 		:
 		id(id),
 		name(std::move(name)),
 		hp(hp),
 		mp(mp),
 		damage(55),
+		mapLogic(mapLogic),
 		worm(std::make_shared<Worm>(x, y, angle)) {
 	worm->playerId = id;
 }
@@ -33,7 +34,7 @@ void Player::shoot(Player& other) {
 		other.onDead();
 	}
 }
-void Player::sync() {
+void Player::sync() const {
 	if (worm) {
 		GameNetwork::instance->send(static_cast<int>(CMD::SYNC_PLAYER), {
 				to_string(id),

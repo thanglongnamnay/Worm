@@ -23,8 +23,8 @@ public:
 		Node::init();
 		hud = CSLoader::createNode("res/Login.csb");
 		addChild(hud);
-		tfName = dynamic_cast<ui::TextField*>(hud->getChildByName("tfName"));
-		btnLogin = dynamic_cast<ui::Button*>(hud->getChildByName("btnLogin"));
+		tfName = hud->getChildByName<ui::TextField*>("tfName");
+		btnLogin = hud->getChildByName<ui::Button*>("btnLogin");
 		btnLogin->addClickEventListener([=](Ref* event) {
 		  login();
 		});
