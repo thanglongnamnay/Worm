@@ -61,13 +61,8 @@ public:
 			// Constrain to test within map boundary
 			const auto sizeX = map[0].size();
 			const auto sizeY = map.size();
-			if (testPosX >= sizeX) { testPosX = sizeX - 1; }
-			if (testPosY >= sizeY) { testPosY = sizeY - 1; }
-			if (testPosX < 0) { testPosX = 0; }
-			if (testPosY < 0) { testPosY = 0; }
-
-			// Test if any points on semicircle intersect with terrain
-			if (map[(int)testPosY][(int)testPosX] != 0) {
+			if (testPosY >= sizeY) testPosY = sizeY - 1;
+			if (testPosX >= sizeX || testPosY >= sizeY || testPosY < 0 || map[(int)testPosY][(int)testPosX] != 0) {
 				// Accumulate collision points to give an escape response vector
 				// Effectively, normal to the areas of contact
 				responseX += potentialX - testPosX;

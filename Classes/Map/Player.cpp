@@ -28,7 +28,8 @@ void Player::init() {
 }
 void Player::shoot(Player& other) {
 	other.hp -= damage;
-	other.worm->view->changeHp(static_cast<int>(hp));
+	other.worm->view->changeHp(static_cast<int>(other.hp));
+	CCLOG("SHOOT: -%d => %d", static_cast<int>(damage), static_cast<int>(other.hp));
 	if (other.hp <= HP(0)) {
 		other.hp = HP(0);
 		other.onDead();

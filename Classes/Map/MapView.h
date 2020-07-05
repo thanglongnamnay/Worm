@@ -8,17 +8,20 @@
 #include <cocos2d.h>
 #include <cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h>
 #include <cocos/ui/UISlider.h>
+#include <Units/UnitPhysic.h>
 
 USING_NS_CC;
 
 class MapView : public Node {
-	DrawNode* mainMap{};
 	Node* hud{};
 	ui::Slider* powerBar;
 	const std::vector<std::vector<u_char>>& map;
+	const Size screen;
+	std::shared_ptr<UnitPhysic> following = nullptr;
 public:
+	DrawNode* mainMap{};
 	explicit MapView(std::vector<std::vector<u_char>>& map)
-			:Node(), map(map) {
+			:Node(), map(map), screen(Director::getInstance()->getVisibleSize()) {
 	}
 
 	bool init() override {
@@ -28,6 +31,7 @@ public:
 		hud = CSLoader::createNode("res/GameHUD.csb");
 		addChild(hud);
 		powerBar = hud->getChildByName("ndPropertyies")->getChildByName<ui::Slider*>("slPower");
+		scheduleUpdate();
 		return true;
 	}
 
@@ -35,6 +39,23 @@ public:
 		if (!powerBar) return 100;
 		CCLOG("powerBar: %d", powerBar->getPercent());
 		return powerBar->getPercent();
+	}
+
+	void follow(const std::shared_ptr<UnitPhysic>& unit) {
+		following = unit;
+		CCLOG("change following");
+	}
+
+	void update(float delta) override {
+		if (following && !following->isDead) {
+			mainMap->setPosition(-following->getView()->getPositionX() * mainMap->getScale() + screen.width / 2, -following->getView()->getPositionY() * mainMap->getScale() + screen.height / 2);
+		} else {
+			mainMap->setPosition(0, 0);
+		}
+	}
+
+	void addObject(Node* node) const {
+		mainMap->addChild(node);
 	}
 
 	~MapView() override {

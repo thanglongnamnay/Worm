@@ -67,7 +67,7 @@ void MapLogic::recreateMap(int newSeed) {
 }
 void MapLogic::addUnit(const shared_ptr<UnitPhysic>& unitPhysic) {
 	unitPhysic->draw();
-	mapView->addChild(unitPhysic->getView());
+	mapView->addObject(unitPhysic->getView());
 	unitList.push_back(unitPhysic);
 }
 void MapLogic::removeUnit(const shared_ptr<UnitPhysic>& unitPhysic) {
@@ -111,12 +111,12 @@ void MapLogic::CircleBresenham(int xc, int yc, int r) {
 	}
 }
 std::vector<std::vector<unsigned char>> MapLogic::createMap(type::Vector<int> mapSize) {
-	auto fNoiseSeed = std::vector<double>(static_cast<int>(mapSize.x));
+	auto noiseSeeds = std::vector<double>(static_cast<int>(mapSize.x));
 	for (int i = 0; i < mapSize.x; i++) {
-		fNoiseSeed[i] = (double)rand() / RAND_MAX;
+		noiseSeeds[i] = (double)rand() / RAND_MAX;
 	}
-	fNoiseSeed[0] = 0.5f;
-	auto fSurface = PerlinNoise1D(fNoiseSeed, 8, 2);
+	noiseSeeds[0] = 0.5f;
+	auto fSurface = PerlinNoise1D(noiseSeeds, 10, 1.8);
 	std::vector<std::vector<unsigned char>> map(mapSize.y);
 	for (auto y = 0; y < mapSize.y; ++y) {
 		map[y] = std::vector<unsigned char>(mapSize.x);
@@ -146,8 +146,8 @@ void MapLogic::explode(UnitPhysic* unit, double radius) {
 					{"shooter", unit->playerId},
 					{"shot",    otherUnit->playerId},
 			});
-			otherUnit->vx = 10 * (dx / distance) * radius;
-			otherUnit->vy = 10 * (dy / distance) * radius;
+			otherUnit->vx = (dx / distance) * radius;
+			otherUnit->vy = (dy / distance) * radius;
 			otherUnit->isStable = false;
 		}
 	}

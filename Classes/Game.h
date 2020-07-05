@@ -26,7 +26,7 @@ class Game : game::EventListener {
 private:
 	GameConfig gameConfig;
 	GameNetwork gameNetwork;
-	MapLogic mapLogic{{1024, 512}};
+	MapLogic mapLogic{{2048, 512}};
 	GameState gameState = WAITING;
 	list<Player> players;
 	list<Player>::iterator currentPlayer;

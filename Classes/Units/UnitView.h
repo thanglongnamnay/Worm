@@ -57,10 +57,10 @@ public:
 
 class WormView : public UnitView {
 	Sprite* view{};
-	DrawNode* indicator{};
 	ProgressTimer* hpBar{};
 	ProgressTimer* mpBar{};
 public:
+	DrawNode* indicator{};
 	bool init() override {
 		if (!Node::init()) return false;
 		view = Sprite::createWithSpriteFrameName("tile000.png");
@@ -70,13 +70,17 @@ public:
 		auto sp1 = Sprite::create("Bars/hp.png");
 		sp1->setContentSize({118, 20});
 		hpBar = ProgressTimer::create(sp1);
+		hpBar->setType(ProgressTimer::Type::BAR);
 		hpBar->setPositionY(22);
+		hpBar->setMidpoint(Vec2(0, 0));
 		hpBar->setScale(0.3f);
 		hpBar->setPercentage(100);
 		addChild(hpBar);
 		auto sp = Sprite::create("Bars/mp.png");
 		sp->setContentSize({118, 20});
 		mpBar = ProgressTimer::create(sp);
+		mpBar->setType(ProgressTimer::Type::BAR);
+		mpBar->setMidpoint(Vec2(0, 0));
 		addChild(mpBar);
 		mpBar->setPositionY(16);
 		mpBar->setScale(0.3f);
@@ -109,7 +113,7 @@ public:
 	void changeMp(int mp) {
 		mpBar->setPercentage(mp);
 	}
-	void indicate(Angle angle) {
+	void indicate(Angle angle) const {
 		indicator->clear();
 		indicator->drawLine(Vec2::ZERO,
 				(new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, static_cast<double>(angle) * 3.14 / 180),

@@ -22,11 +22,15 @@ public:
 	bool init() override {
 		Node::init();
 		auto visibleSize = Director::getInstance()->getVisibleSize();
+
+		auto bg = LayerColor::create({0, 0, 0, 200});
+		addChild(bg);
+
 		auto lbVictory = Label::create();
 		lbVictory->setBMFontSize(48);
 		lbVictory->setSystemFontSize(48);
 		lbVictory->setString(draw ? "Draw" : "Player " + name + " won");
-		lbVictory->setPosition(visibleSize.width / 2, visibleSize.height / 2);
+		lbVictory->setPosition(visibleSize.width / 2, visibleSize.height / 2 + 100);
 		addChild(lbVictory);
 
 		auto lbBtnBack = Label::create();
@@ -36,7 +40,7 @@ public:
 
 		auto btnBack = ui::Button::create();
 		btnBack->setTitleLabel(lbBtnBack);
-		btnBack->setPosition({visibleSize.width / 2, visibleSize.height / 2 - 100});
+		btnBack->setPosition({visibleSize.width / 2, visibleSize.height / 2 - 50});
 		btnBack->addClickEventListener([](Ref* sender) {
 			Game::instance->showLoginScene();
 		});

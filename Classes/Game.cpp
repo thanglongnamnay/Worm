@@ -26,6 +26,11 @@ void Game::showLoginScene() {
 }
 void Game::handleEvent(int eventName, const Object& data) {
 	EventListener::handleEvent(eventName, data);
+	if (eventName == event::EVENT_EXPLODE) {
+		needNextTurn = true;
+		mapLogic.mapView->follow(currentPlayer->worm);
+		return;
+	}
 	if (eventName == event::EVENT_RECEIVE_PACKET) {
 		auto cmd = any_cast<int>(data.at("cmd"));
 		auto params = any_cast<Params>(data.at("params"));
@@ -103,8 +108,9 @@ void Game::handleGameAction(Params params) {
 	switch (action) {
 		case GAME_ACTION::SHOOT: {
 			const auto power = params.getInt();
-			mapLogic.addUnit(worm->makeBullet(power));
-			needNextTurn = true;
+			const shared_ptr<Missile>& bullet = worm->makeBullet(power);
+			mapLogic.addUnit(bullet);
+			mapLogic.mapView->follow(bullet);
 			break;
 		}
 		case GAME_ACTION::CHANGE_ANGLE: {
@@ -117,6 +123,8 @@ void Game::handleGameAction(Params params) {
 			const auto direction = params.getInt();
 			worm->vy = 20;
 			worm->vx = 10 * direction;
+			worm->view->setScaleX(-direction);
+			worm->view->indicator->setScaleX(-direction);
 			break;
 		}
 		case GAME_ACTION::NEXT_TURN: {
@@ -150,12 +158,19 @@ void Game::removeAllPlayer() {
 void Game::nextTurn(int id) {
 	currentPlayer = std::find_if(players.begin(), players.end(),
 			[=](const Player& player) { return player.id == id; });
+
+	mapLogic.mapView->follow(currentPlayer->worm);
 	gameState = PLAYING;
 	if (currentPlayer == players.end()) throw bad_any_cast();
 }
 void Game::nextTurn() {
 	++currentPlayer;
 	if (currentPlayer == players.end()) { currentPlayer = players.begin(); }
+	if (currentPlayer != players.end() && currentPlayer->worm) {
+		mapLogic.mapView->follow(currentPlayer->worm);
+	} else {
+		mapLogic.mapView->follow(nullptr);
+	}
 	gameState = PLAYING;
 }
 void Game::prepareGame() {
@@ -222,7 +237,7 @@ void Game::prepareGame() {
 void Game::startGame(int id) {
 	gameState = PLAYING;
 	mapLogic.mapView->refreshMap();
-
+	mapLogic.mapView->mainMap->setScale(1.5);
 	nextTurn(id);
 }
 void Game::restartGame(int id) {
