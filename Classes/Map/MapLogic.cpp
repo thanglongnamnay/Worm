@@ -116,7 +116,7 @@ std::vector<std::vector<unsigned char>> MapLogic::createMap(type::Vector<int> ma
 		noiseSeeds[i] = (double)rand() / RAND_MAX;
 	}
 	noiseSeeds[0] = 0.5f;
-	auto fSurface = PerlinNoise1D(noiseSeeds, 10, 1.8);
+	auto fSurface = PerlinNoise1D(noiseSeeds, 10, 1.5 + noiseSeeds.back());
 	std::vector<std::vector<unsigned char>> map(mapSize.y);
 	for (auto y = 0; y < mapSize.y; ++y) {
 		map[y] = std::vector<unsigned char>(mapSize.x);
