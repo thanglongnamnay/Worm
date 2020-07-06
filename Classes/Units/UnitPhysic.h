@@ -134,16 +134,7 @@ public:
     Node* getView() override {
 		return view.get();
 	}
-	~CRT_UnitPhysic() override {
-		if (view && view->getParent()) {
-			try {
-				view->removeFromParent();
-			}
-			catch (std::exception& e) {
-
-			}
-		}
-	}
+	~CRT_UnitPhysic() override = default;
 };
 
 class Missile : public CRT_UnitPhysic<MissileView> {

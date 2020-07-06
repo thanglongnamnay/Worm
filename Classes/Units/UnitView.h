@@ -13,6 +13,12 @@
 USING_NS_CC;
 
 class UnitView : public Node {
+public:
+	~UnitView() override {
+		if (this->getParent()) {
+			this->removeFromParent();
+		}
+	}
 };
 
 class DebrisView : public UnitView {
