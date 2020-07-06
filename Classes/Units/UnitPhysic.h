@@ -122,7 +122,7 @@ public:
 template<class ViewType>
 class CRT_UnitPhysic : public UnitPhysic {
 public:
-	ViewType* view;
+    std::shared_ptr<ViewType> view;
 	CRT_UnitPhysic(double x, double y)
 			:UnitPhysic(x, y) {
 		view = ViewType::create();
@@ -131,8 +131,8 @@ public:
 	void draw() override {
 		if (view) view->setPosition(px, py);
 	}
-	Node* getView() override {
-		return view;
+    Node* getView() override {
+		return view.get();
 	}
 	~CRT_UnitPhysic() override {
 		if (view && view->getParent()) {

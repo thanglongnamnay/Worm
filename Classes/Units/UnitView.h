@@ -25,10 +25,9 @@ public:
 		addChild(view);
 		return true;
 	}
-	static DebrisView* create() {
-		auto p = new(std::nothrow) DebrisView();
+	static std::shared_ptr<DebrisView> create() {
+		auto p = std::make_shared<DebrisView>();
 		if (p && p->init()) {
-			p->autorelease();
 			return p;
 		}
 		return nullptr;
@@ -45,10 +44,9 @@ public:
 		addChild(view);
 		return true;
 	}
-	static MissileView* create() {
-		auto p = new(std::nothrow) MissileView();
+	static std::shared_ptr<MissileView> create() {
+		auto p = std::make_shared<MissileView>();
 		if (p && p->init()) {
-			p->autorelease();
 			return p;
 		}
 		return nullptr;
@@ -119,10 +117,9 @@ public:
 				(new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, static_cast<double>(angle) * 3.14 / 180),
 				Color4F(1, 1, 1, 1));
 	}
-	static WormView* create() {
-		auto p = new(std::nothrow) WormView();
+	static std::shared_ptr<WormView> create() {
+		auto p = std::make_shared<WormView>();
 		if (p && p->init()) {
-			p->autorelease();
 			return p;
 		}
 		return nullptr;
