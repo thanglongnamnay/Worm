@@ -48,7 +48,10 @@ public:
 
 	void update(float delta) override {
 		if (following && !following->isDead) {
-			mainMap->setPosition(-following->getView()->getPositionX() * mainMap->getScale() + screen.width / 2, -following->getView()->getPositionY() * mainMap->getScale() + screen.height / 2);
+			const auto dest = Vec2{-following->getView()->getPositionX() * mainMap->getScale() + screen.width / 2, -following->getView()->getPositionY() * mainMap->getScale() + screen.height / 2};
+			const auto curr = mainMap->getPosition();
+			if (dest.distanceSquared(curr) < delta * 100) mainMap->setPosition(dest);
+			mainMap->setPosition(curr.lerp(dest, 0.1f));
 		} else {
 			mainMap->setPosition(0, 0);
 		}

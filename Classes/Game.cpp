@@ -169,15 +169,15 @@ void Game::nextTurn(int id) {
 void Game::nextTurn() {
 	++currentPlayer;
 	if (currentPlayer == players.end()) { currentPlayer = players.begin(); }
-	if (currentPlayer != players.end() && currentPlayer->worm) {
-		mapLogic.mapView->follow(currentPlayer->worm);
-	} else {
+	if (players.empty() || currentPlayer == players.end() || !currentPlayer->worm) {
 		mapLogic.mapView->follow(nullptr);
+	} else {
+		mapLogic.mapView->follow(currentPlayer->worm);
 	}
 	gameState = PLAYING;
 	if (currentPlayer == myPlayer) {
-        Helper::showText("Your turn");
-    }
+		Helper::showText("Your turn");
+	}
 }
 void Game::prepareGame() {
 	gameState = WAITING;
