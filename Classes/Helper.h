@@ -24,6 +24,14 @@ public:
         }
         return tokens;
     }
+
+    static void showText(const string &s) {
+        auto scene = Director::getInstance()->getRunningScene();
+        auto text = Label::createWithSystemFont(s, "Arial", 64);
+        text->setPosition(scene->getContentSize().width / 2, scene->getContentSize().height / 2);
+        text->runAction(Sequence::create(EaseIn::create(MoveBy::create(1, {0, 100}), 2), RemoveSelf::create()));
+        scene->addChild(text);
+    }
 };
 
 #endif //WORM_HELPER_H

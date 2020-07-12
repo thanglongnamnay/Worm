@@ -160,6 +160,9 @@ void Game::nextTurn(int id) {
 			[=](const Player& player) { return player.id == id; });
 
 	mapLogic.mapView->follow(currentPlayer->worm);
+    if (currentPlayer == myPlayer) {
+        Helper::showText("Your turn");
+    }
 	gameState = PLAYING;
 	if (currentPlayer == players.end()) throw bad_any_cast();
 }
@@ -172,6 +175,9 @@ void Game::nextTurn() {
 		mapLogic.mapView->follow(nullptr);
 	}
 	gameState = PLAYING;
+	if (currentPlayer == myPlayer) {
+        Helper::showText("Your turn");
+    }
 }
 void Game::prepareGame() {
 	gameState = WAITING;
