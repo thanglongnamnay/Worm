@@ -87,8 +87,7 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 			isMaster = params.getBool();
 			CCLOG("YOUR_ID: %d", id);
 			myPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
-			Player::myId = id;
-			break;
+            break;
 		}
 		case CMD::GAME_ACTION: {
 			handleGameAction(params);

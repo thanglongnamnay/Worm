@@ -4,7 +4,7 @@
 
 #include <GameNetwork.h>
 #include "Player.h"
-int Player::myId = -1;
+
 Player::Player(MapLogic& mapLogic, int id, std::string name, int x, int y, int hp, int mp, Angle angle)
 		:
 		id(id),
