@@ -130,15 +130,12 @@ void MapLogic::handleNetworkCmd(CMD cmd, Params& params) {
 
 }
 void MapLogic::explode(UnitPhysic* unit, double radius) {
-	const auto worldX = unit->px;
-	const auto worldY = unit->py;
-	CircleBresenham(worldX, worldY, radius);
+    CircleBresenham(unit->position.x, unit->position.y, radius);
 
 	for (const auto& otherUnit : unitList) {
 		if (otherUnit.get() == unit) continue;
-		double dx = otherUnit->px - worldX;
-		double dy = otherUnit->py - worldY;
-		double distance = sqrt(dx * dx + dy * dy);
+		Vec2 delta = otherUnit->position - unit->position;
+		double distance = delta.getLength();
 		if (distance < epsilon) distance = epsilon;
 
 		if (distance < radius) {
@@ -146,14 +143,13 @@ void MapLogic::explode(UnitPhysic* unit, double radius) {
 					{"shooter", unit->playerId},
 					{"shot",    otherUnit->playerId},
 			});
-			otherUnit->vx = (dx / distance) * radius;
-			otherUnit->vy = (dy / distance) * radius;
+			otherUnit->velocity = delta / (distance / radius);
 			otherUnit->isStable = false;
 		}
 	}
 
 	// Launch debris proportional to blast size
 	for (int i = 0; i < (int)radius; i++)
-		addUnit(std::make_shared<Debris>(worldX, worldY));
+		addUnit(std::make_shared<Debris>(unit->position));
 }
 

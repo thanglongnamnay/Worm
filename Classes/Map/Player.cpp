@@ -13,8 +13,9 @@ Player::Player(MapLogic& mapLogic, int id, std::string name, int x, int y, int h
 		mp(mp),
 		damage(55),
 		mapLogic(mapLogic),
-		worm(std::make_shared<Worm>(x, y, angle)) {
+		worm(std::make_shared<Worm>(Vec2(x, y), angle)) {
 	worm->playerId = id;
+	worm->view->setPlayerName(name);
 }
 void Player::onDead() {
 	worm->isDead = true;
@@ -39,8 +40,8 @@ void Player::sync() const {
 	if (worm) {
 		GameNetwork::instance->send(static_cast<int>(CMD::SYNC_PLAYER), {
 				to_string(id),
-				to_string(worm->px),
-				to_string(worm->py),
+				to_string(worm->position.x),
+				to_string(worm->position.y),
 				to_string(static_cast<int>(hp)),
 				to_string(static_cast<int>(mp)),
 				to_string(static_cast<int>(worm->angle)),

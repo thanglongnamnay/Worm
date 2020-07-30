@@ -121,8 +121,7 @@ void Game::handleGameAction(Params params) {
 		}
 		case GAME_ACTION::MOVE: {
 			const auto direction = params.getInt();
-			worm->vy = 20;
-			worm->vx = 10 * direction;
+			worm->velocity = Vec2(20, 10 * direction);
 			worm->view->setScaleX(-direction);
 			worm->view->indicator->setScaleX(-direction);
 			break;
@@ -234,11 +233,10 @@ void Game::prepareGame() {
 	listener->onKeyReleased = [&](EventKeyboard::KeyCode keyCode, Event* event) {
 		if (gameState != PLAYING) { return; }
 		auto worm = currentPlayer->worm;
-		worm->ay = 0;
-		worm->ax = 0;
+		worm->acceleration = Vec2(0, 0);
 	};
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, currentScene);
-	gameNetwork.send(2);
+	gameNetwork.send(static_cast<int>(CMD::JOIN_ROOM));
 }
 void Game::startGame(int id) {
 	gameState = PLAYING;

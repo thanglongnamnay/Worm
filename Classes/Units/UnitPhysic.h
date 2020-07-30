@@ -12,15 +12,11 @@ class UnitPhysic {
 private:
 	constexpr static const double epsilon = 0.1;
 public:
+    const Vec2 GRAVITY{0, -9.8};
 	int playerId = -1;
-	double px = 0; // Position
-	double py = 0;
-	double vx = 0; // Velocity
-	double vy = 0;
-	double ax = 0; // Acceleration
-	double ay = 0;
-	double maxVx = 0;
-	double maxVy = 0;
+	Vec2 position;
+	Vec2 velocity;
+	Vec2 acceleration;
 
 	double radius = 4;    // Bounding circle for collision
 	bool isStable = false;    // Has object stopped moving
@@ -29,7 +25,7 @@ public:
 	int bounceBeforeDeath = -1;    // How many time object can bounce before death
 	bool isDead = false;        // Flag to indicate object should be removed
 
-	explicit UnitPhysic(double x = 0, double y = 0);
+	explicit UnitPhysic(const Vec2& position);
 	virtual ~UnitPhysic() = default;
 
 	virtual void update(double dt, const std::vector<std::vector<unsigned char>>& map);
@@ -42,13 +38,13 @@ template<class ViewType>
 class CRT_UnitPhysic : public UnitPhysic {
 public:
     std::shared_ptr<ViewType> view;
-	CRT_UnitPhysic(double x, double y)
-			:UnitPhysic(x, y) {
+	CRT_UnitPhysic(const Vec2& position)
+			:UnitPhysic(position) {
 		view = ViewType::create();
 	}
 
 	void draw() override {
-		if (view) view->setPosition(px, py);
+		if (view) view->setPosition(position);
 	}
     Node* getView() override {
 		return view.get();
@@ -58,14 +54,14 @@ public:
 
 class Missile : public CRT_UnitPhysic<MissileView> {
 public:
-	explicit Missile(double x, double y, const Angle& angle, double strength = 100);
+	explicit Missile(const Vec2& position, const Angle& angle, double strength = 100);
 
 	int bounceDeathAction() override;
 };
 
 class Debris : public CRT_UnitPhysic<DebrisView> {
 public:
-	explicit Debris(double x = 0, double y = 0);
+	explicit Debris(const Vec2& position = Vec2::ZERO);
 
 	int bounceDeathAction() override;
 };
@@ -73,7 +69,7 @@ public:
 class Worm : public CRT_UnitPhysic<WormView> {
 public:
 	Angle angle;
-	explicit Worm(double x = 0, double y = 0, Angle angle = Angle(0));
+	explicit Worm(const Vec2& position = Vec2::ZERO, Angle angle = Angle(0));
 
 	int bounceDeathAction() override;
 
