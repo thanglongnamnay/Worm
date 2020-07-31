@@ -9,7 +9,8 @@ UnitPhysic::UnitPhysic(const Vec2& position)
 }
 
 void UnitPhysic::update(double dt, const std::vector<std::vector<unsigned char>> &map) {
-    velocity += (acceleration - GRAVITY) * dt;
+    if (velocity.length() < epsilon && acceleration.length() < epsilon && isStable) return draw();
+    velocity += (acceleration + GRAVITY) * dt;
 
     if (velocity.x < epsilon && velocity.x > -epsilon) velocity.x = 0;
     if (velocity.y < epsilon && velocity.y > -epsilon) velocity.y = 0;
@@ -26,7 +27,7 @@ void UnitPhysic::update(double dt, const std::vector<std::vector<unsigned char>>
     // Iterate through semicircle of objects radius rotated to direction of travel
     for (auto r = angle - 3.14159 / 2; r < angle + 3.14159 / 2; r += 3.14159 / 8) {
         // Calculate test point on circumference of circle
-        Vec2 testPos = Vec2(radius * cos(r) + potential.x, radius * sin(r) + potential.y);
+        Vec2 testPos = potential + Vec2(radius * cos(r),radius * sin(r));
 
         // Constrain to test within map boundary
         const auto sizeX = map[0].size();
@@ -35,15 +36,14 @@ void UnitPhysic::update(double dt, const std::vector<std::vector<unsigned char>>
         if (testPos.x >= sizeX || testPos.y >= sizeY || testPos.y < 0 || map[(int)testPos.y][(int)testPos.x] != 0) {
             // Accumulate collision points to give an escape response vector
             // Effectively, normal to the areas of contact
-            respond.x += potential.x - testPos.x;
-            respond.y += potential.y - testPos.y;
+            respond += potential - testPos;
             collision = true;
         }
     }
 
     // Calculate magnitudes of response and velocity vectors
-    double magVelocity = sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
-    double magResponse = sqrt(respond.x * respond.x + respond.y * respond.y);
+    double magVelocity = velocity.length();
+    double magResponse = respond.length();
 
     // Collision occurred
     if (collision) {
@@ -51,11 +51,10 @@ void UnitPhysic::update(double dt, const std::vector<std::vector<unsigned char>>
         isStable = true;
 
         // Calculate reflection vector of objects velocity vector, using response vector as normal
-        double dot = velocity.x * (respond.x / magResponse) + velocity.y * (respond.y / magResponse);
+        double dot = velocity.dot(respond) / magResponse;
 
         // Use friction coefficient to dampen response (approximating energy loss)
-        velocity.x = friction * (-2 * dot * (respond.x / magResponse) + velocity.x);
-        velocity.y = friction * (-2 * dot * (respond.y / magResponse) + velocity.y);
+        velocity = friction * (velocity - 2 * dot * (respond / magResponse));
 
         //Some objects will "die" after several bounces
         if (bounceBeforeDeath > 0) {

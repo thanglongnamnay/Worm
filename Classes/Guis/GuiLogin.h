@@ -19,26 +19,11 @@ public:
 	ui::TextField* tfName = nullptr;
 	ui::Button* btnLogin = nullptr;
 
-	bool init() override {
-		Node::init();
-		hud = CSLoader::createNode("res/Login.csb");
-		addChild(hud);
-		tfName = hud->getChildByName<ui::TextField*>("tfName");
-		btnLogin = hud->getChildByName<ui::Button*>("btnLogin");
-		btnLogin->addClickEventListener([=](Ref* event) {
-		  login();
-		});
-		return true;
-	}
+	bool init() override;
 
 	void login();
 
-	static GuiLogin* create() {
-		auto ptr = new(std::nothrow) GuiLogin();
-		ptr->init();
-		ptr->autorelease();
-		return ptr;
-	}
+	static GuiLogin* create();
 };
 
 #endif //WORM_GUILOGIN_H

@@ -38,7 +38,7 @@ template<class ViewType>
 class CRT_UnitPhysic : public UnitPhysic {
 public:
     std::shared_ptr<ViewType> view;
-	CRT_UnitPhysic(const Vec2& position)
+	explicit CRT_UnitPhysic(const Vec2& position)
 			:UnitPhysic(position) {
 		view = ViewType::create();
 	}

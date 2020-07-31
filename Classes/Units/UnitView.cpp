@@ -29,8 +29,10 @@ bool WormView::init() {
     mpBar->setScale(0.3f);
     mpBar->setPercentage(100);
     lbName = Label::create();
-    lbName->setBMFontSize(48);
-    lbName->setSystemFontSize(48);
+    lbName->setString("fdsafdsa");
+//    lbName = Label::createWithSystemFont("fdsa", "Arial", 24, Size::ZERO, TextHAlignment::CENTER, TextVAlignment::CENTER);
+    lbName->setBMFontSize(24);
+    lbName->setSystemFontSize(24);
     lbName->setPosition(0, 30);
     addChild(lbName);
 
