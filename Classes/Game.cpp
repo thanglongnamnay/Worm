@@ -121,8 +121,7 @@ void Game::handleGameAction(Params params) {
 		case GAME_ACTION::MOVE: {
 			const auto direction = params.getInt();
 			worm->velocity = Vec2(10 * direction, 20);
-			worm->view->setScaleX(-direction);
-			worm->view->indicator->setScaleX(-direction);
+			worm->view->flip(direction > 0);
 			break;
 		}
 		case GAME_ACTION::NEXT_TURN: {

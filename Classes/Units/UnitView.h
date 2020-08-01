@@ -64,6 +64,7 @@ class WormView : public UnitView {
 	ProgressTimer* hpBar{};
 	ProgressTimer* mpBar{};
     Label *lbName{};
+    static ProgressTimer* makeBar(const std::string& sprPath);
 public:
 	DrawNode* indicator{};
 	bool init() override;
@@ -71,6 +72,7 @@ public:
 	void changeMp(int mp);
 	void setPlayerName(const std::string& name);
 	void indicate(Angle angle) const;
+	void flip(bool v);
 	static std::shared_ptr<WormView> create();
 };
 

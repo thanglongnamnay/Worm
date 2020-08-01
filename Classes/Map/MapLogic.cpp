@@ -5,27 +5,27 @@
 #include "MapLogic.h"
 #include <GameNetwork.h>
 
-vector<double> MapLogic::PerlinNoise1D(vector<double> fSeed, int nOctaves, double fBias) {
-	auto nCount = fSeed.size();
-	vector<double> fOutput(nCount);
+vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves, double bias) {
+	auto nCount = seeds.size();
+	vector<double> output(nCount);
 	for (auto x = 0; x < nCount; x++) {
-		auto fNoise = 0.0f;
-		auto fScaleAcc = 0.0f;
-		auto fScale = 1.0f;
+		auto noise = 0.0;
+		auto scaleAcc = 0.0;
+		auto scale = 1.0;
 
-		for (auto o = 0; o < nOctaves; o++) {
-			auto nPitch = nCount >> o;
-			auto nSample1 = (x / nPitch) * nPitch;
-			auto nSample2 = (nSample1 + nPitch) % nCount;
-			auto fBlend = (double)(x - nSample1) / (double)nPitch;
-			auto fSample = (1.0f - fBlend) * fSeed[nSample1] + fBlend * fSeed[nSample2];
-			fScaleAcc += fScale;
-			fNoise += fSample * fScale;
-			fScale = fScale / fBias;
+		for (auto o = 0; o < octaves; o++) {
+			auto pitch = nCount >> o;
+			auto sample1 = (x / pitch) * pitch;
+			auto sample2 = (sample1 + pitch) % nCount;
+			auto blend = (double)(x - sample1) / (double)pitch;
+			auto sample = (1.0 - blend) * seeds[sample1] + blend * seeds[sample2];
+			scaleAcc += scale;
+			noise += sample * scale;
+			scale = scale / bias;
 		}
-		fOutput[x] = fNoise / fScaleAcc;
+		output[x] = noise / scaleAcc;
 	}
-	return fOutput;
+	return output;
 }
 
 MapLogic::MapLogic(type::Vector<int> mapSize)
@@ -90,14 +90,15 @@ void MapLogic::drawLine(const int sx, const int ex, const int ny) {
 	for (int i = sx; i < ex; i++) {
 		if (ny < mapSize.y && i >= 0 && i < mapSize.x) {
 			map[ny][i] = 0;
-			mapView->refreshMap(i, ny);
 		}
 	}
 }
-void MapLogic::CircleBresenham(int xc, int yc, int r) {
-	int x = 0;
-	int y = r;
-	int p = 3 - 2 * r;
+void MapLogic::CircleBresenham(const Vec2& pos, const int r) {
+	auto x = 0;
+	auto y = r;
+	auto p = 3 - 2 * r;
+	auto xc = pos.x;
+	auto yc = pos.x;
 	if (!r) return;
 
 	while (y >= x) {
@@ -109,6 +110,7 @@ void MapLogic::CircleBresenham(int xc, int yc, int r) {
 		if (p < 0) p += 4 * x++ + 6;
 		else p += 4 * (x++ - y--) + 10;
 	}
+	mapView->drawCircle(pos, r);
 }
 std::vector<std::vector<unsigned char>> MapLogic::createMap(type::Vector<int> mapSize) {
 	auto noiseSeeds = std::vector<double>(static_cast<int>(mapSize.x));
@@ -116,7 +118,7 @@ std::vector<std::vector<unsigned char>> MapLogic::createMap(type::Vector<int> ma
 		noiseSeeds[i] = (double)rand() / RAND_MAX;
 	}
 	noiseSeeds[0] = 0.5f;
-	auto fSurface = PerlinNoise1D(noiseSeeds, 10, 1.5 + noiseSeeds.back());
+	auto fSurface = perlinNoise1D(noiseSeeds, 10, 1.5 + noiseSeeds.back());
 	std::vector<std::vector<unsigned char>> map(mapSize.y);
 	for (auto y = 0; y < mapSize.y; ++y) {
 		map[y] = std::vector<unsigned char>(mapSize.x);
@@ -130,7 +132,7 @@ void MapLogic::handleNetworkCmd(CMD cmd, Params& params) {
 
 }
 void MapLogic::explode(UnitPhysic* unit, double radius) {
-    CircleBresenham(unit->position.x, unit->position.y, radius);
+	CircleBresenham(unit->position, radius);
 
 	for (const auto& otherUnit : unitList) {
 		if (otherUnit.get() == unit) continue;

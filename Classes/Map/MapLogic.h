@@ -34,11 +34,11 @@ public:
 	void removeUnit(const std::shared_ptr<UnitPhysic>& unitPhysic);
 	void update(double dt);
 private:
-	void drawLine(const int sx, const int ex, const int ny);
-	void CircleBresenham(int xc, int yc, int r);;
+	void drawLine(int sx, int ex, int ny);
+	void CircleBresenham(const Vec2& pos, int r);;
 	void explode(UnitPhysic* unit, double radius);
 	static std::vector<std::vector<unsigned char>> createMap(type::Vector<int> mapSize);
-	static std::vector<double> PerlinNoise1D(std::vector<double> fSeed, int nOctaves, double fBias);
+	static std::vector<double> perlinNoise1D(const std::vector<double>& seeds, int octaves, double bias);
 	void handleNetworkCmd(CMD cmd, Params& params);
 };
 

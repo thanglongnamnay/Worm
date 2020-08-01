@@ -10,31 +10,19 @@ bool WormView::init() {
     addChild(view);
     indicator = DrawNode::create();
     addChild(indicator);
-    auto sp1 = Sprite::create("Bars/hp.png");
-    sp1->setContentSize({118, 20});
-    hpBar = ProgressTimer::create(sp1);
-    hpBar->setType(ProgressTimer::Type::BAR);
-    hpBar->setPositionY(22);
-    hpBar->setMidpoint(Vec2(0, 0));
-    hpBar->setScale(0.3f);
-    hpBar->setPercentage(100);
+    hpBar = makeBar("Bars/hp.png");
+	hpBar->setPositionY(22);
     addChild(hpBar);
-    auto sp = Sprite::create("Bars/mp.png");
-    sp->setContentSize({118, 20});
-    mpBar = ProgressTimer::create(sp);
-    mpBar->setType(ProgressTimer::Type::BAR);
-    mpBar->setMidpoint(Vec2(0, 0));
+    mpBar = makeBar("Bars/mp.png");
+	mpBar->setPositionY(16);
     addChild(mpBar);
-    mpBar->setPositionY(16);
-    mpBar->setScale(0.3f);
-    mpBar->setPercentage(100);
     lbName = Label::create();
     lbName->setString("fdsafdsa");
 //    lbName = Label::createWithSystemFont("fdsa", "Arial", 24, Size::ZERO, TextHAlignment::CENTER, TextVAlignment::CENTER);
     lbName->setBMFontSize(24);
     lbName->setSystemFontSize(24);
-    lbName->setPosition(0, 30);
-    addChild(lbName);
+    lbName->setPositionY(30);
+    addChild(lbName, 100);
 
     Vector<SpriteFrame*> animFrames;
     const int numberSprite = 15;
@@ -83,4 +71,18 @@ std::shared_ptr<WormView> WormView::create() {
 
 void WormView::setPlayerName(const std::string &name) {
     lbName->setString(name);
+}
+ProgressTimer* WormView::makeBar(const std::string& sprPath) {
+	auto sp1 = Sprite::create(sprPath);
+	sp1->setContentSize({118, 20});
+	auto bar = ProgressTimer::create(sp1);
+	bar->setType(ProgressTimer::Type::BAR);
+	bar->setMidpoint({0, 0});
+	bar->setBarChangeRate({1, 0});
+	bar->setScale(0.3f);
+	bar->setPercentage(100);
+	return bar;
+}
+void WormView::flip(bool v) {
+	view->setFlippedX(v);
 }
