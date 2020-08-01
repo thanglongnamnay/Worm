@@ -6,17 +6,17 @@
 #include <GameNetwork.h>
 
 vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves, double bias) {
-	auto nCount = seeds.size();
-	vector<double> output(nCount);
-	for (auto x = 0; x < nCount; x++) {
+	auto count = seeds.size();
+	vector<double> output(count);
+	for (auto x = 0; x < count; x++) {
 		auto noise = 0.0;
 		auto scaleAcc = 0.0;
 		auto scale = 1.0;
 
 		for (auto o = 0; o < octaves; o++) {
-			auto pitch = nCount >> o;
+			auto pitch = count >> o;
 			auto sample1 = (x / pitch) * pitch;
-			auto sample2 = (sample1 + pitch) % nCount;
+			auto sample2 = (sample1 + pitch) % count;
 			auto blend = (double)(x - sample1) / (double)pitch;
 			auto sample = (1.0 - blend) * seeds[sample1] + blend * seeds[sample2];
 			scaleAcc += scale;
@@ -30,7 +30,7 @@ vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves,
 
 MapLogic::MapLogic(type::Vector<int> mapSize)
 		:mapSize(mapSize), game::EventListener() {
-	seed = time(0);
+	seed = time(nullptr);
 	srand(seed);
 	map = createMap(mapSize);
 	mapView = MapView::create(map);
