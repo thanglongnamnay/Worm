@@ -31,7 +31,6 @@ private:
 	list<Player> players;
 	list<Player>::iterator currentPlayer;
 	list<Player>::iterator myPlayer;
-	bool isMaster{};
 	bool someoneDied{};
 	bool needNextTurn{};
 

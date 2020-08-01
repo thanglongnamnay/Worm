@@ -132,3 +132,9 @@ std::shared_ptr<Missile> Worm::makeBullet(int power) {
 void Worm::refreshIndicate() {
     view->indicate(angle);
 }
+void Worm::flip(bool v) {
+	if (v == fliped) return;
+	view->flip(v);
+	angle = Angle(180) - angle;
+	refreshIndicate();
+}

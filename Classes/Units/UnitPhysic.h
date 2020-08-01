@@ -67,6 +67,7 @@ public:
 };
 
 class Worm : public CRT_UnitPhysic<WormView> {
+	bool fliped;
 public:
 	Angle angle;
 	explicit Worm(const Vec2& position = Vec2::ZERO, Angle angle = Angle(0));
@@ -76,6 +77,8 @@ public:
 	std::shared_ptr<Missile> makeBullet(int power);
 
 	void refreshIndicate();
+
+	void flip(bool);
 };
 
 #endif //WORM_UNITPHYSIC_H

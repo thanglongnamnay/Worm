@@ -34,6 +34,10 @@ public:
         check(internal - t);
         return *this;
     }
+
+	Angle operator-(const Angle& rhs) const {
+    	return Angle(internal - rhs.internal);
+    }
 };
 
 #endif //WORM_ANGLE_H

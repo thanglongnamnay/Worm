@@ -84,7 +84,7 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 		}
 		case CMD::YOUR_ID: {
 			const auto id = params.getInt();
-			isMaster = params.getBool();
+			params.getBool();
 			CCLOG("YOUR_ID: %d", id);
 			myPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
             break;
@@ -121,7 +121,7 @@ void Game::handleGameAction(Params params) {
 		case GAME_ACTION::MOVE: {
 			const auto direction = params.getInt();
 			worm->velocity = Vec2(10 * direction, 20);
-			worm->view->flip(direction > 0);
+			worm->flip(direction > 0);
 			break;
 		}
 		case GAME_ACTION::NEXT_TURN: {
