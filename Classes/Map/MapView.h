@@ -8,12 +8,17 @@
 #include <cocos2d.h>
 #include <cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h>
 #include <cocos/ui/UISlider.h>
+#include <cocos/ui/UILoadingBar.h>
 #include <Units/UnitPhysic.h>
+#include <Types/HP.h>
+#include <Types/MP.h>
 
 USING_NS_CC;
 
 class MapView : public Node {
 	Node* hud{};
+	ui::LoadingBar* hpBar;
+	ui::LoadingBar* mpBar;
 	ui::Slider* powerBar{};
 	const std::vector<std::vector<u_char>>& map;
 	const Size screen;
@@ -46,6 +51,7 @@ public:
 
 	static MapView* create(std::vector<std::vector<u_char>>& map);
 	void drawCircle(const Vec2& pos, double radius);
+	void refreshGui(const HP& hp, const MP& mp);
 };
 
 #endif //WORM_MAPVIEW_H

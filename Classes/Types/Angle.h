@@ -4,6 +4,7 @@
 
 #ifndef WORM_ANGLE_H
 #define WORM_ANGLE_H
+class Angle;
 
 class Angle {
     double internal;
@@ -16,28 +17,39 @@ public:
     Angle(double angle) {
         check(angle);
     }
-
     explicit operator double() const {
         return internal;
     }
-
 	explicit operator int() const {
 		return internal;
 	}
-
     Angle& operator+=(double t) {
         check(internal + t);
         return *this;
     }
-
     Angle& operator-=(double t) {
         check(internal - t);
         return *this;
     }
-
 	Angle operator-(const Angle& rhs) const {
     	return Angle(internal - rhs.internal);
     }
+	Angle operator+(const Angle& rhs) const {
+		return Angle(internal + rhs.internal);
+	}
+	bool operator<(const Angle& rhs) const {
+		return internal < rhs.internal;
+	}
+	bool operator>(const Angle& rhs) const {
+		return rhs < *this;
+	}
+	bool operator<=(const Angle& rhs) const {
+		return !(rhs < *this);
+	}
+	bool operator>=(const Angle& rhs) const {
+		return !(*this < rhs);
+	}
+	static const Angle RIGHT_ANGLE;
 };
 
 #endif //WORM_ANGLE_H

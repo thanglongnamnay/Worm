@@ -27,6 +27,11 @@ bool MapView::init() {
 	addChild(mainMap);
 	hud = CSLoader::createNode("res/GameHUD.csb");
 	addChild(hud);
+	const auto ndProperties = hud->getChildByName("ndPropertyies");
+	hpBar = dynamic_cast<ui::LoadingBar*>(ndProperties->getChildByName("barHp"));
+	hpBar->setColor(Color3B::GREEN);
+	mpBar = dynamic_cast<ui::LoadingBar*>(ndProperties->getChildByName("barMana"));
+	mpBar->setColor(Color3B::BLUE);
 	powerBar = hud->getChildByName("ndPropertyies")->getChildByName<ui::Slider*>("slPower");
 	scheduleUpdate();
 	return true;
@@ -82,4 +87,8 @@ MapView* MapView::create(std::vector<std::vector<u_char>>& map) {
 }
 void MapView::drawCircle(const Vec2& pos, double radius) {
 	drawNode->drawSolidCircle(pos, radius, 3.14 * 2, 50, BACKGROUND_COLOR);
+}
+void MapView::refreshGui(const HP& hp, const MP& mp) {
+	hpBar->setPercent(static_cast<int>(hp));
+	mpBar->setPercent(static_cast<int>(mp));
 }

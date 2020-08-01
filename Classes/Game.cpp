@@ -47,6 +47,9 @@ void Game::handleEvent(int eventName, const Object& data) {
 			return p.id == shot;
 		});
 		shooterPlayer->shoot(*shotPlayer);
+		if (shotPlayer == myPlayer) {
+			mapLogic.mapView->refreshGui(myPlayer->hp, myPlayer->mp);
+		}
 		return;
 	}
 	if (eventName == event::EVENT_PLAYER_DIE) {
@@ -121,7 +124,7 @@ void Game::handleGameAction(Params params) {
 		case GAME_ACTION::MOVE: {
 			const auto direction = params.getInt();
 			worm->velocity = Vec2(10 * direction, 20);
-			worm->flip(direction > 0);
+			worm->flip(direction < 0);
 			break;
 		}
 		case GAME_ACTION::NEXT_TURN: {
@@ -207,13 +210,13 @@ void Game::prepareGame() {
 				case EventKeyboard::KeyCode::KEY_W:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
 							{currentPlayer->id, static_cast<int>(GAME_ACTION::CHANGE_ANGLE),
-							 static_cast<int>(worm->angle) + 10});
+							 static_cast<int>(worm->raiseAngle(10))});
 					break;
 				case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
 				case EventKeyboard::KeyCode::KEY_S:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
 							{currentPlayer->id, static_cast<int>(GAME_ACTION::CHANGE_ANGLE),
-							 static_cast<int>(worm->angle) - 10});
+							 static_cast<int>(worm->raiseAngle(-10))});
 					break;
 				case EventKeyboard::KeyCode::KEY_SPACE:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION), {

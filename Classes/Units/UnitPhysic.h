@@ -79,6 +79,8 @@ public:
 	void refreshIndicate();
 
 	void flip(bool);
+
+	Angle raiseAngle(double amount) const;
 };
 
 #endif //WORM_UNITPHYSIC_H

@@ -117,6 +117,7 @@ Worm::Worm(const Vec2& position, Angle angle)
     friction = 0.2;
     bounceBeforeDeath = -1;
     view->indicate(0);
+    flip(true);
 }
 
 int Worm::bounceDeathAction() {
@@ -134,7 +135,14 @@ void Worm::refreshIndicate() {
 }
 void Worm::flip(bool v) {
 	if (v == fliped) return;
-	view->flip(v);
+	fliped = v;
+	view->flip(!v);
 	angle = Angle(180) - angle;
 	refreshIndicate();
+}
+Angle Worm::raiseAngle(double amount) const {
+	if (fliped) {
+		return MAX(Angle(static_cast<double>(angle) - amount), Angle::RIGHT_ANGLE);
+	}
+	return MIN(Angle(static_cast<double>(angle) + amount), Angle::RIGHT_ANGLE);
 }
