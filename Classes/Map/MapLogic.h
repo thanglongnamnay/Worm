@@ -21,24 +21,25 @@ private:
 
 	int seed;
 	type::Vector<int> mapSize;
-	std::vector<std::vector<unsigned char>> map;
-	std::list<std::shared_ptr<UnitPhysic>> unitList;
+	vector<vector<unsigned char>> map;
+	list<shared_ptr<UnitPhysic>> unitList;
+	static minstd_rand0 rand;
 public:
 	MapView* mapView;
 	explicit MapLogic(type::Vector<int> mapSize);
 	MapLogic(MapLogic&& rhs) noexcept
-			:seed(rhs.seed), mapSize(rhs.mapSize), map(std::move(rhs.map)), mapView(rhs.mapView) {
+			:seed(rhs.seed), mapSize(rhs.mapSize), map(move(rhs.map)), mapView(rhs.mapView) {
 	}
 	void recreateMap(int newSeed);
-	void addUnit(const std::shared_ptr<UnitPhysic>& unitPhysic);
-	void removeUnit(const std::shared_ptr<UnitPhysic>& unitPhysic);
+	void addUnit(const shared_ptr<UnitPhysic>& unitPhysic);
+	void removeUnit(const shared_ptr<UnitPhysic>& unitPhysic);
 	void update(double dt);
 private:
 	void drawLine(int sx, int ex, int ny);
 	void CircleBresenham(const Vec2& pos, int r);;
 	void explode(UnitPhysic* unit, double radius);
-	static std::vector<std::vector<unsigned char>> createMap(type::Vector<int> mapSize);
-	static std::vector<double> perlinNoise1D(const std::vector<double>& seeds, int octaves, double bias);
+	static vector<vector<unsigned char>> createMap(type::Vector<int> mapSize);
+	static vector<double> perlinNoise1D(const vector<double>& seeds, int octaves, double bias);
 	void handleNetworkCmd(CMD cmd, Params& params);
 };
 

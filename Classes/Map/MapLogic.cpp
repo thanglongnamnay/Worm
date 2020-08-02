@@ -5,6 +5,8 @@
 #include "MapLogic.h"
 #include <GameNetwork.h>
 
+minstd_rand0 MapLogic::rand = minstd_rand0(0);
+
 vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves, double bias) {
 	auto count = seeds.size();
 	vector<double> output(count);
@@ -54,7 +56,7 @@ void MapLogic::handleEvent(int eventName, const Object& data) {
 void MapLogic::recreateMap(int newSeed) {
 	if (newSeed == seed) return;
 	seed = newSeed;
-	srand(seed);
+	rand.seed(newSeed);
 	unitList.clear();
 	map = createMap(mapSize);
 	const auto& viewParent = mapView->getParent();
