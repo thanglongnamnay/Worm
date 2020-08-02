@@ -64,6 +64,17 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 		case CMD::LOGIN:
 			prepareGame();
 			break;
+		case CMD::LEAVE_ROOM: {
+			if (gameState == WAITING) return;
+			const auto id = params.getInt();
+			auto player = find_if(players.begin(), players.end(), [&](const Player& p) {
+				return p.id == id;
+			});
+			if (currentPlayer == player) nextTurn();
+			player->hp = HP(0);
+			player->onDead();
+			break;
+		}
 		case CMD::JOIN_ROOM: {
 			const auto seed = params.getInt();
 			const auto id = params.getInt();
@@ -83,6 +94,9 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 			const auto id = params.getInt();
 			CCLOG("START: %d", id);
 			startGame(id);
+			gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
+					{myPlayer->id, static_cast<int>(GAME_ACTION::CHANGE_ANGLE),
+					 static_cast<int>(myPlayer->worm->angle)});
 			break;
 		}
 		case CMD::YOUR_ID: {
@@ -104,8 +118,8 @@ void Game::handleNetworkCmd(CMD cmd, Params& params) {
 }
 void Game::handleGameAction(Params params) {
 	const auto id = params.getInt();
-	CCLOG("GAME_ACTION: %d", id);
 	const auto action = (GAME_ACTION)params.getInt();
+	CCLOG("GAME_ACTION: %d", action);
 	auto worm = currentPlayer->worm;
 	switch (action) {
 		case GAME_ACTION::SHOOT: {
@@ -131,6 +145,8 @@ void Game::handleGameAction(Params params) {
 			nextTurn(id);
 			break;
 		}
+		case GAME_ACTION::END_GAME:
+			break;
 	}
 }
 Game::Game(GameConfig gameConfig)
@@ -145,15 +161,18 @@ Game::Game(GameConfig gameConfig)
 void Game::login(const string& name) {
 	gameNetwork.send(static_cast<int>(CMD::LOGIN), {name});
 }
-void Game::addPlayer(int id, const std::string& name, double x, double y, int hp, int mp, Angle angle) {
+const Player& Game::addPlayer(int id, const std::string& name, double x, double y, int hp, int mp, Angle angle) {
 	players.emplace_back(mapLogic, id, name, x, y, hp, mp, angle);
 	mapLogic.addUnit(players.back().worm);
+	return players.back();
 }
 void Game::removePlayer(Player* p) {
 	mapLogic.removeUnit(p->worm);
 }
 void Game::removeAllPlayer() {
 	players.clear();
+	currentPlayer = players.end();
+	myPlayer = players.end();
 }
 void Game::nextTurn(int id) {
 	currentPlayer = std::find_if(players.begin(), players.end(),
@@ -247,6 +266,7 @@ void Game::startGame(int id) {
 }
 void Game::restartGame(int id) {
 	gameState = WAITING;
+	gameNetwork.send(static_cast<int>(CMD::LEAVE_ROOM));
 	if (id >= 0) {
 		auto winPlayer = find_if(players.begin(), players.end(), [=](const Player& p) { return p.id == id; });
 		currentScene->addChild(GuiEndGame::create(winPlayer->name));
@@ -259,17 +279,20 @@ void Game::restartGame(int id) {
 }
 void Game::update(float dt) {
 	if (gameState == WAITING) return;
-	if (players.size() < 2) {
-		restartGame(!players.empty() ? players.front().id : -1);
-	} else {
-		mapLogic.update(dt);
-	}
 	if (someoneDied) {
 		someoneDied = false;
 		players.remove_if([=](const Player& p) { return p.hp <= HP(0); });
 	}
-	if (needNextTurn) {
-		needNextTurn = false;
-		nextTurn();
+	if (players.size() < 2) {
+		restartGame(!players.empty() ? players.front().id : -1);
+	} else {
+		mapLogic.update(dt);
+		if (needNextTurn) {
+			needNextTurn = false;
+			nextTurn();
+		}
 	}
+}
+void Game::onDisconnect() {
+	Helper::showText("Disconnected from server.");
 }

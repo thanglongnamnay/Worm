@@ -3,6 +3,7 @@
 //
 
 #include "GameNetwork.h"
+#include "Game.h"
 
 GameNetwork* GameNetwork::instance = nullptr;
 
@@ -63,6 +64,7 @@ void GameNetwork::onMessage(network::WebSocket *ws, const network::WebSocket::Da
 
 void GameNetwork::onClose(network::WebSocket *ws) {
     CCLOG("Socket closed.");
+    Game::instance->onDisconnect();
 }
 
 void GameNetwork::onError(network::WebSocket *ws, const network::WebSocket::ErrorCode &error) {

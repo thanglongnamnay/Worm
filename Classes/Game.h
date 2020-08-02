@@ -44,7 +44,7 @@ public:
 	explicit Game(GameConfig gameConfig);
 	void update(float dt);
 	void login(const string& name);
-	void
+	const Player&
 	addPlayer(int id, const string& name, double x = rand() % 800, double y = 400 + rand() % 400, int hp = 100,
 			int mp = 0, Angle angle = Angle(0));
 	void removePlayer(Player* p);
@@ -55,6 +55,7 @@ public:
 	void prepareGame();
 	void startGame(int id);
 	void restartGame(int id);
+	void onDisconnect();
 };
 
 #endif //WORM_GAME_H

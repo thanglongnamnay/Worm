@@ -30,8 +30,10 @@ bool MapView::init() {
 	const auto ndProperties = hud->getChildByName("ndPropertyies");
 	hpBar = dynamic_cast<ui::LoadingBar*>(ndProperties->getChildByName("barHp"));
 	hpBar->setColor(Color3B::GREEN);
+	hpBar->setPercent(100);
 	mpBar = dynamic_cast<ui::LoadingBar*>(ndProperties->getChildByName("barMana"));
 	mpBar->setColor(Color3B::BLUE);
+	mpBar->setPercent(100);
 	powerBar = hud->getChildByName("ndPropertyies")->getChildByName<ui::Slider*>("slPower");
 	scheduleUpdate();
 	return true;

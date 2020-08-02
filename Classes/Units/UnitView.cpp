@@ -17,7 +17,6 @@ bool WormView::init() {
 	mpBar->setPositionY(16);
     addChild(mpBar);
 	lbName = Label::createWithSystemFont("fdsafdsa", "Arial", 12);
-//    lbName = Label::createWithSystemFont("fdsa", "Arial", 24, Size::ZERO, TextHAlignment::CENTER, TextVAlignment::CENTER);
     lbName->setPositionY(32);
 	addChild(lbName, 100);
 
