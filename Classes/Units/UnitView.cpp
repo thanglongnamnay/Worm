@@ -16,13 +16,10 @@ bool WormView::init() {
     mpBar = makeBar("Bars/mp.png");
 	mpBar->setPositionY(16);
     addChild(mpBar);
-    lbName = Label::create();
-    lbName->setString("fdsafdsa");
+	lbName = Label::createWithSystemFont("fdsafdsa", "Arial", 12);
 //    lbName = Label::createWithSystemFont("fdsa", "Arial", 24, Size::ZERO, TextHAlignment::CENTER, TextVAlignment::CENTER);
-    lbName->setBMFontSize(24);
-    lbName->setSystemFontSize(24);
-    lbName->setPositionY(30);
-    addChild(lbName, 100);
+    lbName->setPositionY(32);
+	addChild(lbName, 100);
 
     Vector<SpriteFrame*> animFrames;
     const int numberSprite = 15;

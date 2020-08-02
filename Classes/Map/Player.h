@@ -24,7 +24,7 @@ public:
 
 	const HP damage;
 
-	Player(MapLogic& mapLogic, int id, std::string name, int x = rand() % 800, int y = 400 + rand() % 400, int hp = 100, int mp = 0,
+	Player(MapLogic& mapLogic, int id, const std::string& name, int x = rand() % 800, int y = 400 + rand() % 400, int hp = 100, int mp = 0,
 			Angle angle = Angle(0));
 	void shoot(Player& other);
 	void onDead();

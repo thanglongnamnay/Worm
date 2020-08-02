@@ -5,10 +5,10 @@
 #include <GameNetwork.h>
 #include "Player.h"
 
-Player::Player(MapLogic& mapLogic, int id, std::string name, int x, int y, int hp, int mp, Angle angle)
+Player::Player(MapLogic& mapLogic, int id, const std::string& name, int x, int y, int hp, int mp, Angle angle)
 		:
 		id(id),
-		name(std::move(name)),
+		name(name),
 		hp(hp),
 		mp(mp),
 		damage(55),
