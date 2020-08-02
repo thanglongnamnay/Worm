@@ -90,6 +90,7 @@ void MapLogic::drawLine(const int sx, const int ex, const int ny) {
 	for (int i = sx; i < ex; i++) {
 		if (ny < mapSize.y && i >= 0 && i < mapSize.x) {
 			map[ny][i] = 0;
+			mapView->refreshMap(i, ny);
 		}
 	}
 }
@@ -98,7 +99,7 @@ void MapLogic::CircleBresenham(const Vec2& pos, const int r) {
 	auto y = r;
 	auto p = 3 - 2 * r;
 	auto xc = pos.x;
-	auto yc = pos.x;
+	auto yc = pos.y;
 	if (!r) return;
 
 	while (y >= x) {
@@ -110,7 +111,7 @@ void MapLogic::CircleBresenham(const Vec2& pos, const int r) {
 		if (p < 0) p += 4 * x++ + 6;
 		else p += 4 * (x++ - y--) + 10;
 	}
-	mapView->drawCircle(pos, r);
+//	mapView->drawCircle(pos, r);
 }
 std::vector<std::vector<unsigned char>> MapLogic::createMap(type::Vector<int> mapSize) {
 	auto noiseSeeds = std::vector<double>(static_cast<int>(mapSize.x));
