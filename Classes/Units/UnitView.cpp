@@ -82,3 +82,6 @@ ProgressTimer* WormView::makeBar(const std::string& sprPath) {
 void WormView::flip(bool v) {
 	view->setFlippedX(v);
 }
+void WormView::setColor(const Color3B& v) {
+	view->setColor(v);
+}

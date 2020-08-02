@@ -27,6 +27,7 @@ bool MapView::init() {
 	addChild(mainMap);
 	hud = CSLoader::createNode("res/GameHUD.csb");
 	addChild(hud);
+	hud->getChildByName("ndAngle")->setVisible(false);
 	const auto ndProperties = hud->getChildByName("ndPropertyies");
 	hpBar = dynamic_cast<ui::LoadingBar*>(ndProperties->getChildByName("barHp"));
 	hpBar->setColor(Color3B::GREEN);

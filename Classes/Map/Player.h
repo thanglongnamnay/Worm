@@ -14,7 +14,7 @@
 
 class Player {
 public:
-	static int myId;
+	static const array<Color3B, 4> WORM_COLORS;
 	const int id;
 	const std::string name;
 	const std::shared_ptr<Worm> worm;

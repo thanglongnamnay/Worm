@@ -73,6 +73,7 @@ public:
 	void setPlayerName(const std::string& name);
 	void indicate(Angle angle) const;
 	void flip(bool v);
+	void setColor(const Color3B&) override;
 	static std::shared_ptr<WormView> create();
 };
 

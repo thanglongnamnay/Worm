@@ -5,6 +5,13 @@
 #include <GameNetwork.h>
 #include "Player.h"
 
+const array<Color3B, 4> Player::WORM_COLORS = {
+		Color3B(255, 255, 255),
+		Color3B(150, 150, 255),
+		Color3B(150, 255, 150),
+		Color3B(255, 255, 150),
+};
+
 Player::Player(MapLogic& mapLogic, int id, const std::string& name, int x, int y, int hp, int mp, Angle angle)
 		:
 		id(id),
@@ -16,6 +23,7 @@ Player::Player(MapLogic& mapLogic, int id, const std::string& name, int x, int y
 		worm(std::make_shared<Worm>(Vec2(x, y), angle)) {
 	worm->playerId = id;
 	worm->view->setPlayerName(name);
+	worm->view->setColor(WORM_COLORS[id % 4]);
 }
 void Player::onDead() {
 	worm->isDead = true;
