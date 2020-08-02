@@ -52,8 +52,9 @@ void WormView::changeMp(int mp) {
 
 void WormView::indicate(Angle angle) const {
     indicator->clear();
-    indicator->drawLine(Vec2::ZERO,
-                        (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, static_cast<double>(angle) * 3.14 / 180),
+	const Vec2& destination = (new Vec2(25, 0))->rotateByAngle(Vec2::ZERO, static_cast<double>(angle) * 3.14 / 180);
+	indicator->drawLine(destination.getNormalized() * 5,
+			destination,
                         Color4F(1, 1, 1, 1));
 }
 

@@ -12,7 +12,7 @@ vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves,
 	vector<double> output(count);
 	for (auto x = 0; x < count; x++) {
 		auto noise = 0.0;
-		auto scaleAcc = 0.0;
+		auto totalScale = 0.0;
 		auto scale = 1.0;
 
 		for (auto o = 0; o < octaves; o++) {
@@ -20,12 +20,13 @@ vector<double> MapLogic::perlinNoise1D(const vector<double>& seeds, int octaves,
 			auto sample1 = (x / pitch) * pitch;
 			auto sample2 = (sample1 + pitch) % count;
 			auto blend = (double)(x - sample1) / (double)pitch;
-			auto sample = (1.0 - blend) * seeds[sample1] + blend * seeds[sample2];
-			scaleAcc += scale;
+//			auto sample = (1.0 - blend) * seeds[sample1] + blend * seeds[sample2];
+			auto sample = interpolate(seeds[sample1], seeds[sample2], blend);
+			totalScale += scale;
 			noise += sample * scale;
-			scale = scale / bias;
+			scale /= bias;
 		}
-		output[x] = noise / scaleAcc;
+		output[x] = noise / totalScale;
 	}
 	return output;
 }
@@ -156,5 +157,11 @@ void MapLogic::explode(UnitPhysic* unit, double radius) {
 	// Launch debris proportional to blast size
 	for (int i = 0; i < (int)radius; i++)
 		addUnit(std::make_shared<Debris>(unit->position));
+}
+double MapLogic::interpolate(double s1, double s2, double blend) {
+	// cosine interpolate
+	auto ft = blend * 3.14;
+	auto f = (1 - cos(ft)) * 0.5;
+	return s1 * (1 - f) + s2 * f;
 }
 

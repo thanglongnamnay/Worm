@@ -40,6 +40,7 @@ private:
 	void explode(UnitPhysic* unit, double radius);
 	static vector<vector<unsigned char>> createMap(type::Vector<int> mapSize);
 	static vector<double> perlinNoise1D(const vector<double>& seeds, int octaves, double bias);
+	static double interpolate(double s1, double s2, double blend);
 	void handleNetworkCmd(CMD cmd, Params& params);
 };
 
