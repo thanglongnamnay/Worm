@@ -54,8 +54,6 @@ void MapView::update(float delta) {
 		const auto curr = mainMap->getPosition();
 		if (dest.distanceSquared(curr) < delta * 100) mainMap->setPosition(dest);
 		mainMap->setPosition(curr.lerp(dest, 0.1f));
-	} else {
-		mainMap->setPosition(0, 0);
 	}
 }
 void MapView::addObject(Node* node) const {

@@ -57,6 +57,9 @@ public:
 		}
 		return nullptr;
 	}
+	~MissileView() override {
+		CCLOG("REMOVE MissileView");
+	}
 };
 
 class WormView : public UnitView {

@@ -27,8 +27,10 @@ void Game::showLoginScene() {
 void Game::handleEvent(int eventName, const Object& data) {
 	EventListener::handleEvent(eventName, data);
 	if (eventName == event::EVENT_EXPLODE) {
-		needNextTurn = true;
-		mapLogic.mapView->follow(currentPlayer->worm);
+		Director::getInstance()->getRunningScene()->scheduleOnce([&](float) {
+			needNextTurn = true;
+		}, 0.5f, "next turn");
+		mapLogic.mapView->follow(nullptr);
 		return;
 	}
 	if (eventName == event::EVENT_RECEIVE_PACKET) {
