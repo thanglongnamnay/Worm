@@ -15,7 +15,12 @@ bool GuiLogin::init() {
     hud = CSLoader::createNode("res/Login.csb");
     addChild(hud);
     tfName = hud->getChildByName<ui::TextField*>("tfName");
+    tfName->setPosition(visibleSize / 2 + Size{0, 50});
+    tfName->setTextVerticalAlignment(TextVAlignment::CENTER);
+    tfName->setTextHorizontalAlignment(TextHAlignment::CENTER);
     btnLogin = hud->getChildByName<ui::Button*>("btnLogin");
+    btnLogin->setPosition(visibleSize / 2 - Size{0, 50});
+    btnLogin->setTitleColor(Color3B::BLACK);
     btnLogin->addClickEventListener([=](Ref* event) {
         login();
     });

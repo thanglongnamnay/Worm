@@ -160,8 +160,7 @@ void MapLogic::explode(UnitPhysic* unit, double radius) {
 }
 double MapLogic::interpolate(double s1, double s2, double blend) {
 	// cosine interpolate
-	auto ft = blend * 3.14;
-	auto f = (1 - cos(ft)) * 0.5;
-	return s1 * (1 - f) + s2 * f;
+	auto blend2 = (1 - cos(blend * 3.14)) * 0.5;
+	return s1 * (1 - blend2) + s2 * blend2;
 }
 
