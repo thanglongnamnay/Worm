@@ -27,7 +27,7 @@ class MapView : public Node {
 	Node* background{};
 public:
 	const Color4F FOREGROUND_COLOR = Color4F(0.6f, 0.3f, 0, 1);
-	const Color4F BACKGROUND_COLOR = Color4F(0, 0, 0, 1);
+	const Color4F BACKGROUND_COLOR = Color4F(0.2, 0.2, 0.2, 1);
 	Node* mainMap{};
 	explicit MapView(std::vector<std::vector<u_char>>& map);
 
