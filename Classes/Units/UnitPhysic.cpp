@@ -25,7 +25,8 @@ void UnitPhysic::update(double dt, const std::vector<std::vector<unsigned char>>
     bool collision = false;
 
     // Iterate through semicircle of objects radius rotated to direction of travel
-    for (auto r = angle - 3.14159 / 2; r < angle + 3.14159 / 2; r += 3.14159 / 8) {
+	auto PI = 3.14159;
+	for (auto r = angle - PI / 2; r < angle + PI / 2; r += PI / 8) {
         // Calculate test point on circumference of circle
         Vec2 testPos = potential + Vec2(radius * cos(r),radius * sin(r));
 
