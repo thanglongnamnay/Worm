@@ -27,6 +27,7 @@ class MapView : public LayerColor {
 	DrawNode* drawNode{};
 	Node* background{};
 	ui::Button* btnBack{};
+	bool dragging;
 public:
 	const Color4F FOREGROUND_COLOR = Color4F(0.6f, 0.3f, 0, 1);
 	const Color4F BACKGROUND_COLOR = Color4F(0.2, 0.2, 0.2, 1);

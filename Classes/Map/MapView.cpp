@@ -46,6 +46,21 @@ bool MapView::init() {
 		Game::instance->leaveGame();
 	});
 	addChild(btnBack);
+	const auto listener = EventListenerTouchOneByOne::create();
+	listener->onTouchBegan = [&](Touch* touch, Event* event) {
+		dragging = true;
+		return true;
+	};
+	listener->onTouchMoved = [&](Touch* touch, Event* event) {
+		const Vec2& delta = touch->getDelta();
+		if (delta.length() < 50) {
+			mainMap->runAction(MoveBy::create(0, delta));
+		}
+	};
+	listener->onTouchEnded = [&](Touch* touch, Event* event) {
+		dragging = false;
+	};
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
 	scheduleUpdate();
 	return true;
 }
@@ -59,7 +74,7 @@ void MapView::follow(const std::shared_ptr<UnitPhysic>& unit) {
 	CCLOG("change following");
 }
 void MapView::update(float delta) {
-	if (following && !following->isDead) {
+	if (!dragging && following && !following->isDead) {
 		const auto dest = Vec2{-following->getView()->getPositionX() * mainMap->getScale() + screen.width / 2, -following->getView()->getPositionY() * mainMap->getScale() + screen.height / 2};
 		const auto curr = mainMap->getPosition();
 		if (dest.distanceSquared(curr) < delta * 100) mainMap->setPosition(dest);
