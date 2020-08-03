@@ -53,7 +53,7 @@ bool MapView::init() {
 	};
 	listener->onTouchMoved = [&](Touch* touch, Event* event) {
 		const Vec2& delta = touch->getDelta();
-		if (delta.length() < 50) {
+		if (delta.length() < 500) {
 			mainMap->runAction(MoveBy::create(0, delta));
 		}
 	};
