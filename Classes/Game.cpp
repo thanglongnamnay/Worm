@@ -231,13 +231,13 @@ void Game::prepareGame() {
 				case EventKeyboard::KeyCode::KEY_W:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
 							{currentPlayer->id, static_cast<int>(GAME_ACTION::CHANGE_ANGLE),
-							 static_cast<int>(worm->raiseAngle(10))});
+							 static_cast<int>(worm->raiseAngle(5))});
 					break;
 				case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
 				case EventKeyboard::KeyCode::KEY_S:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION),
 							{currentPlayer->id, static_cast<int>(GAME_ACTION::CHANGE_ANGLE),
-							 static_cast<int>(worm->raiseAngle(-10))});
+							 static_cast<int>(worm->raiseAngle(-5))});
 					break;
 				case EventKeyboard::KeyCode::KEY_SPACE:
 					gameNetwork.send(static_cast<int>(CMD::GAME_ACTION), {
