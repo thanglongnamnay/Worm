@@ -2,13 +2,14 @@
 // Created by long on 20/05/2020.
 //
 
+#include <Game.h>
 #include "MapView.h"
 
 MapView::MapView(std::vector<std::vector<u_char>>& map)
-		:Node(), map(map), screen(Director::getInstance()->getVisibleSize()) {
+		:LayerColor(), map(map), screen(Director::getInstance()->getVisibleSize()) {
 }
 bool MapView::init() {
-	Node::init();
+	LayerColor::initWithColor(Color4B(BACKGROUND_COLOR));
 	background = Node::create();
 	TextureCache* textureCache = Director::getInstance()->getTextureCache();
 	auto backgroundTexture = textureCache->addImage("ground.png");
@@ -36,6 +37,15 @@ bool MapView::init() {
 	mpBar->setColor(Color3B::BLUE);
 	mpBar->setPercent(100);
 	powerBar = hud->getChildByName("ndPropertyies")->getChildByName<ui::Slider*>("slPower");
+	btnBack = ui::Button::create("back.png");
+	btnBack->setAnchorPoint({0, 1});
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+	btnBack->setPosition({20, visibleSize.height - 20});
+	btnBack->setScale(0.5);
+	btnBack->addClickEventListener([&](Ref* sender) {
+		Game::instance->leaveGame();
+	});
+	addChild(btnBack);
 	scheduleUpdate();
 	return true;
 }

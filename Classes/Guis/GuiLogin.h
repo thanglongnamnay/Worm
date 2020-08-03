@@ -13,7 +13,7 @@
 
 USING_NS_CC;
 
-class GuiLogin : public Node {
+class GuiLogin : public LayerColor {
 public:
 	Node* hud = nullptr;
 	ui::TextField* tfName = nullptr;

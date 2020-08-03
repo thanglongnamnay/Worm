@@ -10,7 +10,7 @@ void GuiLogin::login() {
 }
 
 bool GuiLogin::init() {
-    Node::init();
+    LayerColor::initWithColor({50, 50, 50, 255});
     auto visibleSize = Director::getInstance()->getVisibleSize();
     hud = CSLoader::createNode("res/Login.csb");
     addChild(hud);

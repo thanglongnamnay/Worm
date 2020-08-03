@@ -55,6 +55,7 @@ public:
 	void prepareGame();
 	void startGame(int id);
 	void restartGame(int id);
+	void leaveGame();
 	void onDisconnect();
 };
 

@@ -12,10 +12,11 @@
 #include <Units/UnitPhysic.h>
 #include <Types/HP.h>
 #include <Types/MP.h>
+#include <cocos/ui/UIButton.h>
 
 USING_NS_CC;
 
-class MapView : public Node {
+class MapView : public LayerColor {
 	Node* hud{};
 	ui::LoadingBar* hpBar;
 	ui::LoadingBar* mpBar;
@@ -25,6 +26,7 @@ class MapView : public Node {
 	std::shared_ptr<UnitPhysic> following = nullptr;
 	DrawNode* drawNode{};
 	Node* background{};
+	ui::Button* btnBack{};
 public:
 	const Color4F FOREGROUND_COLOR = Color4F(0.6f, 0.3f, 0, 1);
 	const Color4F BACKGROUND_COLOR = Color4F(0.2, 0.2, 0.2, 1);

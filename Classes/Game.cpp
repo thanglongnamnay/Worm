@@ -298,3 +298,9 @@ void Game::update(float dt) {
 void Game::onDisconnect() {
 	Helper::showText("Disconnected from server.");
 }
+void Game::leaveGame() {
+	gameState = WAITING;
+	gameNetwork.send(static_cast<int>(CMD::LEAVE_ROOM));
+	removeAllPlayer();
+	showLoginScene();
+}
