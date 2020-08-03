@@ -43,11 +43,11 @@ bool WormView::init() {
 }
 
 void WormView::changeHp(int hp) {
-    hpBar->setPercentage(hp);
+    hpBar->runAction(ProgressTo::create(0.5f, hp));
 }
 
 void WormView::changeMp(int mp) {
-    mpBar->setPercentage(mp);
+	mpBar->runAction(ProgressTo::create(0.5f, mp));
 }
 
 void WormView::indicate(Angle angle) const {
